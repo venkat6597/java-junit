@@ -1,0 +1,11 @@
+commitmsg=$(git log --pretty=oneline --abbrev-commit | grep -m1 "Merge")
+cmt=${commitmsg:0:6}
+echo $cmt
+invalidcmt=$(git log --pretty=%B HEAD...$cmt | grep -v -e "FSP" | grep -v "Merge pull" | grep -v '^$')
+echo $invalidcmt
+echo "$(System.PullRequest.SourceBranch)"
+git log --pretty=%B HEAD...$cmt
+if [[ $invalidcmt -gt 0 ]]
+then
+    echo "Invalid Commit Message is found" && exit 1
+fi
