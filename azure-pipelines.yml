@@ -20,4 +20,4 @@ stages:
       - job: 'ValidatingPR'
         displayName: 'Validate Pull Request'
         steps:
-          - template: stages/pre.yaml
+          - template: stages/pre.yml
