@@ -1,0 +1,23 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+name: $(Rev:r)
+variables:
+ - name: isStaging
+   value: $[eq(variables['Build.SourceBranch'], 'refs/heads/staging')]
+
+pool:
+  vmImage: ubuntu-latest
+
+#Stages of pipeline
+stages:
+  #Validated Git Check
+  - stage: 'GitCheck'
+    displayName: 'Validate Pull Request'
+    jobs:
+      - job: 'ValidatingPR'
+        displayName: 'Validate Pull Request'
+        steps:
+          - template: stages/pre.yaml
