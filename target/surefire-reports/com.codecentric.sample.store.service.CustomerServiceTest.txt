@@ -1,0 +1,57 @@
+-------------------------------------------------------------------------------
+Test set: com.codecentric.sample.store.service.CustomerServiceTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.046 sec <<< FAILURE! - in com.codecentric.sample.store.service.CustomerServiceTest
+testPLZAddressCombinationIncludingHostValue(com.codecentric.sample.store.service.CustomerServiceTest)  Time elapsed: 0.044 sec  <<< ERROR!
+java.lang.ExceptionInInitializerError: null
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
+	at org.mockito.cglib.core.ReflectUtils$2.run(ReflectUtils.java:57)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at org.mockito.cglib.core.ReflectUtils.<clinit>(ReflectUtils.java:47)
+	at org.mockito.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:167)
+	at org.mockito.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
+	at org.mockito.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:217)
+	at org.mockito.cglib.core.KeyFactory$Generator.create(KeyFactory.java:145)
+	at org.mockito.cglib.core.KeyFactory.create(KeyFactory.java:117)
+	at org.mockito.cglib.core.KeyFactory.create(KeyFactory.java:109)
+	at org.mockito.cglib.core.KeyFactory.create(KeyFactory.java:105)
+	at org.mockito.cglib.proxy.Enhancer.<clinit>(Enhancer.java:70)
+	at org.powermock.api.mockito.repackaged.ClassImposterizer.createProxyClass(ClassImposterizer.java:95)
+	at org.powermock.api.mockito.repackaged.ClassImposterizer.imposterise(ClassImposterizer.java:57)
+	at org.powermock.api.mockito.repackaged.ClassImposterizer.imposterise(ClassImposterizer.java:49)
+	at org.powermock.api.mockito.repackaged.CglibMockMaker.createMock(CglibMockMaker.java:24)
+	at org.powermock.api.mockito.internal.mockmaker.PowerMockMaker.createMock(PowerMockMaker.java:46)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:33)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:59)
+	at org.mockito.Mockito.mock(Mockito.java:1285)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:33)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
+	at org.mockito.internal.configuration.DefaultAnnotationEngine.createMockFor(DefaultAnnotationEngine.java:43)
+	at org.mockito.internal.configuration.DefaultAnnotationEngine.process(DefaultAnnotationEngine.java:66)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:71)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:55)
+	at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:108)
+	at com.codecentric.sample.store.service.CustomerServiceTest.setUp(CustomerServiceTest.java:49)
+
+testPLZAddressCombination(com.codecentric.sample.store.service.CustomerServiceTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class org.powermock.api.mockito.repackaged.ClassImposterizer$3
+	at org.powermock.api.mockito.repackaged.ClassImposterizer.createProxyClass(ClassImposterizer.java:95)
+	at org.powermock.api.mockito.repackaged.ClassImposterizer.imposterise(ClassImposterizer.java:57)
+	at org.powermock.api.mockito.repackaged.ClassImposterizer.imposterise(ClassImposterizer.java:49)
+	at org.powermock.api.mockito.repackaged.CglibMockMaker.createMock(CglibMockMaker.java:24)
+	at org.powermock.api.mockito.internal.mockmaker.PowerMockMaker.createMock(PowerMockMaker.java:46)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:33)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:59)
+	at org.mockito.Mockito.mock(Mockito.java:1285)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:33)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
+	at org.mockito.internal.configuration.DefaultAnnotationEngine.createMockFor(DefaultAnnotationEngine.java:43)
+	at org.mockito.internal.configuration.DefaultAnnotationEngine.process(DefaultAnnotationEngine.java:66)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:71)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:55)
+	at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:108)
+	at com.codecentric.sample.store.service.CustomerServiceTest.setUp(CustomerServiceTest.java:49)
+

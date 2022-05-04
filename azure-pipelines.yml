@@ -54,3 +54,12 @@ stages:
         steps:  
           - checkout: none
           - template: build_branch_version_number.yml     
+
+  - stage: 'Code_Validation'
+    dependsOn: 'GitCheck'
+    displayName: 'JUnit and Code Coverage'   
+    jobs:
+      - job: 'Maven'
+        displayName: 'Maven Junit/Build'
+        steps:  
+          - template: junit_and_code_coverage_build.yml        

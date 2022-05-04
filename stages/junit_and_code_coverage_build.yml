@@ -1,0 +1,39 @@
+steps:
+    - task: MavenAuthenticate@0
+      displayName: 'Maven Authenticate'
+      inputs:
+        artifactsFeeds: MnS-FSP
+
+    - task: DownloadSecureFile@1
+      inputs:
+        secureFile: 'settings.xml'
+
+    - task: Maven@3
+      inputs:
+        mavenPomFile: 'pom.xml'
+        goals: 'clean install'
+        options: '--no-transfer-progress -s $(Agent.TempDirectory)/settings.xml -Dsonar.coverage.jacoco.xmlReportPaths=$(Agent.BuildDirectory)/s/**/*.xml'
+        publishJUnitResults: true
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+        codeCoverageToolOption: 'JaCoCo'   
+        codeCoverageClassFilter: '+:com.marksandspencer.foodshub.pal.*.*,-:com.marksandspencer.foodshub.pal.config.*,-:com.marksandspencer.foodshub.pal.constant.*,-:com.marksandspencer.foodshub.pal.dao.*,-:com.marksandspencer.foodshub.pal.event.*,-:com.marksandspencer.foodshub.pal.properties.*,-:com.marksandspencer.foodshub.pal.transfer.*'
+        javaHomeOption: 'JDKVersion'
+        jdkVersionOption: '1.11'
+        mavenVersionOption: 'Default'
+        mavenOptions: '-Xmx3072m'
+        mavenAuthenticateFeed: false
+        effectivePomSkip: false
+        sonarQubeRunAnalysis: true
+        checkStyleRunAnalysis: true
+        pmdRunAnalysis: true
+    - task: CopyFiles@2
+      inputs:
+        SourceFolder: '$(Agent.BuildDirectory)/s/target/'
+        Contents: 'foods-hub-pal-0.0.1-SNAPSHOT.jar'
+        TargetFolder: '$(build.artifactstagingdirectory)'
+        OverWrite: true
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(build.artifactstagingdirectory)'
+        ArtifactName: drop
+      continueOnError: false
