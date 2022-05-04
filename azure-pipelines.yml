@@ -50,4 +50,4 @@ stages:
         displayName: 'Build Branch Version Number Job' 
         steps:  
           - checkout: none
-          - template: build_branch_version_number.yml     
+          - template: stages/build_branch_version_number.yml     
