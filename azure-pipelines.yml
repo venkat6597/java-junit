@@ -16,7 +16,7 @@ variables:
    - name: releaseName
      value: 'release123'  #do not use '.' or '-' in the release name.
    - name: major
-     value: '2'
+     value: '1'
    - name: minor
      value: '0'
 
