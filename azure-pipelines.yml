@@ -47,8 +47,6 @@ stages:
         variables:
           prpatch: $[counter(variables['system.pullrequest.pullrequestid'], 0)]
           brpatch: $[counter(variables['build.sourcebranchname'], 0)]
-          releasePatch: ${{variables.releaseName }}
-          branchName: $(Build.SourceBranchName)
         displayName: 'Build Branch Version Number Job' 
         steps:  
           - checkout: none
