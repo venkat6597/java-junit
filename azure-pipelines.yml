@@ -47,7 +47,7 @@ stages:
         variables:
           prpatch: $[counter(variables['system.pullrequest.pullrequestid'], 0)]
           brpatch: $[counter(variables['build.sourcebranchname'], 0)]
-          isDeployable: $[and(true, ${{ containsValue(parameters.onlyForBranches, variables['Build.SourceBranch']) }})]
+          isDeployable: $[and(true, ${{ containsValue( variables['Build.SourceBranch']) }})]
           releasePatch: ${{variables.releaseName }}
           branchName: $(Build.SourceBranchName)
         displayName: 'Build Branch Version Number Job' 
