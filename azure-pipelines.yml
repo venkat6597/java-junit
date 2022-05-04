@@ -16,9 +16,9 @@ variables:
    - name: releaseName
      value: 'release123'  #do not use '.' or '-' in the release name.
    - name: major
-     value: '1'
+     value: '2'
    - name: minor
-     value: '0'
+     value: '1'
 
 pool:
   vmImage: ubuntu-latest
@@ -27,7 +27,7 @@ pool:
 #Stages of pipeline
 stages:
   #Validated Git Check
-  - stage: 'GitCheck_${{parameters.release}}'
+  - stage: 'GitCheck_${{variables.releaseName}}'
     displayName: 'Validate Pull Request'
     jobs:
       - job: 'ValidatingPR'
@@ -47,9 +47,6 @@ stages:
         variables:
           prpatch: $[counter(variables['system.pullrequest.pullrequestid'], 0)]
           brpatch: $[counter(variables['build.sourcebranchname'], 0)]
-          isDeployable: $[and(true, ${{ containsValue(parameters.onlyForBranches, variables['Build.SourceBranch']) }})]
-          releasePatch: ${{ parameters.releaseName }}
-          branchName: $(Build.SourceBranchName)
         displayName: 'Build Branch Version Number Job' 
         steps:  
           - checkout: none
