@@ -1,0 +1,57 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+name: $(Rev:r)
+variables:
+   - name: acrRepositoryName
+     value: 'fasdas'
+   - name: acrName
+     value: 'sadas'
+   - name: helmReleaseName
+     value: 'helm-foods-pal-service'
+   - name: newRelicName
+     value: 'asdas'
+   - name: releaseName
+     value: 'release123'  #do not use '.' or '-' in the release name.
+   - name: major
+     value: '2'
+   - name: minor
+     value: '0'
+
+pool:
+  vmImage: ubuntu-latest
+
+
+
+#Stages of pipeline
+stages:
+  #Validated Git Check
+  - stage: 'GitCheck_${{parameters.release}}'
+    displayName: 'Validate Pull Request'
+    jobs:
+      - job: 'ValidatingPR'
+        displayName: 'Validate Pull Request'
+        steps:
+          - template: stages/pre.yaml
+            parameters:
+              releases: 
+                - release: variables.release
+
+
+
+  - stage: 'BuildBranchVersion_${{parameters.release}}'
+    displayName: 'Build_Branch_Version_Number'
+    jobs:
+      - job: Build_Branch_Version_Number
+        variables:
+          prpatch: $[counter(variables['system.pullrequest.pullrequestid'], 0)]
+          brpatch: $[counter(variables['build.sourcebranchname'], 0)]
+          isDeployable: $[and(true, ${{ containsValue(parameters.onlyForBranches, variables['Build.SourceBranch']) }})]
+          releasePatch: ${{ parameters.release }}
+          branchName: $(Build.SourceBranchName)
+        displayName: 'Build Branch Version Number Job' 
+        steps:  
+          - checkout: none
+          - template: build_branch_version_number.yml     
