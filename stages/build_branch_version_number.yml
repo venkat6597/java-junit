@@ -1,0 +1,9 @@
+        steps:
+          - bash: |
+              echo "##vso[build.updatebuildnumber]$(major).$(minor)-PullRequest.$(prpatch)"
+            condition: eq(variables['Build.Reason'], 'PullRequest')
+            name: SetPRBuildName
+          - bash: |
+              echo "##vso[build.updatebuildnumber]$(branchName)-$(major).$(minor).$(brpatch)"
+            condition: and(eq(variables['isDeployable'],true), ne(variables['Build.Reason'], 'PullRequest'))
+            name: SetBranchReleaseBuildName
