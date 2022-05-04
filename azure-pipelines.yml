@@ -24,7 +24,6 @@ pool:
   vmImage: ubuntu-latest
 
 
-
 #Stages of pipeline
 stages:
   #Validated Git Check
@@ -41,7 +40,7 @@ stages:
 
 
 
-  - stage: 'BuildBranchVersion_${{parameters.release}}'
+  - stage: 'BuildBranchVersion_${{variables.releaseName}}'
     displayName: 'Build_Branch_Version_Number'
     jobs:
       - job: Build_Branch_Version_Number
@@ -49,7 +48,7 @@ stages:
           prpatch: $[counter(variables['system.pullrequest.pullrequestid'], 0)]
           brpatch: $[counter(variables['build.sourcebranchname'], 0)]
           isDeployable: $[and(true, ${{ containsValue(parameters.onlyForBranches, variables['Build.SourceBranch']) }})]
-          releasePatch: ${{ parameters.release }}
+          releasePatch: ${{ parameters.releaseName }}
           branchName: $(Build.SourceBranchName)
         displayName: 'Build Branch Version Number Job' 
         steps:  
