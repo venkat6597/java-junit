@@ -10,7 +10,7 @@ variables:
    - name: acrName
      value: 'sadas'
    - name: helmReleaseName
-     value: 'helm-foods-pal-service'
+     value: 'helm'
    - name: newRelicName
      value: 'asdas'
    - name: releaseName
