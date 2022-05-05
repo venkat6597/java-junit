@@ -4,6 +4,9 @@ steps:
       inputs:
         artifactsFeeds: 'MNS'
 
+    - task: DownloadSecureFile@1
+      inputs:
+        secureFile: 'settings.xml'
 
     - task: Maven@3
       inputs:
