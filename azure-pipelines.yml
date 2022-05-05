@@ -52,6 +52,7 @@ stages:
           - checkout: none
           - template: build_branch_version_number.yml     
 
+
   - stage: 'Code_Validation'
     dependsOn: 'GitCheck'
     displayName: 'JUnit and Code Coverage'   

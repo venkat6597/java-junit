@@ -2,7 +2,7 @@ steps:
     - task: MavenAuthenticate@0
       displayName: 'Maven Authenticate'
       inputs:
-        artifactsFeeds: MnS-FSP
+        artifactsFeeds: MNS
 
     - task: DownloadSecureFile@1
       inputs:
@@ -16,7 +16,6 @@ steps:
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
         codeCoverageToolOption: 'JaCoCo'   
-        codeCoverageClassFilter: '+:com.marksandspencer.foodshub.pal.*.*,-:com.marksandspencer.foodshub.pal.config.*,-:com.marksandspencer.foodshub.pal.constant.*,-:com.marksandspencer.foodshub.pal.dao.*,-:com.marksandspencer.foodshub.pal.event.*,-:com.marksandspencer.foodshub.pal.properties.*,-:com.marksandspencer.foodshub.pal.transfer.*'
         javaHomeOption: 'JDKVersion'
         jdkVersionOption: '1.11'
         mavenVersionOption: 'Default'
@@ -26,12 +25,14 @@ steps:
         sonarQubeRunAnalysis: true
         checkStyleRunAnalysis: true
         pmdRunAnalysis: true
+
     - task: CopyFiles@2
       inputs:
         SourceFolder: '$(Agent.BuildDirectory)/s/target/'
-        Contents: 'foods-hub-pal-0.0.1-SNAPSHOT.jar'
+        Contents: 'sample-0.0.1-SNAPSHOT.jar'
         TargetFolder: '$(build.artifactstagingdirectory)'
         OverWrite: true
+
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(build.artifactstagingdirectory)'
