@@ -50,7 +50,7 @@ stages:
         displayName: 'Build Branch Version Number Job' 
         steps:  
           - checkout: none
-          - template: build_branch_version_number.yml     
+          - template: stages/build_branch_version_number.yml     
 
 
   - stage: 'Code_Validation'
@@ -60,4 +60,4 @@ stages:
       - job: 'Maven'
         displayName: 'Maven Junit/Build'
         steps:  
-          - template: junit_and_code_coverage_build.yml        
+          - template: stages/junit_and_code_coverage_build.yml        
