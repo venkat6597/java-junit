@@ -54,6 +54,7 @@ stages:
 
 
   - stage: 'Code_Validation'
+    dependsOn: GitCheck_${{variables.releaseName}}
     displayName: 'JUnit and Code Coverage'   
     jobs:
       - job: 'Maven'
