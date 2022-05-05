@@ -15,9 +15,8 @@ steps:
         jdkVersionOption: '1.11'
         mavenVersionOption: 'Default'
         mavenOptions: '-Xmx3072m'
-        mavenAuthenticateFeed: false
+        mavenAuthenticateFeed: true
         effectivePomSkip: false
-        sonarQubeRunAnalysis: true
         checkStyleRunAnalysis: true
         pmdRunAnalysis: true
 
