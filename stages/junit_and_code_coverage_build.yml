@@ -4,15 +4,10 @@ steps:
       inputs:
         artifactsFeeds: 'MNS'
 
-    - task: DownloadSecureFile@1
-      inputs:
-        secureFile: 'settings.xml'
-
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom.xml'
         goals: 'clean install'
-        options: '--no-transfer-progress -s $(Agent.TempDirectory)/settings.xml -Dsonar.coverage.jacoco.xmlReportPaths=$(Agent.BuildDirectory)/s/**/*.xml'
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
         codeCoverageToolOption: 'JaCoCo'   
