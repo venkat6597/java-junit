@@ -3,7 +3,7 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-name: $(Rev:r)
+name: $(variables.major).$(variables.minor)$(Rev:.r)
 variables:
    - name: acrRepositoryName
      value: 'fasdas'
@@ -38,7 +38,7 @@ stages:
               releases: 
                 - release: variables.release
 
-name: $(variables.major).$(variables.minor)$(Rev:.r)
+
 
   #- stage: 'BuildBranchVersion_${{variables.releaseName}}'
   #  displayName: 'Build_Branch_Version_Number'
