@@ -1,0 +1,20 @@
+steps:
+  - task: DownloadBuildArtifacts@0
+    inputs:
+        buildType: 'current'
+        downloadType: 'single'
+        artifactName: 'drop'
+        downloadPath: '.'
+
+        
+  - script: |
+            echo 'Validate PMD'
+            ls drop/.codeAnalysis/CodeAnalysisBuildSummary.md
+            grep 'PMD found no violations.' drop/.codeAnalysis/CodeAnalysisBuildSummary.md
+            if grep 'PMD found no violations.' drop/.codeAnalysis/CodeAnalysisBuildSummary.md
+            then
+              echo "There are No PMD Error"
+            else
+              echo "There are PMD Error"
+              exit 1
+            fi
