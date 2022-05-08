@@ -42,17 +42,17 @@ stages:
 
 
 
-  #- stage: 'BuildBranchVersion_${{variables.releaseName}}'
-  #  displayName: 'Build_Branch_Version_Number'
-   # jobs:
-     # - job: Build_Branch_Version_Number
-     #   variables:
-     #    prpatch: $[counter(variables['system.pullrequest.pullrequestid'], 0)]
-     #     brpatch: $[counter(variables['build.sourcebranchname'], 0)]
-     #  displayName: 'Build Branch Version Number Job' 
-     #   steps:  
-      #    - checkout: none
-       #   - template: stages/build_branch_version_number.yml     
+  - stage: 'BuildBranchVersion_${{variables.releaseName}}'
+    displayName: 'Build_Branch_Version_Number'
+    jobs:
+      - job: Build_Branch_Version_Number
+        variables:
+           prpatch: $[counter(variables['system.pullrequest.pullrequestid'], 0)]
+           brpatch: $[counter(variables['build.sourcebranchname'], 0)]
+        displayName: 'Build Branch Version Number Job' 
+        steps:  
+          - checkout: none
+          - template: stages/build_branch_version_number.yml     
 
 
   - stage: 'Code_Validation'
