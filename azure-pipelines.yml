@@ -49,6 +49,7 @@ stages:
         variables:
            prpatch: $[counter(variables['system.pullrequest.pullrequestid'], 0)]
            brpatch: $[counter(variables['build.sourcebranchname'], 0)]
+           patch: $[counter(variables['minor'], 0)]
         displayName: 'Build Branch Version Number Job' 
         steps:  
           - checkout: none
