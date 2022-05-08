@@ -75,4 +75,4 @@ stages:
         displayName: 'PMD Validation'
         steps:
           - checkout: none
-          - template: pmd_validation.yml
+          - template: stages/pmd_validation.yml
