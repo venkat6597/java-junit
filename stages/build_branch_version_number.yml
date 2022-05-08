@@ -1,4 +1,8 @@
         steps:
+          - bash: | 
+               echo "##vso[build.updatebuildnumber]$(major).$(minor)-$(Build.SourceBranchName).$(brpatch)"
+            condition: ne(variables['Build.Reason'], 'PullRequest')
+            name: SetFeature
           - bash: |
               echo "##vso[build.updatebuildnumber]$(major).$(minor)-PullRequest.$(prpatch)"
             condition: eq(variables['Build.Reason'], 'PullRequest')
