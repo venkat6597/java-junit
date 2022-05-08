@@ -3,7 +3,7 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-name: $(Rev:r)
+
 variables:
    - name: acrRepositoryName
      value: 'fasdas'
@@ -19,6 +19,8 @@ variables:
      value: '2'
    - name: minor
      value: '1'
+     
+name: ${{variables.major}}.${{variables.minor}}$(Rev:.r)
 
 pool:
   vmImage: ubuntu-latest
@@ -40,17 +42,17 @@ stages:
 
 
 
-  - stage: 'BuildBranchVersion_${{variables.releaseName}}'
-    displayName: 'Build_Branch_Version_Number'
-    jobs:
-      - job: Build_Branch_Version_Number
-        variables:
-          prpatch: $[counter(variables['system.pullrequest.pullrequestid'], 0)]
-          brpatch: $[counter(variables['build.sourcebranchname'], 0)]
-        displayName: 'Build Branch Version Number Job' 
-        steps:  
-          - checkout: none
-          - template: stages/build_branch_version_number.yml     
+  #- stage: 'BuildBranchVersion_${{variables.releaseName}}'
+  #  displayName: 'Build_Branch_Version_Number'
+   # jobs:
+     # - job: Build_Branch_Version_Number
+     #   variables:
+     #    prpatch: $[counter(variables['system.pullrequest.pullrequestid'], 0)]
+     #     brpatch: $[counter(variables['build.sourcebranchname'], 0)]
+     #  displayName: 'Build Branch Version Number Job' 
+     #   steps:  
+      #    - checkout: none
+       #   - template: stages/build_branch_version_number.yml     
 
 
   - stage: 'Code_Validation'
