@@ -13,7 +13,6 @@
             name: SetBranchReleaseBuildName
           - bash: |
               echo "##vso[build.updatebuildnumber]$(major).$(minor).$(patch)"
-            condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')  
             name: SetMasterBuildName  
 
 

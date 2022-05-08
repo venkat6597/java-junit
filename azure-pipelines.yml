@@ -44,6 +44,7 @@ stages:
 
   - stage: 'BuildBranchVersion_${{variables.releaseName}}'
     displayName: 'Build_Branch_Version_Number'
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
     jobs:
       - job: Build_Branch_Version_Number
         variables:
@@ -64,3 +65,14 @@ stages:
         displayName: 'Maven Junit/Build'
         steps:  
           - template: stages/junit_and_code_coverage_build.yml        
+
+  
+  - stage: 'PMD_Validation'
+    dependsOn: 'Code_Validation'
+    displayName: 'Validate PMD Validation'
+    jobs:
+      - job: 'PMD'
+        displayName: 'PMD Validation'
+        steps:
+          - checkout: none
+          - template: pmd_validation.yml
