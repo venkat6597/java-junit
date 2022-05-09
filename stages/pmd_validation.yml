@@ -16,5 +16,4 @@ steps:
               echo "There are No PMD Error"
             else
               echo "There are PMD Error"
-              exit 1
             fi

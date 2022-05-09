@@ -76,3 +76,17 @@ stages:
         steps:
           - checkout: none
           - template: stages/pmd_validation.yml
+
+
+
+
+  - stage: 'DockerizeDeploy_${{parameters.release}}'
+    #condition: and(succeeded(), ${{ containsValue(parameters.onlyForBranches, variables['Build.SourceBranch']) }})
+    displayName: 'Image Creation'
+    jobs:
+      - job: 'CreateImage'
+        variables:
+          patch:  $[counter(variables['Build.SourceBranchName'].variables['major'].variables['minor'], 0)]
+          releasePatch: ${{ parameters.release }}
+        steps:
+          - template: dockerbuild.yml
