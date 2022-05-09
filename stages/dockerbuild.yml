@@ -11,7 +11,7 @@ steps:
   - task: CopyFiles@2
     inputs:
       SourceFolder: 'drop'
-      Contents: '*.jar'
+      Contents: '**/*.jar'
       TargetFolder: '$(build.artifactstagingdirectory)/s/stages/docker/drop'
       OverWrite: true
     displayName: 'Copy Artifact to Docker'
