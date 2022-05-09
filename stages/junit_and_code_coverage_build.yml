@@ -18,7 +18,7 @@ steps:
         mavenAuthenticateFeed: true
         effectivePomSkip: false
         checkStyleRunAnalysis: true
-        pmdRunAnalysis: true
+        pmdRunAnalysis: false
 
     - task: CopyFiles@2
       inputs:
