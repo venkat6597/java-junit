@@ -10,7 +10,7 @@ variables:
    - name: acrName
      value: 'sadas'
    - name: helmReleaseName
-     value: 'helm'
+     value: 'helm2'
    - name: newRelicName
      value: 'asdas'
    - name: releaseName

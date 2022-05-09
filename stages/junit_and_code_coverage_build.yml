@@ -22,8 +22,7 @@ steps:
 
     - task: CopyFiles@2
       inputs:
-        SourceFolder: '$(Agent.BuildDirectory)/s/target/'
-        Contents: 'sample-0.0.1-SNAPSHOT.jar'
+        Contents: '**/*.jar'
         TargetFolder: '$(build.artifactstagingdirectory)'
         OverWrite: true
 
