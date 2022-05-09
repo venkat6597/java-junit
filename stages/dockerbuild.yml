@@ -12,7 +12,7 @@ steps:
     inputs:
       SourceFolder: 'drop'
       Contents: '*.jar'
-      TargetFolder: '$(Agent.BuildDirectory)/s/stages/docker/drop'
+      TargetFolder: '$(build.artifactstagingdirectory)/s/stages/docker/drop'
       OverWrite: true
     displayName: 'Copy Artifact to Docker'
 
@@ -26,50 +26,50 @@ steps:
            	
     name: SetMasterBuildName
   
-  - task: DownloadSecureFile@1
-    name: DownloadNonProdNewRelicConfig
-    inputs:
-      secureFile: 'newrelic_nonprod.yml'
+  #- task: DownloadSecureFile@1
+    #name: DownloadNonProdNewRelicConfig
+    #inputs:
+    #  secureFile: 'newrelic_nonprod.yml'
 
-  - task: CopyFiles@2
-    name: CopyNonProdNewRelicConfig
-    inputs:
-      SourceFolder: '$(Agent.WorkFolder)/_temp'
-      Contents: 'newrelic_nonprod.yml'
-      TargetFolder: '$(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)/configMap'
-      OverWrite: true
+  #- task: CopyFiles@2
+    #name: CopyNonProdNewRelicConfig
+  #  inputs:
+   #   SourceFolder: '$(Agent.WorkFolder)/_temp'
+  #    Contents: 'newrelic_nonprod.yml'
+   #   TargetFolder: '$(build.artifactstagingdirectory)/s/ci-helper/infra/$(helmReleaseName)/configMap'
+  #    OverWrite: true
 
-  - task: DownloadSecureFile@1
-    name: DownloadProdNewRelicConfig
-    inputs:
-      secureFile: 'newrelic_prod.yml'
+ # - task: DownloadSecureFile@1
+  #  name: DownloadProdNewRelicConfig
+    #inputs:
+   #   secureFile: 'newrelic_prod.yml'
 
-  - task: CopyFiles@2
-    name: CopyProdNewRelicConfig
-    inputs:
-      SourceFolder: '$(Agent.WorkFolder)/_temp'
-      Contents: 'newrelic_prod.yml'
-      TargetFolder: '$(Agent.BuildDirectory)/s/stages/infra/$(helmReleaseName)/configMap'
-      OverWrite: true
+ # - task: CopyFiles@2
+  #  name: CopyProdNewRelicConfig
+   # inputs:
+  #    SourceFolder: '$(Agent.WorkFolder)/_temp'
+   #   Contents: 'newrelic_prod.yml'
+   #   TargetFolder: '$(Agent.BuildDirectory)/s/stages/infra/$(helmReleaseName)/configMap'
+     # OverWrite: true
 
-  - bash: |
-           grep -rl 'imageversion' $(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)/values.yaml | xargs sed -i 's/imageversion/$(version)/g'   
-           grep -rl 'release' $(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)/values_dev_release.yaml | xargs sed -i 's/release/$(releaseName)/g' 
-           grep -rl '<<ApplicationName>>' $(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)/configMap/newrelic_nonprod.yml | xargs sed -i 's/<<ApplicationName>>/$(newRelicName)/g'
-           grep -rl '<<ApplicationName>>' $(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)/configMap/newrelic_prod.yml | xargs sed -i 's/<<ApplicationName>>/$(newRelicName)/g'
-    name: SetNewRelicApplicationName
+  #- bash: |
+  #         grep -rl 'imageversion' $(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)/values.yaml | xargs sed -i 's/imageversion/$(version)/g'   
+   #        grep -rl 'release' $(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)/values_dev_release.yaml | xargs sed -i 's/release/$(releaseName)/g' 
+   #        grep -rl '<<ApplicationName>>' $(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)/configMap/newrelic_nonprod.yml | xargs sed -i 's/<<ApplicationName>>/$(newRelicName)/g'
+    #       grep -rl '<<ApplicationName>>' $(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)/configMap/newrelic_prod.yml | xargs sed -i 's/<<ApplicationName>>/$(newRelicName)/g'
+    #name: SetNewRelicApplicationName
 
-  - task: Bash@3
-    inputs:
-      targetType: 'inline'
-      script: 'curl -O https://download.newrelic.com/newrelic/java-agent/newrelic-agent/current/newrelic-java.zip'
+  #- task: Bash@3
+  #  inputs:
+  #    targetType: 'inline'
+ #     script: 'curl -O https://download.newrelic.com/newrelic/java-agent/newrelic-agent/current/newrelic-java.zip'
 
-  - task: ExtractFiles@1
-    inputs:
-      archiveFilePatterns: 'newrelic-java.zip'
-      destinationFolder: '$(Agent.BuildDirectory)/s/ci-helper/docker'
-      cleanDestinationFolder: false
-      overwriteExistingFiles: true
+  #- task: ExtractFiles@1
+   # inputs:
+    #  archiveFilePatterns: 'newrelic-java.zip'
+    #  destinationFolder: '$(Agent.BuildDirectory)/s/ci-helper/docker'
+    #  cleanDestinationFolder: false
+    #  overwriteExistingFiles: true
 
   #- task: AzureCLI@2
    # displayName: Build & push Docker Image
@@ -91,7 +91,7 @@ steps:
   
   - task: CopyFiles@2
     inputs:
-      SourceFolder: '$(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)'
+      SourceFolder: '$(system.defaultWorkingDirectory)/s/ci-helper/infra/$(helmReleaseName)'
       Contents: '**'
       TargetFolder: '$(build.artifactstagingdirectory)'
       OverWrite: true
