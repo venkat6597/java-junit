@@ -23,7 +23,7 @@ variables:
 name: ${{variables.major}}.${{variables.minor}}$(Rev:.r)
 
 pool:
-  name: MyHost
+  vmImage: 'ubuntu-latest'
 
 
 #Stages of pipeline
