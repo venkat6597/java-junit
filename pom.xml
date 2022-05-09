@@ -27,6 +27,17 @@
       <name>Test Project Site</name>
       <url>file:///tmp/maven-project-site</url>
     </site>
+     <repository>
+     <id>MNS</id>
+     <url>https://pkgs.dev.azure.com/MyCloud6597/SampleApp/_packaging/MNS/maven/v1</url>
+     <releases>
+      <enabled>true</enabled>
+     </releases>
+     <snapshots>
+      <enabled>true</enabled>
+     </snapshots>
+    </repository>
+    
   </distributionManagement>
 
   <build>
@@ -170,18 +181,7 @@
    </repository>
   </repositories>
 
-  <distributionManagement>
-    <repository>
-     <id>MNS</id>
-     <url>https://pkgs.dev.azure.com/MyCloud6597/SampleApp/_packaging/MNS/maven/v1</url>
-     <releases>
-      <enabled>true</enabled>
-     </releases>
-     <snapshots>
-      <enabled>true</enabled>
-     </snapshots>
-    </repository>
-  </distributionManagement>
+
 
   <prerequisites>
     <maven>3.0.3</maven>
