@@ -88,4 +88,4 @@ stages:
         variables:
           patch:  $[counter(variables['Build.SourceBranchName'].variables['major'].variables['minor'], 0)]
         steps:
-          - template: dockerbuild.yml
+          - template: stages/dockerbuild.yml
