@@ -12,7 +12,7 @@ steps:
     inputs:
       SourceFolder: 'drop'
       Contents: '**/*.jar'
-      TargetFolder: '$(build.artifactstagingdirectory)/s/stages/docker/drop'
+      TargetFolder: '$(build.artifactstagingdirectory)/stages/docker/drop'
       OverWrite: true
     displayName: 'Copy Artifact to Docker'
 
@@ -91,7 +91,7 @@ steps:
   
   - task: CopyFiles@2
     inputs:
-      SourceFolder: '$(system.defaultWorkingDirectory)/s/ci-helper/infra/$(helmReleaseName)'
+      SourceFolder: '$(system.defaultWorkingDirectory)/ci-helper/infra/$(helmReleaseName)'
       Contents: '**'
       TargetFolder: '$(build.artifactstagingdirectory)'
       OverWrite: true
