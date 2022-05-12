@@ -50,7 +50,7 @@ steps:
     name: CopyProdNewRelicConfig
     inputs:
       SourceFolder: '$(Agent.WorkFolder)/_temp'
-      Contents: 'newrelic.yml'
+      Contents: 'newrelic.yaml'
       TargetFolder: '$(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)/configMap'    
   
   - bash: |
