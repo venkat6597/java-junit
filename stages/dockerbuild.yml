@@ -8,13 +8,13 @@ steps:
         artifactName: 'drop'
         downloadPath: '.'
 
-  - task: CopyFiles@2
-    inputs:
-      SourceFolder: 'drop'
-      Contents: '**/*.jar'
-      TargetFolder: '$(build.artifactstagingdirectory)/stages/docker/drop'
-      OverWrite: true
-    displayName: 'Copy Artifact to Docker'
+  #- task: CopyFiles@2
+   # inputs:
+    #  SourceFolder: 'drop'
+     # Contents: '**/*.jar'
+      #TargetFolder: '$(build.artifactstagingdirectory)/stages/docker/drop'
+      #OverWrite: true
+    #displayName: 'Copy Artifact to Docker'
 
   - bash: |
            #echo "##vso[build.updatebuildnumber]$(major).$(minor).$(patch)"
@@ -93,9 +93,9 @@ steps:
   
   - task: CopyFiles@2
     inputs:
-      SourceFolder: '$(system.defaultWorkingDirectory)/ci-helper/infra/$(helmReleaseName)'
+      SourceFolder: '$(system.defaultWorkingDirectory)/ci-helper/infra/'
       Contents: '**'
-      TargetFolder: '$(build.artifactstagingdirectory)'
+      TargetFolder: '$(build.artifactstagingdirectory)/s/ci-helper/infra/$(helmReleaseName)/configMap'
       OverWrite: true
 
   - task: PublishBuildArtifacts@1
