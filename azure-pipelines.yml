@@ -68,7 +68,7 @@ stages:
 
   
   - stage: 'PMD_Validation'
-    dependsOn: 'Code_Validation'
+    #dependsOn: 'Code_Validation'
     displayName: 'Validate PMD Validation'
     jobs:
       - job: 'PMD'
