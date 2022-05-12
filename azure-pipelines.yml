@@ -57,14 +57,14 @@ stages:
           - template: stages/build_branch_version_number.yml     
 
 
-  #- stage: 'Code_Validation'
-   # dependsOn: GitCheck_${{variables.releaseName}}
-    #displayName: 'JUnit and Code Coverage'   
-    #jobs:
-     # - job: 'Maven'
-      #  displayName: 'Maven Junit/Build'
-       # steps:  
-        #  - template: stages/junit_and_code_coverage_build.yml        
+  - stage: 'Code_Validation'
+    dependsOn: GitCheck_${{variables.releaseName}}
+    displayName: 'JUnit and Code Coverage'   
+    jobs:
+      - job: 'Maven'
+        displayName: 'Maven Junit/Build'
+        steps:  
+          - template: stages/junit_and_code_coverage_build.yml        
 
   
   - stage: 'PMD_Validation'

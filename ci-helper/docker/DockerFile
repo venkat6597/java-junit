@@ -1,0 +1,27 @@
+FROM openjdk:11.0-jdk-slim
+
+RUN apt-get update; apt-get install -y fontconfig libfreetype6
+
+COPY drop/foods-hub-pal-0.0.1-SNAPSHOT.jar app.jar
+
+ADD /newrelic /newrelic
+COPY entrypoint.sh /
+
+RUN groupadd -g 1001 foodshub && useradd -u 1001 -g foodshub -s /bin/sh foodshub
+RUN chown -R foodshub:foodshub app.jar
+RUN chown -R foodshub:foodshub /newrelic
+RUN chown -R foodshub:foodshub /entrypoint.sh
+
+RUN chmod 777 /tmp
+RUN chown -R foodshub:foodshub /tmp
+RUN chmod +x /entrypoint.sh
+
+USER foodshub
+
+ARG build_no
+ENV app_version=$build_no
+ENV NEWRELIC_PROFILE=production
+
+# run application with this command line 
+ENTRYPOINT ["/entrypoint.sh"]
+#CMD ["java", "-jar", "app.jar"]
