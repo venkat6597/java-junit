@@ -56,7 +56,7 @@ steps:
   - bash: |
            grep -rl 'imageversion' $(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)/values.yaml | xargs sed -i 's/imageversion/$(version)/g'   
            grep -rl '<<ApplicationName>>' $(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)/configMap/newrelic_nonprod.yml | xargs sed -i 's/<<ApplicationName>>/$(newRelicName)/g'
-           grep -rl '<<ApplicationName>>' $(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)/configMap/newrelic_prod.yaml | xargs sed -i 's/<<ApplicationName>>/$(newRelicName)/g'
+           grep -rl '<<ApplicationName>>' $(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)/configMap/newrelic.yaml | xargs sed -i 's/<<ApplicationName>>/$(newRelicName)/g'
     name: SetNewRelicApplicationName 
 
   - task: Bash@3
