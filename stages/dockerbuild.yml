@@ -35,8 +35,8 @@ steps:
   - task: CopyFiles@2
     name: CopyConfig
     inputs:
-      SourceFolder: source
-      Contents: 'Chart.yml'
+      SourceFolder: '$(system.defaultWorkingDirectory)/ci-helper/infra'
+      Contents: '**'
       TargetFolder: '$(build.artifactstagingdirectory)/s/ci-helper/infra/$(helmReleaseName)/configMap'
       OverWrite: true
       
