@@ -1,0 +1,76 @@
+{{- if .Values.monitoring }}
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  labels:
+    prometheus: k8s
+    role: alert-rules
+  name: prometheus-{{.Values.env }}-{{ template "fullname" . }}-rules
+  namespace: monitoring
+spec:
+  groups:
+  - name: ./{{ template "fullname" . }}.rules
+    rules:
+    # if there is a metrics exposed then use that to determine pod up or down
+    - alert: {{ template "fullname" . }}-{{.Values.env }}-down
+      for: {{.Values.prometheus.alert.rule.duration | default "160s" }}
+    # using the pod information not the metric
+      expr: absent(kube_pod_container_status_running{container="{{ template "fullname" . }}",namespace="{{.Values.namespace }}"}) == 1 
+      labels:
+        severity: High
+        urgency: Critical
+        env: {{.Values.env }}
+        namespace: {{.Values.namespace }}
+        app: {{.Values.app}}
+        team: {{.Values.team}}
+      annotations:
+        message: {{ template "fullname" . }} in {{.Values.env }} is down.
+    - alert: {{ template "fullname" . }}-{{.Values.env }}-cpu-usage-more-than-90-percent
+      for: {{.Values.prometheus.alert.rule.duration | default "160s" }}
+      expr: round(100 * sum by(pod, container, namespace) (rate(container_cpu_usage_seconds_total{container!="POD",image!="",namespace="{{.Values.namespace }}",pod=~"{{ template "fullname" . }}.*"}[5m])) / avg by(pod, container, namespace) (kube_pod_container_resource_limits_cpu_cores)) > 90
+      labels:
+        severity: {{.Values.prometheus.alert.rule.severity }}
+        urgency: {{.Values.prometheus.alert.rule.urgency }}
+        env: {{.Values.env }}
+        namespace: {{.Values.namespace }}
+        app: {{.Values.app}}
+        team: {{.Values.team}}
+      annotations:
+        message: CPU usage of {{ template "fullname" . }} in {{.Values.env }} is more than 90%
+    - alert: {{ template "fullname" . }}-{{.Values.env }}-memory-usage-more-than-90-percent
+      for: {{.Values.prometheus.alert.rule.duration | default "160s" }}
+      expr: round(100 * sum by(container, pod, namespace) (container_memory_usage_bytes{container!="POD",image!="",namespace="{{.Values.namespace }}",pod=~"{{ template "fullname" . }}.*"}) / avg by(container, pod, namespace) (kube_pod_container_resource_limits_memory_bytes)) > 90
+      labels:
+        severity: {{.Values.prometheus.alert.rule.severity }}
+        urgency: {{.Values.prometheus.alert.rule.urgency }}
+        env: {{.Values.env }}
+        namespace: {{.Values.namespace }}
+        app: {{.Values.app}}
+        team: {{.Values.team}}
+      annotations:
+        message: Memory usage of {{ template "fullname" . }} in {{.Values.env }} is more than 90%
+    - alert: {{ template "fullname" . }}-{{.Values.env }}-deployment-not-matching-replicas
+      for: {{.Values.prometheus.alert.rule.duration | default "160s" }}
+      expr: ((kube_deployment_status_replicas_updated{namespace="{{.Values.namespace }}",deployment="{{ template "fullname" . }}"}  != kube_deployment_spec_replicas{namespace="{{.Values.namespace }}",deployment="{{ template "fullname" . }}"})  or (kube_deployment_status_replicas_available{namespace="{{.Values.namespace }}",deployment="{{ template "fullname" . }}"}  != kube_deployment_spec_replicas{namespace="{{.Values.namespace }}",deployment="{{ template "fullname" . }}"}))   unless (kube_deployment_spec_paused{namespace="{{.Values.namespace }}",deployment="{{ template "fullname" . }}"})  == 1
+      labels:
+        severity: {{.Values.prometheus.alert.rule.severity }}
+        urgency: {{.Values.prometheus.alert.rule.urgency }}
+        env: {{.Values.env }}
+        namespace: {{.Values.namespace }}
+        app: {{.Values.app}}
+        team: {{.Values.team}}
+      annotations:
+        message: {{ template "fullname" . }} in {{.Values.env }} is not running with expected replicas
+    - alert: {{ template "fullname" . }}-{{.Values.env }}-restart
+      for: {{.Values.prometheus.alert.rule.duration | default "160s" }}
+      expr: rate(kube_pod_container_status_restarts_total{container="{{ template "fullname" . }}",namespace="{{.Values.namespace }}"}[1h]) * 3600 > 1
+      labels:
+        severity: {{.Values.prometheus.alert.rule.severity }}
+        urgency: {{.Values.prometheus.alert.rule.urgency }}
+        env: {{.Values.env }}
+        namespace: {{.Values.namespace }}
+        app: {{.Values.app}}
+        team: {{.Values.team}}
+      annotations:
+        message: {{ template "fullname" . }} in {{.Values.env }} has restarted more than once during last one hour.
+{{- end }}

@@ -1,0 +1,21 @@
+{{- if .Values.service.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "fullname" . }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ template "fullname" . }}
+    heritage: {{.Release.Service | quote }}
+    release: {{.Release.Name | quote }}
+    chart: {{.Chart.Name}}-{{.Chart.Version}}
+  annotations:
+      prometheus.io/scrape: "true"
+spec:
+  ports:
+  - name: http
+    port: 80
+    targetPort: {{default 8080 .Values.portOverride }}
+  selector:
+    app: {{ template "fullname" . }}
+{{- end }}

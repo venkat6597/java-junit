@@ -1,0 +1,77 @@
+
+# Name of the cluster, env, application and team details #
+cluster: dev
+env: dev
+app: sample
+team: sample
+
+# Cluster namespace
+namespace: 
+
+
+# docker image details
+docker:
+  image: maceundevspkaccreg001.azurecr.io/services/sparkswebproxy
+  pullsecret: nprodregcred
+portOverride: 8080
+
+# Container environment variables
+javaopts: >-
+    -Dcom.sun.management.jmxremote -Dspring.config.additional-location=/etc/config/ -Dspring.profiles.active=dev
+
+# Autoscaler
+# Replica count for your pods. For production always higher than 1, because if one pod dies your app will be unavailable until the pod recovers
+autoscaler:
+  enabled: false
+replicas: 2
+replicasMax: 4
+# CPU target to trigger autoscaling of your pods
+cpuTargetPercentage: 50
+
+service:
+  enabled: false
+ingress:
+  enabled: false
+  # If not specified, a random name will be generated
+  multihost:
+    - name: test
+      domain: mac.apps.mnscorpdev.net
+      path: /
+  # Mark metric as true to enable custom metrics for your application
+  metric: true
+
+tlssecret: pluto-tls
+
+#
+# Resources request
+#
+# Evaluate the needs of your application in order to request the right amount of resources
+resources:
+  requests:
+    memory: 500Mi
+    cpu: 0.5
+  limits:
+    memory: 1Gi
+    cpu: 1
+
+monitoring: false
+prometheus:
+  alert:
+    rule:
+      duration: 120s
+      severity: "warning"
+      urgency : "Low"
+
+csi:
+  enabled: false
+  resourcegroup: "mac-eun-dev-spkacc-rg-001"
+  subscriptionid: "53320766-7ba9-43f1-9c61-69efdc3955a9"
+  tenantid: "bd5c6713-7399-4b31-be79-78f2d078e543"
+  usepodidentity: "false"
+  keyvault:
+    name: "mac-eun-nprod-acc-akv-01"
+    secret: saskvcred
+    keyvaultobjectnames: "application-saws-credentials"
+    keyvaultobjectaliases: "application-saws-credentials.yml"
+    keyvaultobjecttypes: "secret"
+

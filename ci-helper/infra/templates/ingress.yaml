@@ -1,0 +1,31 @@
+{{- if .Values.ingress.enabled }}
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: {{ template "fullname" . }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ template "fullname" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    heritage: {{.Release.Service | quote }}
+    release: {{.Release.Name | quote }}
+  annotations:
+    kubernetes.io/ingress.class: "nginx-apps"
+spec:
+  tls:
+  - hosts:
+    {{ range $multihost := .Values.ingress.multihost}}
+    - {{ $multihost.name }}.{{ $multihost.domain }}
+    {{ end }}
+    secretName: {{ .Values.tlssecret }}
+  rules:
+    {{ range $multihost := .Values.ingress.multihost}}
+    - host: {{ $multihost.name }}.{{ $multihost.domain }}
+      http:
+        paths:
+        - path: {{ $multihost.path }}
+          backend:
+            serviceName: {{ template "fullname" $ }}
+            servicePort: 80
+  {{- end }}
+{{- end }}

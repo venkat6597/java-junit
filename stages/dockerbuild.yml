@@ -31,13 +31,15 @@ steps:
     #inputs:
     #  secureFile: 'newrelic_nonprod.yml'
 
-  #- task: CopyFiles@2
-    #name: CopyNonProdNewRelicConfig
-  #  inputs:
-   #   SourceFolder: '$(Agent.WorkFolder)/_temp'
-  #    Contents: 'newrelic_nonprod.yml'
-   #   TargetFolder: '$(build.artifactstagingdirectory)/s/ci-helper/infra/$(helmReleaseName)/configMap'
-  #    OverWrite: true
+
+  - task: CopyFiles@2
+    name: CopyConfig
+    inputs:
+      SourceFolder: '$(build.SourcesDirectory)/ci-helper/infra'
+      Contents: 'Chart.yml'
+      TargetFolder: '$(build.artifactstagingdirectory)/s/ci-helper/infra/$(helmReleaseName)/configMap'
+      OverWrite: true
+      
 
  # - task: DownloadSecureFile@1
   #  name: DownloadProdNewRelicConfig

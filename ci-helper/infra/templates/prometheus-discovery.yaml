@@ -1,0 +1,21 @@
+{{- if and .Values.monitoring .Values.ingress.metrics }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus-{{ .Values.env }}-{{ template "fullname" . }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: prometheus-{{ .Values.env }}-{{ template "fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+spec:
+  selector:
+    app: {{ template "fullname" . }}
+  type: ClusterIP
+  clusterIP: None
+  ports:
+  - name: http
+    port: 80
+    targetPort: {{ .Values.portOverride }}
+{{- end }}

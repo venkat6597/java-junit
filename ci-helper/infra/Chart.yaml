@@ -1,0 +1,10 @@
+apiVersion: v1
+name: k8s-app-deployment
+version: 1.0.0
+description: sparks k8s application deployment
+home: https://github.com/DigitalInnovation/kubernetes-deployment
+sources:
+  - https://github.com/DigitalInnovation/kubernetes-deployment
+maintainers:
+  - name: M&S Sparks
+    email: grp-sparkspluto@mnscorp.onmicrosoft.com

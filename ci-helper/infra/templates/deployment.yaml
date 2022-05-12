@@ -1,0 +1,101 @@
+{{- if not .Values.multideployment }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "fullname" . }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ template "fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+spec:
+  replicas: {{ default 2 .Values.replicas }}
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: {{ template "fullname" . }}
+  # We dont need a large deployment history limit as Helm keeps it's own
+  # history
+  revisionHistoryLimit: 2
+  template:
+    metadata:
+      name: {{ template "fullname" . }}
+      namespace: {{ .Values.namespace }}
+      annotations:
+        prometheus.io/scrape: "true"
+      labels:
+        app: {{ template "fullname" . }}
+        release: "{{ .Release.Name }}"
+        heritage: "{{ .Release.Service }}"
+        chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    spec:
+      securityContext:
+        runAsUser: 1001
+        runAsGroup: 3000
+        fsGroup: 2000
+      containers:
+      - name: {{ template "fullname" . }}
+        image: {{ template "docker-image" $ }}
+        imagePullPolicy: IfNotPresent
+        {{- if .Values.csi.enabled }}
+        volumeMounts:
+            - name: {{ template "fullname" . }}-akv-volume
+              mountPath: /etc/config/
+              readOnly: true
+        {{- end }}
+        env:
+          - name: JAVA_OPTS
+            value: {{ .Values.javaopts }}
+          {{ if .Values.newRelic_enabled }}
+          - name: NEW_RELIC_LICENSE_KEY
+            value: {{ .Values.newRelic.license_key }}
+          {{ end }}
+        ports:
+          # The port that our container listens for HTTP requests on
+          - containerPort: {{ default 8080 .Values.portOverride }}
+            name: http
+        readinessProbe:
+          httpGet:
+            path: {{ .Values.contextPath}}/metrics
+            port: {{default 8080 .Values.portOverride }}
+          initialDelaySeconds: 30
+          timeoutSeconds: 60
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: {{ .Values.contextPath}}/metrics
+            port: {{default 8080 .Values.portOverride }}
+          initialDelaySeconds: 30
+          periodSeconds: 60
+        resources:
+{{ toYaml .Values.resources | indent 10 }}
+      restartPolicy: Always
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: app
+                      operator: In
+                      values:
+                        - {{ template "fullname" . }}
+                topologyKey: failure-domain.beta.kubernetes.io/zone
+      imagePullSecrets:
+          - name: {{ .Values.docker.pullsecret }}
+      {{- if .Values.csi.enabled }}
+      volumes:
+          - name: {{ template "fullname" . }}-akv-volume
+            csi:
+              driver: secrets-store.csi.k8s.io
+              readOnly: true
+              volumeAttributes:
+                secretProviderClass:  {{ template "fullname" . }}-csi-kv
+              nodePublishSecretRef:                                    # Only required when using service principal mode
+                name: {{ .Values.csi.keyvault.secret }}                # Only required when using service principal mode
+      {{- end }}
+{{- end }}
