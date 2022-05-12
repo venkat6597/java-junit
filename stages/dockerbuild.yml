@@ -82,11 +82,11 @@ steps:
       #inlineScript: |
        # az acr build -r $(acrName) --file '$(Agent.BuildDirectory)/s/ci-helper/docker/DockerFile' -t $(acrRepositoryName):$(version) '$(Agent.BuildDirectory)/s/ci-helper/docker' --build-arg build_no=$(version)
 
-  - bash: |
-      git status
-      git tag '$(version)'
-      git push origin '$(version)'
-    name: PushTag
+  #- bash: |
+   #   git status
+    #  git tag '$(version)'
+     # git push origin '$(version)'
+    #name: PushTag
   # Publish the folder as pipeline artifact
   - publish: $(Pipeline.Workspace)/variables
     artifact: variables
