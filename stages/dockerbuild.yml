@@ -39,10 +39,11 @@ steps:
       Contents: 'newrelic_nonprod.yml'
       TargetFolder: '$(Agent.BuildDirectory)/s/ci-helper/infra/$(helmReleaseName)/configMap'
 
+
   - task: DownloadSecureFile@1
     name: DownloadProdNewRelicConfig
     inputs:
-      secureFile: 'newrelic.yml'
+      secureFile: 'newrelic.yaml'
 
 
   - task: CopyFiles@2
@@ -99,7 +100,7 @@ steps:
       OverWrite: true
 
 
-      
+
   - task: PublishBuildArtifacts@1
     inputs:
       PathtoPublish: '$(build.artifactstagingdirectory)'
