@@ -1,0 +1,38 @@
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet id="update_pal_fields_1"	author="harish">
+		<ext:runCommand>
+		<ext:command>
+			{
+			"update": "PALFields",
+			"updates": [
+			{
+			"q": {
+			"_id": {
+			"$in": [
+			"supplierSiteCode"
+			]
+			}
+			},
+			"u": {
+			"$set": {
+			"errorMessages": {
+			"patternMessage": "Please enter an F code in the format F0XXXX"
+			},
+			"pattern": "^[F][0]([0-9]){4}$"
+			}
+			},
+			"multi": true
+			}
+			]
+			}
+		</ext:command>
+		</ext:runCommand>
+	</changeSet>
+
+</databaseChangeLog>

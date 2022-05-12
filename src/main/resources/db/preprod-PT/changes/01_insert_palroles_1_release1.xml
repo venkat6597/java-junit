@@ -1,0 +1,66 @@
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+	
+	<changeSet id="pal_role_collection_insert_1" author="harish">
+		<ext:insertMany collectionName="PALRole">
+			<ext:documents>
+				[
+				{
+				"objectId" : "654fd403-b97b-4cfe-9ba1-78f14c302b9e",
+				"name" : "Project Manager",
+				"role" : "projectManager"
+				},
+				{
+				"objectId" : "71dad8df-bf7e-4dbe-be66-ce9c3d7c5af8",
+				"name" : "Product Developer",
+				"role" : "productDeveloper"
+				},
+				{
+				"objectId" : "a0315d39-d00e-4f6e-8c3b-63565057db44",
+				"name" : "Buyer",
+				"role" : "buyer"
+				},
+				{
+				"objectId" : "d16eb3ef-9da2-4ba5-ad79-05c0ac1ba52e",
+				"name" : "Food technologist",
+				"role" : "foodTechnologist"
+				},
+				{
+				"objectId" : "c544c4e4-7a62-4995-b13e-c62e759166d7",
+				"name" : "International",
+				"role" : "international"
+				},
+				{
+				"objectId" : "6310dafd-17c7-4f00-a56b-6db12e5a2b1e",
+				"name" : "Commercial Planner",
+				"role" : "commercialPlanner"
+				},
+				{
+				"objectId" : "e8123a5e-fb1d-42a5-bd0d-136e84fd5175",
+				"name" : "Ocado",
+				"role" : "ocado"
+				},
+				{
+				"objectId" : "02238c79-71ae-4aa0-9b7c-a76f05a59385",
+				"name" : "GSP",
+				"role" : "gsp"
+				},
+				{
+				"objectId" : "17051f8e-879a-4ad6-aa1c-c7310cd79c66",
+				"name" : "Ashbury",
+				"role" : "ashbury"
+				},
+				{
+				"objectId" : "2b5a8756-1750-447f-8978-6d5229e5508c",
+				"name" : "VAT",
+				"role" : "vat"
+				}
+				]
+			</ext:documents>
+		</ext:insertMany>
+	</changeSet>
+</databaseChangeLog>

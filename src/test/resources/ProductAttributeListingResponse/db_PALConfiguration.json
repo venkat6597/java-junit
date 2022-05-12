@@ -1,0 +1,932 @@
+[
+	{
+		"id": "AGREED COST PRICE CURRENCY",
+		"values": [
+			"GBP",
+			"Euro",
+			"USD"
+		]
+	},
+	{
+		"id": "BANNED INGREDIENTS FOR INTERNATIONAL",
+		"values": [
+			"None",
+			"Alcohol",
+			"BPA",
+			"Pork Derivatives",
+			"Poppy Seeds",
+			"Titanium Dioxide",
+			"Alcohol and Titanium Dioxide",
+			"Alcohol and Pork Derivatives",
+			"BPA and Titanium Dioxide"
+		]
+	},
+	{
+		"id": "CATCHWEIGHT OR FIXEDWEIGHT",
+		"values": [
+			"CatchWeight",
+			"FixedWeight",
+			"Loose/CW",
+			"Loose/FW",
+			"N/A"
+		]
+	},
+	{
+		"id": "CATEGORY",
+		"values": [
+			"F01C Poultry",
+			"F02F Frozen",
+			"F03C Global Meal Sol",
+			"F04C Delicatessen",
+			"F05C Cook",
+			"F06C Dairy",
+			"F07C FOTM",
+			"F08C Desserts",
+			"F09A Bakery",
+			"F10A Biscuits",
+			"F11C Fresh Counters",
+			"F12A Savoury Snacks",
+			"F13A Confectionery",
+			"F15C Vegetables",
+			"F16C Salads",
+			"F17C Fresh Counters Raw Mat",
+			"F18A Direct Hampers",
+			"F19A Groceries",
+			"F20A Wines",
+			"F21A B&#38;S",
+			"F22A Soft Drinks",
+			"F27A In Store Bakery",
+			"F30C Juice",
+			"F33A Ambient Celebration",
+			"F35A Homecare",
+			"F38C Meat",
+			"F60C FTG Raw Material",
+			"F61C Fruit",
+			"F62C Fish",
+			"F63C Traditional Meal Sol",
+			"F64C Healthy Meal Sol",
+			"F65C Pies",
+			"F67C Prepared Vegetables",
+			"F74A Cafe 2",
+			"F75A Cafe",
+			"F76A Hospitality Raw Mat",
+			"F79A Unbaked Bakery Products",
+			"F90C HFOTM"
+		]
+	},
+	{
+		"id": "CONSUMER PACKAGING TYPE",
+		"values": [
+			"Aerosol",
+			"Bag",
+			"Box",
+			"Cardboard/Paper (eg. card sleeves / labels)",
+			"Foil Tray",
+			"Glass Bottle",
+			"Loose",
+			"Overwrap",
+			"Plastic Bag / Net ",
+			"Other (comment for other)",
+			"Plastic Bottle",
+			"Plastic Tub",
+			"Pouch",
+			"Punnet / Tray",
+			"Sachet",
+			"Tetra Pak Carton",
+			"Tin",
+			"Tube",
+			"VacPack"
+		]
+	},
+	{
+		"id": "CRITICAL PATH REQUIRED",
+		"values": [
+			"N/A",
+			"CP1 - LSP/TECH/GSP",
+			"CP2 - LSP/TECH/GSP",
+			"CP3 - TECH/GSP",
+			"CP4 - GSP ONLY",
+			"CP5 - HOSP &#38; ISB",
+			"CP6 - LAUNCH DATE ONLY"
+		]
+	},
+	{
+		"id": "CUTTER TYPE",
+		"values": [
+			"Approved Existing Cutter",
+			"New Cutter",
+			"Multiple",
+			"None"
+		]
+	},
+	{
+		"id": "DATE CODE VISIBILLITY",
+		"values": [
+			"Yes",
+			"No"
+		]
+	},
+	{
+		"id": "DESIGN ROUTE",
+		"values": [
+			"None",
+			"Autumn",
+			"Burns Night",
+			"Chinese New Year",
+			"Christmas Classic",
+			"Christmas Others (bespoke)",
+			"Colin Caterpillar",
+			"Cook With M&#38;S",
+			"Core",
+			"Divali",
+			"Easter",
+			"Father's Day",
+			"Grill",
+			"Halloween",
+			"Hogmany",
+			"Jewish New Year",
+			"M&#38;S Balanced For You",
+			"M&#38;S Collection",
+			"M&#38;S Count On Us",
+			"M&#38;S Gastropub",
+			"M&#38;S Hidden Veggies",
+			"M&#38;S Made Without",
+			"M&#38;S Organic",
+			"M&#38;S Our Best Ever",
+			"M&#38;S Percy Pig",
+			"M&#38;S Plant Kitchen",
+			"M&#38;S Select Farms",
+			"M&#38;S Taste Buds",
+			"Mother's Day",
+			"Pancake Day",
+			"Pride",
+			"Ramadan &#38; Eid",
+			"Spring",
+			"St Davids Day",
+			"The Healthy One",
+			"Valentine's Day"
+		]
+	},
+	{
+		"id": "DISPLAY GROUP",
+		"values": [
+			"Ambient Celebration SE1B",
+			"Biscuits BC1A",
+			"Cards &#38; Wrap GM1A",
+			"Cereals &#38; Hot Bevs GR1F",
+			"Confectionery BC1B",
+			"Healthy Snacking BC1H",
+			"Homebaking GR1A",
+			"Pantry GR1G",
+			"Personal Care &#38; Baby HH1P",
+			"Household &#38; Pet HH1H",
+			"Savouries SS1A",
+			"World Foods GR1D",
+			"Halal GR1H",
+			"Kosher GR1K ",
+			"International Brands - Groceries IN1C",
+			"International Brands - Gifting IN1B",
+			"Beers BW1M",
+			"Fine Wine BW1G",
+			"Focal Bay BW1S",
+			"Low &#38; No BW1U",
+			"Red Wine BW1A",
+			"Rose &#38; Sparkling BW1F",
+			"Spirits BW1N",
+			"Soft Drinks SD1A",
+			"White Wine BW1E",
+			"Hot &#38; Chilled Desserts DS1A",
+			"FOTM Drinks FT1K",
+			"FOTM Sandwiches, Rolls &#38; Wraps FT1H",
+			"FOTM Salads, Sushi &#38; Accomps FT1S",
+			"FOTM Feature Space FT1P",
+			"Gastro TR1B",
+			"Healthy &#38; Kids HE1A",
+			"Indian GL1F",
+			"Italian Meals GL1A",
+			"Made Without - Chilled MA1A",
+			"Oriental &#38; Taste GL1H",
+			"Pasta Shop GL1D",
+			"Pizza &#38; Snacking GL1E",
+			"Plant Kitchen HE1B",
+			"Trad Accomps TR1D",
+			"Traditional Meals TR1C",
+			"Juice JU1A",
+			"Seasonal Desserts DS2A",
+			"Seasonal Plant Kitchen HE2B",
+			"Seasonal Trad Accomps TR2D",
+			"Ambient Charcuterie DE1F",
+			"Bacon, Sausage &#38; Grill ME1G",
+			"Beef, Pork &#38; Lamb ME1H",
+			"Bread &#38; Morning Goods BA1F",
+			"Butters, Creams &#38; Spreads DA1B",
+			"Cake BA1C",
+			"Chilled Charcuterie DE1G",
+			"Cheese DA1A",
+			"Coated Fish FS1B",
+			"Coated Poultry PY1B",
+			"Fish FS1A",
+			"Fish Deli FS1C",
+			"Fresh Poultry &#38; Accomps PY1A",
+			"In Store Bakery IB1A",
+			"Made Without - Ambient MW1A",
+			"Meat Joints ME1E",
+			"Milk DA1C",
+			"Mod Deli DE1C",
+			"Protein Portions ME1D",
+			"Roast Poultry DE1D",
+			"Savoury Pastry DE1B",
+			"Sliced Meats DE1E",
+			"Value Added Protein ME1F",
+			"Wet Fish FS1A",
+			"Seasonal - Party Food DE2A",
+			"Seasonal - Savoury Pastry DE2B",
+			"Seasonal - Sliced Meats DE2E",
+			"Seasonal Fish Deli FS2C",
+			"Seasonal Cheese DA2A",
+			"Seasonal Joints ME2E",
+			"Seasonal Poultry PY2A",
+			"Seasonal Creams DA2B",
+			"Seasonal Stuffings &#38; Garnishes PY2C",
+			"Yogurts DS1C",
+			"Salad Shop SA1H",
+			"Chilled Veg VE1B",
+			"Stirfry VE1H",
+			"Dried Fruit &#38; Nut FR1D",
+			"Flowers FP1A",
+			"Frozen FF1D",
+			"Fruit FR1A",
+			"Indoor Plants FP1B",
+			"Outdoor Plants FP1C",
+			"Potatoes VE1A",
+			"Prepared Fruit FR1C",
+			"Prepared Salads SA1C",
+			"Prepared Vegetables VE1C",
+			"Side Salads SA1G",
+			"Seasonal Flowers FP2A",
+			"Seasonal Plants FP2B",
+			"Seasonal Fruit FR2A",
+			"Seasonal Dried Fruit &#38; Nuts FR2D",
+			"Seasonal Salad &#38; Veg VE2X"
+		]
+	},
+	{
+		"id": "DIRECT OR INDIRECT SUPPLY CHAIN",
+		"values": [
+			"Direct - M&#38;S",
+			"Direct - Ocado",
+			"Direct - M&#38;S &#38; Ocado",
+			"Indirect - Ocado",
+			"N/A"
+		]
+	},
+	{
+		"id": "FEASIBILITY",
+		"values": [
+			"Critical",
+			"High",
+			"Medium",
+			"Low"
+		]
+	},
+	{
+		"id": "FIND PRODUCT FILE TYPE",
+		"values": [
+			"Parent",
+			"Standard",
+			"Existing"
+		]
+	},
+	{
+		"id": "FIXED BUY",
+		"values": [
+			"Yes – Seasonal/Event",
+			"Yes - AYR",
+			"Yes - Commodity",
+			"No"
+		]
+	},
+	{
+		"id": "FR VAT CODE",
+		"values": [
+			"Code 1 - 20%",
+			"Code 2 - 5.5%",
+			"Code 3 - 10%",
+			"Code 4 - 10% (FOTM Sandwiches and wraps)"
+		]
+	},
+	{
+		"id": "FTO OR EBO",
+		"values": [
+			"Yes - EBO",
+			"Yes - FTO",
+			"No"
+		]
+	},
+	{
+		"id": "HERO PRODUCT",
+		"values": [
+			"Hero",
+			"Zeitgeist",
+			"N/A"
+		]
+	},
+	{
+		"id": "HFSS",
+		"values": [
+			"Yes",
+			"No"
+		]
+	},
+	{
+		"id": "IRISH VAT CODE",
+		"values": [
+			"0%",
+			"9%",
+			"13.5%",
+			"23%",
+			"mixed (0-23%)"
+		]
+	},
+	{
+		"id": "LAUNCH PHASE",
+		"values": [
+			"P01 APR 2020",
+			"P02 MAY 2020",
+			"P03 JUN 2020",
+			"P04 JUL 2020",
+			"P05 AUG 2020",
+			"P06 SEP 2020",
+			"P07 OCT 2020",
+			"P08 NOV 2020",
+			"P09 DEC 2020",
+			"P10 JAN 2021",
+			"P11 FEB 2021",
+			"P12 MAR 2021",
+			"P01 APR 2021",
+			"P02 MAY 2021",
+			"P03 JUN 2021",
+			"P04 JUL 2021",
+			"P05 AUG 2021",
+			"P06 SEP 2021",
+			"P07 OCT 2021",
+			"P08 NOV 2021",
+			"P09 DEC 2021",
+			"P10 JAN 2022",
+			"P11 FEB 2022",
+			"P12 MAR 2022"
+		]
+	},
+	{
+		"id": "LEGAL STATUS",
+		"values": [
+			"GB (Eng, Scot, Wales)",
+			"GB, EU &#38; NI",
+			"GB &#38; NI"
+		]
+	},
+	{
+		"id": "MASTER VENDOR",
+		"values": [
+			"Yes",
+			"No"
+		]
+	},
+	{
+		"id": "MCR",
+		"values": [
+			"Yes",
+			"No"
+		]
+	},
+	{
+		"id": "MULTIPLE ARTWORKS",
+		"values": [
+			"Yes",
+			"No"
+		]
+	},
+	{
+		"id": "MULTIPLE COUNTRY OF ORIGINS",
+		"values": [
+			"Yes",
+			"No"
+		]
+	},
+	{
+		"id": "NEW SUPPLIER",
+		"values": [
+			"Yes",
+			"No"
+		]
+	},
+	{
+		"id": "ORIENTATION",
+		"values": [
+			"Landscape",
+			"Portrait",
+			"Square",
+			"Round"
+		]
+	},
+	{
+		"id": "PHOTO REQUIRED",
+		"values": [
+			"Yes",
+			"No",
+			"Existing"
+		]
+	},
+	{
+		"id": "PRICE PER UOM",
+		"values": [
+			"per kg",
+			"per litre",
+			"per 10g",
+			"per 100g",
+			"per 10ml",
+			"per 100ml",
+			"per 750ml",
+			"Single item e.g. one bread loaf"
+		]
+	},
+	{
+		"id": "PRICE STICKERED PRODUCTS",
+		"values": [
+			"Yes",
+			"No"
+		]
+	},
+	{
+		"id": "PRICING POLICY",
+		"values": [
+			"Preferred price point only",
+			"Not higher than Waitrose price",
+			"Bigger pack better value maintained ",
+			"Align to family group/rest of range pricing architecture"
+		]
+	},
+	{
+		"id": "PRINTED PACKAGING TYPE",
+		"values": [
+			"Multiple",
+			"Bag",
+			"Board",
+			"Booklet",
+			"Bottle",
+			"Box",
+			"Can",
+			"Cap",
+			"Card",
+			"Carton (drinks only)",
+			"Collar",
+			"Film",
+			"Foil",
+			"FSDU (Food Sales Display Unit)",
+			"Header / Backing Card",
+			"In Mould Label",
+			"Insert",
+			"Jar",
+			"Label - Other",
+			"Label - C-Wrap",
+			"Label - Linerless",
+			"Label - Wrap Around",
+			"Label - Wineglass",
+			"Lid",
+			"Net",
+			"Outercase",
+			"Pad",
+			"Pot",
+			"Pouch",
+			"Ribbon",
+			"Sachet",
+			"Skewer",
+			"Sleeve",
+			"Stick",
+			"Straight on Tray (SOT)",
+			"Stabber",
+			"Tag",
+			"Tin",
+			"Top Web",
+			"Tray",
+			"Tub",
+			"Tube",
+			"U-card",
+			"Wrap"
+		]
+	},
+	{
+		"id": "PRINTER TYPE",
+		"values": [
+			"A list",
+			"SMP",
+			"None"
+		]
+	},
+	{
+		"id": "PRODUCT TYPE",
+		"values": [
+			"New Product",
+			"Upgrade",
+			"Re-presentation",
+			"Size Variant",
+			"Existing",
+			"Eliminate"
+		]
+	},
+	{
+		"id": "PRODUCT SOLD IN",
+		"values": [
+			"Online Only - Ocado",
+			"Online &#38; In store",
+			"In Store only - M&#38;S",
+			"In Store M&#38;S and TBC Ocado"
+		]
+	},
+	{
+		"id": "PROJECT STATUS",
+		"values": [
+			"Draft",
+			"Creative Stage",
+			"Post-Creative Gate",
+			"Finalise Stage",
+			"Post-Finalise Gate",
+			"Archived"
+		]
+	},
+	{
+		"id": "PROJECT TYPE",
+		"values": [
+			"Rolling",
+			"Standard NPD"
+		]
+	},
+	{
+		"id": "PROMO FOR LAUNCH",
+		"values": [
+			"Yes",
+			"No"
+		]
+	},
+	{
+		"id": "RANGE",
+		"values": [
+			"Core",
+			"Branded",
+			"FTO",
+			"GBF",
+			"F07C FOTM Bakery Cake",
+			"F07C FOTM Confectionery",
+			"F07C FOTM Dairy",
+			"F07C FOTM Desserts",
+			"F07C FOTM Drinks",
+			"F07C FOTM Fruit",
+			"F07C FOTM Fruit &#38; Nut",
+			"F07C FOTM Homecare",
+			"F07C FOTM Meals",
+			"F07C FOTM Salads",
+			"F07C FOTM Savouries",
+			"F14A Flowers",
+			"F14A Flowers GBF",
+			"F14A Plants",
+			"F14A Plants GBF",
+			"F15C Basic Veg",
+			"F15c Vegetables",
+			"F16C Basic Salads",
+			"F16C Salads"
+		]
+	},
+	{
+		"id": "REASONS FOR CHANGE",
+		"values": [
+			"N",
+			"NE",
+			"SV",
+			"UG",
+			"RP",
+			"RI",
+			"NSupp",
+			"NSC",
+			"Minor",
+			"Elims",
+			"Child File"
+		]
+	},
+	{
+		"id": "ROUTE TO MARKET",
+		"values": [
+			"Standard",
+			"Sourced",
+			"Supplier Led"
+		]
+	},
+	{
+		"id": "SECONDARY DESIGN ROUTE",
+		"values": [
+			"None",
+			"Cook With M&#38;S",
+			"M&#38;S Balanced For You",
+			"M&#38;S Collection",
+			"M&#38;S Count On Us",
+			"M&#38;S Gastropub",
+			"M&#38;S Hidden Veggies",
+			"M&#38;S Made Without",
+			"M&#38;S Organic",
+			"M&#38;S Our Best Ever",
+			"M&#38;S Percy Pig",
+			"M&#38;S Plant Kitchen",
+			"M&#38;S Select Farms",
+			"M&#38;S Taste Buds"
+		]
+	},
+	{
+		"id": "SMP APPROVED",
+		"values": [
+			"Yes",
+			"No"
+		]
+	},
+	{
+		"id": "SOLD IN FRANCE",
+		"values": [
+			"UK only",
+			"UK only + IFG",
+			"UK + France (2in1)",
+			"UK + France + Bespoke",
+			"UK + France + Oversticker",
+			"UK + France + IFG",
+			"France New Bespoke",
+			"France Existing Bespoke",
+			"International New IFG",
+			"International Existing IFG"
+		]
+	},
+	{
+		"id": "SOLD IN OCADO",
+		"values": [
+			"Yes",
+			"No"
+		]
+	},
+	{
+		"id": "SPS CERTIFICATION TYPE REQUIRED FOR EXPORT",
+		"values": [
+			"EHC - VET",
+			"EHC - Non Vet",
+			"EHC - Composite",
+			"Non SPS",
+			"PA - BCP Check",
+			"PA - Commo",
+			"PHYTO - ROOTED",
+			"PHYTO",
+			"HIGH RISK FOOD OF NON ANIMAL ORIGIN",
+			"ENGLISH WINE",
+			"EU WINE",
+			"NON-EU WINE",
+			"EHC - CANNED PET FOOD",
+			"EHC - PET FOOD OTHER THAN CANNED",
+			"FOOD CONTAINING MATERIAL",
+			"NON FOOD"
+		]
+	},
+	{
+		"id": "SRP REQUIRED",
+		"values": [
+			"Yes",
+			"No"
+		]
+	},
+	{
+		"id": "STATUS",
+		"values": [
+			"In Progress",
+			"Go",
+			"No Go",
+			"Hold",
+			"Recycle",
+			"Archived"
+		]
+	},
+	{
+		"id": "STOCK LOSS RISK",
+		"values": [
+			"Pharmaceutical Product",
+			"Homecare Product",
+			"Product will be priced above £15",
+			"Best Tier Product e.g. Manuka Honey",
+			"N/A"
+		]
+	},
+	{
+		"id": "STRATEGIC CLASSIFICATION",
+		"values": [
+			"Health",
+			"Christmas",
+			"Events",
+			"Heroes",
+			"Freshness &#38; Produce",
+			"Disruption in Convenience",
+			"Cook With",
+			"BAU",
+			"Ocado",
+			"Branded"
+		]
+	},
+	{
+		"id": "SUSTAINABILITY",
+		"values": [
+			"100% British Chicken",
+			"Active Health / Enriched Products",
+			"AISE Charter for Sustainable Cleaning (for homecare products only)",
+			"Attribute Type Attribute Definition Application / Use Owner",
+			"Balanced For You (BFY)",
+			"BEE (Black Economic Empowerment)",
+			"British Beef (if previously sourced from countries at risk of deforestation)",
+			"BUAV (for homecare only)",
+			"Carbon Neutral",
+			"Compostable Biobased Polymers (OK Compost HOME Approved)",
+			"Count on Us (COU)",
+			"Eat Well",
+			"Fairtrade",
+			"Food waste reduction (through Packaging or Processing)",
+			"Free Range Eggs (where >10% of the product)",
+			"Free range protein",
+			"FSC Certified Cork",
+			"FSC Certified product (not packaging)",
+			"Lochmuir Salmon",
+			"Low Alcohol (under 4%)",
+			"Low Sugar (or No Sugar alternatives)",
+			"Lower Alcohol (4% - 11%)",
+			"Member of an M&#38;S-approved Sustainable Wine Scheme",
+			"Milk Pledge Plus (inc. Dairy Health &#38; Welfare)",
+			"MPS-A (for flowers &#38; plants)",
+			"No alcohol (adult drinks)",
+			"No net tuna",
+			"Oakham Chicken",
+			"Organic",
+			"Outdoor Bred",
+			"Packaging from M&#38;S Model Forest",
+			"Portion Control",
+			"Rainforest Alliance",
+			"Recycled Content from an M&#38;S Recycling Partnership",
+			"Recycled Product Content (not packaging)",
+			"Reduced fat / Sugar / Salt / Saturated Fat",
+			"Responsibly Caught Wild Fish",
+			"Responsibly farmed fish",
+			"Rope Grown Mussels",
+			"Significant Carbon footprint reduction (>25%)",
+			"Significant carbon footprint reduction through bulk shipping of wine",
+			"Significant packaging reduction (>25%)",
+			"Supporting local communities",
+			"Sustainable certified cocoa",
+			"Sustainable Flower Harvesting",
+			"Sustainable palm oil (RSPO)",
+			"Sustainable soy (RTRS)",
+			"Validated by M&#38;S as a Silver or Gold factory on the How We Do Business scorecard",
+			"Vegetarian",
+			"Waterless Direct Delivery Flowers"
+		]
+	},
+	{
+		"id": "TIER",
+		"values": [
+			"Good",
+			"Better",
+			"Best"
+		]
+	},
+	{
+		"id": "TRAVEL TEST REQUIRED",
+		"values": [
+			"Yes (M&#38;S &#38; Ocado)",
+			"Yes (Ocado only)",
+			"No"
+		]
+	},
+	{
+		"id": "VAT - BUYING TAX INDICATOR",
+		"values": [
+			"As per existing",
+			"Code 0 = 0%",
+			"Code 1 = 20%",
+			"Code 2 = 5%",
+			"Code 9 = Mixed (add % in VAT comment)"
+		]
+	},
+	{
+		"id": "VAT - SELLING TAX INDICATOR",
+		"values": [
+			"As per existing",
+			"Code 0 = 0%",
+			"Code 1 = 20%",
+			"Code 2 = 5%",
+			"Code 9 = Mixed (add % in VAT comment)"
+		]
+	},
+	{
+		"id": "UNIT OF MEASURE",
+		"values": [
+			"g",
+			"kg",
+			"ltr",
+			"ml",
+			"cl",
+			"cm",
+			"m",
+			"Other",
+			"N/A"
+		]
+	},
+	{
+		"id": "VAT TEAM CONFIRMED",
+		"values": [
+			"Yes",
+			"No"
+		]
+	},
+	{
+		"id": "PAL PROJECT UPDATE ACCESS",
+		"values": [
+			"projectManager",
+			"productDeveloper"
+		]
+	},
+	{
+		"id": "PAL NOTIFICATION CONFIGURATION",
+		"mapValues": [
+			{
+				"trigger" : "AddProjectUserRoles",
+				"projectUsers" : [
+					"productDeveloper"
+				]
+			},
+			{
+				"trigger" : "UpdateProjectStatusCreativeStageUserRoles",
+				"projectUsers" : [
+					"productDeveloper","projectManager","buyer","foodTechnologist"
+				],
+				"productUsers" : [
+					"productDeveloper","projectManager","buyer","foodTechnologist","supplier"
+				]
+			},
+			{
+				"trigger" : "UpdateProjectStatusPostCreativeGateUserRoles",
+				"projectUsers" : [
+					"international"
+				],
+				"groupUsers" : [
+					"vat","ocado"
+				]
+			},
+			{
+				"trigger" : "UpdateProjectStatusFinaliseStageUserRoles",
+				"projectUsers" : [
+					"commercialPlanner"
+				],
+				"groupUsers" : [
+					"ashbury","gsp"
+				]
+			},
+			{
+				"trigger" : "UpdateProjectStatusPostFinaliseGateUserRoles",
+				"projectUsers" : [
+					"productDeveloper","buyer","foodTechnologist","international"
+				],
+				"groupUsers" : [
+					"ocado","gsp"
+				]
+			},
+			{
+				"trigger" : "AddProductUserRoles",
+				"productUsers" : [
+					"productDeveloper","buyer","foodTechnologist","supplier"
+				],
+				"projectUsers" : [
+					"projectManager","international"
+				],
+				"groupUsers" : [
+					"ocado"
+				]
+			},
+			{
+				"trigger" : "UpdateProductStatusUserRoles",
+				"productUsers" : [
+					"productDeveloper","buyer","foodTechnologist"
+				],
+				"projectUsers" : [
+					"projectManager","international"
+				],
+				"groupUsers" : [
+					"ocado"
+				]
+			}
+		]
+	},
+	{
+		"id": "PAL PRODUCT DUPLICATE ACCESS",
+		"values": [
+			"projectManager",
+			"productDeveloper"
+		]
+	}
+]

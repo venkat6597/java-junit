@@ -1,0 +1,396 @@
+{
+	"request": {
+		"financialYear": [
+			"2020-2021"
+		],
+		"searchText": "abc",
+		"fromDate": "10/11/2020",
+		"toDate": "11/12/2021",
+		"projectType": [
+			"Seasonal"
+		],
+		"userRole": "projectManager"
+		
+	},
+	"response": {
+		"data": [
+			{
+				"id": "6194cb10b2cbd14e3d8e8e59",
+				"templateName": "Standard",
+				"templateId": "611d11f7cde71e991b217579",
+				"personnel": {
+					"internal": [
+						{
+							"role": "projectManager"
+						},
+						{
+							"role": "productDeveloper"
+						},
+						{
+							"role": "foodTechnologist"
+						},
+						{
+							"role": "buyer"
+						}
+					]
+				},
+				"information": {
+					"id": "6194cb10b2cbd14e3d8e8e59",
+					"projectName": "Christmas sale",
+					"templateId": "611d11f7cde71e991b217579",
+					"templateName": "Standard",
+					"status": "Active - Pre-Creative Seal",
+					"projectType": "Rolling",
+					"financialYear": "2019-2020",
+					"projectCompletionDate": "2021-11-15T00:00:00",
+					"comments": "test"
+				}
+			},
+			{
+				"id": "6194cb32b2cbd14e3d8e8e5a",
+				"templateName": "Standard",
+				"templateId": "611d11f7cde71e991b217579",
+				"personnel": {
+					"internal": [
+						{
+							"role": "projectManager"
+						},
+						{
+							"role": "productDeveloper"
+						},
+						{
+							"role": "foodTechnologist"
+						},
+						{
+							"role": "buyer"
+						}
+					]
+				},
+				"information": {
+					"id": "6194cb32b2cbd14e3d8e8e5a",
+					"projectName": "new pal project",
+					"templateId": "611d11f7cde71e991b217579",
+					"templateName": "Standard",
+					"status": "Active - Pre-Creative Seal",
+					"projectType": "Seasonal",
+					"financialYear": "2019-2020",
+					"projectCompletionDate": "2021-11-22T00:00:00",
+					"comments": "test"
+				}
+			}
+		],
+		"exception": null,
+		"status": true
+	},
+	"request2": {
+		"ProjectFilter": {},
+		"userRole": "projectManager"
+	},
+	"palproject": {
+		"id": "60ff64a1476c45bf24a684d4",
+		"projectName": "2021-2022 Christmas Delicatessen",
+		"templateId": "611d11f7cde71e991b217579",
+		"templateName": "Standard",
+		"projectCompletionDate": "2021-09-29T13:24:51.608Z",
+		"financialYear": "2020-2021",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				}
+			]
+		},
+		"status": "Active",
+		"projectType": "Seasonal",
+		"comments": "project details"
+	},
+	"request4": {
+		"financialYear": [
+			"2020-2021"
+		],
+		"fromDate": "10/11/2020",
+		"projectType": [
+			"Seasonal",
+			"projectType2"
+		],
+		"userRole": "projectManager"
+	},
+	"response4": {
+		"data": [
+			{
+				"id": "6194cb10b2cbd14e3d8e8e59",
+				"templateName": "Standard",
+				"templateId": "611d11f7cde71e991b217579",
+				"personnel": {
+					"internal": [
+						{
+							"role": "projectManager"
+						},
+						{
+							"role": "productDeveloper"
+						},
+						{
+							"role": "foodTechnologist"
+						},
+						{
+							"role": "buyer"
+						}
+					]
+				},
+				"information": {
+					"id": "6194cb10b2cbd14e3d8e8e59",
+					"projectName": "Christmas sale",
+					"templateId": "611d11f7cde71e991b217579",
+					"templateName": "Standard",
+					"status": "Active - Pre-Creative Seal",
+					"projectType": "Rolling",
+					"financialYear": "2019-2020",
+					"projectCompletionDate": "11/11/2020",
+					"comments": "test"
+				}
+			}
+		],
+		"exception": null,
+		"status": true
+	},
+	"request5": {
+		"financialYear": [
+			"2020-2021"
+		],
+		"toDate": "11/12/2021",
+		"projectType": [
+			"Seasonal",
+			"projectType2"
+		],
+		"userRole": "projectManager"
+	},
+	"response5": {
+		"data": [
+			{
+				"id": "6194cb10b2cbd14e3d8e8e59",
+				"templateName": "Standard",
+				"templateId": "611d11f7cde71e991b217579",
+				"personnel": {
+					"internal": [
+						{
+							"role": "projectManager"
+						},
+						{
+							"role": "productDeveloper"
+						},
+						{
+							"role": "foodTechnologist"
+						},
+						{
+							"role": "buyer"
+						}
+					]
+				},
+				"information": {
+					"id": "6194cb10b2cbd14e3d8e8e59",
+					"projectName": "Christmas sale",
+					"templateId": "611d11f7cde71e991b217579",
+					"templateName": "Standard",
+					"status": "Active - Pre-Creative Seal",
+					"projectType": "Rolling",
+					"financialYear": "2019-2020",
+					"projectCompletionDate": "10/12/2021",
+					"comments": "test"
+				}
+			}
+		],
+		"exception": null,
+		"status": true
+	},
+	"requestFai": {
+		"filter": {
+			"searchText": "aaaaa"
+		},
+		"userRole": "projectManager"
+	},
+	"requestFromDate": {
+		"fromDate": "01/02/2022",
+		"userRole": "projectManager"
+	},
+	"requestDateProjectType": {
+		"fromDate": "01/02/2022",
+		"projectType": [
+			"Seasonal"
+		],
+		"userRole": "projectManager"
+	},
+	"searchNameRequest": {
+		"searchText": "pal",
+		"userRole": "projectManager"
+	},
+	"requestForNegative": {
+		"searchText": "aaaaaaa",
+		"userRole": "projectManager"
+	},
+	"responseFromDate": {
+		"data": [
+			{
+				"id": "618ea6165952b2dd4453cdd4",
+				"templateName": "Standard",
+				"templateId": "611d11f7cde71e991b217579",
+				"information": {
+					"id": "618ea6165952b2dd4453cdd4",
+					"projectName": "2021-2022 Christmas Delicatessen",
+					"templateId": "611d11f7cde71e991b217579",
+					"templateName": "Standard",
+					"status": "Active - Pre-Creative Seal",
+					"projectType": "Seasonal",
+					"financialYear": "@#$% ",
+					"projectCompletionDate": "2022-03-28T00:00:00",
+					"comments": "asd\nasd\n"
+				}
+			}
+		],
+		"exception": null,
+		"status": true
+	},
+	"requestCombinationFilter": {
+		"financialYear": [
+			"2021-2022"
+		],
+		"projectType": [
+			"Seasonal"
+		],
+		"userRole": "projectManager"
+	},
+	"requestMultipleFilter": {
+		"financialYear": [
+			"1999-2022"
+		],
+		"projectType": [
+			"Seasonal",
+			"Rolling"
+		],
+		"userRole": "projectManager"
+	},
+	"responseFilter1": {
+		"projectName": "test",
+		"templateId": "611d11f7cde71e991b217579",
+		"templateName": "Standard",
+		"status": "Archived",
+		"projectType": "Seasonal",
+		"financialYear": "2021-2022",
+		"comments": "asd\nasd\n",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				}
+			]
+		}
+	},
+	"responseFilter2": {
+		"projectName": "2021-22 Christmas Hampers",
+		"templateId": "611d11f7cde71e991b217579",
+		"templateName": "Standard",
+		"status": "Active - Pre-Creative Seal",
+		"projectType": "Seasonal",
+		"financialYear": "2021-2022",
+		"comments": "Sample project for demo",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				},
+				{
+					"role": "foodTechnologist",
+					"users": ["foodTechnologist@xyz.com"]
+				},
+				{
+					"role": "buyer",
+					"users": ["buyer@xyz.com"]
+				}
+			]
+		}
+	},
+	"responseFilter3": {
+		"projectName": "Testing PAL - Paused - 10",
+		"templateId": "611d11f7cde71e991b217579",
+		"templateName": "Standard",
+		"status": "Active - Pre-Creative Seal",
+		"projectType": "Seasonal",
+		"financialYear": "2021-2022",
+		"comments": "This is a test PAL \nProject has been postponed TBD",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				},
+				{
+					"role": "foodTechnologist",
+					"users": ["foodTechnologist@xyz.com"]
+				},
+				{
+					"role": "buyer",
+					"users": ["buyer@xyz.com"]
+				}
+			]
+		}
+	},
+	"supplierRequest1": {
+		"userRole": "supplier"
+	},
+	"supplierPalProduct1": {
+		"id": "61357305cde71e991bd8eaab",
+		"projectId": "60ff64a1476c45bf24a684d4"
+	},
+	"supplierResponseFilter1": {
+		"data": [
+			{
+				"id": "60ff64a1476c45bf24a684d4",
+				"templateName": "Standard",
+				"templateId": "611d11f7cde71e991b217579",
+				"information": {
+					"id": "60ff64a1476c45bf24a684d4",
+					"projectName": "2021-2022 Christmas Delicatessen",
+					"templateId": "611d11f7cde71e991b217579",
+					"templateName": "Standard",
+					"status": "Active",
+					"projectType": "Seasonal",
+					"financialYear": "2020-2021",
+					"projectCompletionDate": "2021-09-29T13:24:51.608",
+					"comments": "project details"
+				}
+			}
+		],
+		"exception": null,
+		"status": true
+	},
+	"requestValidUserFilter": {
+		"projectManager": ["projectManager@xyz.com"],
+		"userRole": "projectManager"
+	},
+	"requestInValidUserFilter": {
+		"projectManager": ["projectManager1@xyz.com"],
+		"userRole": "projectManager"
+	},
+	"requestMultipleUserFilter": {
+		"projectManager": ["projectManager@xyz.com","projectManager1@xyz.com"],
+		"userRole": "projectManager"
+	}
+}

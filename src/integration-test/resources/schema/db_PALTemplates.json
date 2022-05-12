@@ -1,0 +1,1809 @@
+{
+	"id": "611d11f7cde71e991b217579",
+	"templateName": "Standard",
+	"sections": [{
+		"sectionName": "overview",
+		"sectionLabel": "Overview",
+		"sectionFields": [{
+			"id": "projectName",
+			"label": "PROJECT NAME",
+			"type": "input",
+			"format": "text",
+			"creativeGate": true,
+			"disabled": true,
+			"owner": "projectManager",
+			"mandatory": true,
+			"errorMessages": {
+				"requiredMessage": "PROJECT NAME is mandatory"
+			},
+			"readable": ["supplier"]
+		},
+			{
+				"id": "launchPhase",
+				"label": "LAUNCH PHASE",
+				"type": "select",
+				"creativeGate": true,
+				"disabled": false,
+				"owner": "buyer",
+				"mandatory": true,
+				"optionsRef": {
+					"id": "LAUNCH PHASE",
+					"values": ["P01 APR 2020", "P02 MAY 2020", "P03 JUN 2020", "P04 JUL 2020", "P05 AUG 2020", "P06 SEP 2020", "P07 OCT 2020", "P08 NOV 2020"]
+				},
+				"editable": ["All"],
+				"readable": ["supplier"]
+			},
+			{
+				"id": "inDepotDate",
+				"label": "IN-DEPOT DATE",
+				"type": "date",
+				"creativeGate": false,
+				"disabled": false,
+				"owner": "buyer",
+				"mandatory": true,
+				"minDate": 1,
+				"errorMessages": {
+					"requiredMessage": "IN-DEPOT DATE is mandatory",
+					"minDateMessage": "Enter only future date"
+				},
+				"editable": ["All"]
+			},
+			{
+				"id": "status",
+				"label": "STATUS",
+				"type": "select",
+				"creativeGate": true,
+				"disabled": false,
+				"mandatory": true,
+				"owner": "projectManager",
+				"optionsRef": {
+					"id": "STATUS",
+					"values": ["In Progress", "Go", "No Go", "Hold", "Recycle", "Archived"]
+				},
+				"editable": ["projectManager"]
+			},
+			{
+				"id": "criticalPathRequired",
+				"label": "CRITICAL PATH REQUIRED",
+				"type": "select",
+				"creativeGate": true,
+				"disabled": false,
+				"owner": "projectManager",
+				"mandatory": true,
+				"optionsRef": {
+					"id": "CRITICAL PATH REQUIRED",
+					"values": ["N/A", "CP1 - LSP/TECH/GSP", "CP2 - LSP/TECH/GSP", "CP3 - TECH/GSP", "CP4 - GSP ONLY", "CP5 - HOSP & ISB", "CP6 - LAUNCH DATE ONLY"]
+				},
+				"editable": ["All"]
+			},
+			{
+				"id": "reasonsForChange",
+				"label": "REASONS FOR CHANGE",
+				"type": "select",
+				"creativeGate": true,
+				"disabled": false,
+				"owner": "productDeveloper",
+				"mandatory": true,
+				"optionsRef": {
+					"id": "REASONS FOR CHANGE",
+					"values": ["N", "NE", "SV", "UG", "RP", "RI", "NSupp", "NSC", "Minor", "Elims", "Child File"]
+				},
+				"editable": ["All", "supplier"],
+				"readable": ["supplier"]
+			}
+		]
+	},
+		{
+			"sectionName": "criticalPath",
+			"sectionLabel": "Critical Path",
+			"sectionFields": [{
+				"id": "ftpDate",
+				"label": "FTP Date",
+				"type": "date",
+				"creativeGate": true,
+				"disabled": false,
+				"owner": "productDeveloper",
+				"mandatory": true,
+				"errorMessages": {
+					"requiredMessage": "FTP DATE is mandatory",
+					"minDateMessage": "Enter only future date"
+				},
+				"minDate": 1,
+				"editable": ["All", "supplier"],
+				"readable": ["supplier"],
+				"scripts": ["batonHandover"]
+			},
+				{
+					"id": "batonHandover",
+					"label": "BATON HANDOVER",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": true,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"editable": ["All"],
+					"scripts": ["designConceptHandover", "finaliseGate"]
+				},
+				{
+					"id": "designConceptHandover",
+					"label": "DESIGN CONCEPT HANDOVER",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": true,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"editable": ["All"]
+
+				},
+				{
+					"id": "finaliseGate",
+					"label": "FINALISE GATE",
+					"type": "date",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"errorMessages": {
+						"requiredMessage": "FINALISE GATE is mandatory",
+						"minDateMessage": "Enter only future date"
+					},
+					"mandatory": true,
+					"minDate": 1,
+					"editable": ["All"],
+					"readable": ["supplier"]
+				}
+			]
+		},
+		{
+			"sectionName": "productInformation",
+			"sectionLabel": "Product Information",
+			"sectionFields": [{
+				"id": "productTitle",
+				"label": "PRODUCT TITLE",
+				"type": "input",
+				"format": "text",
+				"creativeGate": true,
+				"disabled": false,
+				"owner": "productDeveloper",
+				"mandatory": true,
+				"errorMessages": {
+					"requiredMessage": "PRODUCT TITLE is mandatory",
+					"patternMessage": "Enter maximum 5 words without symbols"
+				},
+				"pattern": "^[^\\s]+([a-zA-Z0-9]*\\s*){0,5}",
+				"editable": ["productDeveloper"],
+				"readable": ["supplier"]
+			},
+				{
+					"id": "productSubTitle",
+					"label": "PRODUCT SUBTITLE",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"errorMessages": {
+						"requiredMessage": "PRODUCT SUBTITLE is mandatory",
+						"patternMessage": "Enter maximum 15 words only"
+					},
+					"mandatory": true,
+					"pattern": "^[^\\s]+(\\w*\\s*[^\\s]+){0,14}",
+					"editable": ["productDeveloper", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "upc",
+					"label": "UPC",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "commercialPlanner",
+					"mandatory": true,
+					"errorMessages": {
+						"requiredMessage": "UPC is mandatory",
+						"patternMessage": "Enter numerical values only"
+					},
+					"pattern": "[0-9]+",
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "category",
+					"label": "CATEGORY",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "buyer",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "CATEGORY",
+						"values": ["F01C Poultry", "F02F Frozen", "F03C Global Meal Sol", "F04C Delicatessen", "F05C Cook"]
+					},
+					"editable": ["All"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "productGroupCode",
+					"label": "PRODUCT GROUP CODE",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "buyer",
+					"mandatory": true,
+					"errorMessages": {
+						"requiredMessage": "PRODUCT GROUP CODE is mandatory"
+					},
+					"editable": ["All"]
+				},
+				{
+					"id": "range",
+					"label": "RANGE",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "projectManager",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "RANGE",
+						"values": ["Core", "Branded", "FTO", "GBF"]
+					},
+					"editable": ["All"]
+				},
+				{
+					"id": "subRange",
+					"label": "SUB-RANGE",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"errorMessages": {
+						"requiredMessage": "SUB-RANGE is mandatory"
+					},
+					"editable": ["All"]
+				},
+				{
+					"id": "productType",
+					"label": "PRODUCT TYPE",
+					"type": "select",
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "PRODUCT TYPE",
+						"values": ["New Product", "Upgrade", "Re-presentation", "Size Variant", "Existing", "Eliminate"]
+					},
+					"editable": ["All"]
+				},
+				{
+					"id": "sapTitle",
+					"label": "SAP TITLE",
+					"type": "input",
+					"format": "text",
+					"disabled": false,
+					"owner": "foodCentralSupport",
+					"mandatory": true,
+					"editable": ["All"]
+
+				},
+				{
+					"id": "tier",
+					"label": "TIER",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "TIER",
+						"values": ["Good", "Better", "Best"]
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "productComments",
+					"label": "COMMENTS",
+					"type": "textarea",
+					"format": "text",
+					"creativeGate": false,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "productDeveloper",
+					"editable": ["productDeveloper", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "weightOrVolume",
+					"label": "WEIGHT/VOLUME",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"errorMessages": {
+						"requiredMessage": "WEIGHT/VOLUME is mandatory"
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "unitOfMeasure",
+					"label": "UNIT OF MEASURE",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "UNIT OF MEASURE",
+						"values": ["g", "kg", "ltr", "ml", "cl", "cm", "m", "Other", "N/A"]
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "catchweightOrFixedweight",
+					"label": "CATCH WEIGHT/FIXED WEIGHT",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "buyer",
+					"optionsRef": {
+						"id": "CATCHWEIGHT OR FIXEDWEIGHT",
+						"values": ["CatchWeight", "FixedWeight", "N/A"]
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "strategicClassification",
+					"label": "STRATEGIC CLASSIFICATION",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "STRATEGIC CLASSIFICATION",
+						"values": ["Health", "Christmas", "Events", "Heroes", "Freshness & Produce", "Disruption in Convenience", "Cook With", "BAU", "Ocado", "Branded"]
+					},
+					"editable": ["All"]
+				},
+				{
+					"id": "productNeedState",
+					"label": "PRODUCT NEEDSTATE",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"errorMessages": {
+						"requiredMessage": "PRODUCT NEEDSTATE is mandatory"
+					},
+					"editable": ["All"]
+				},
+				{
+					"id": "heroProduct",
+					"label": "HERO PRODUCT",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "HERO PRODUCT",
+						"values": ["Hero", "Zeitgeist", "N/A"]
+					},
+					"editable": ["All"]
+				},
+				{
+					"id": "productQualityStory",
+					"label": "PRODUCT QUALITY STORY",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"errorMessages": {
+						"requiredMessage": "PRODUCT QUALITY STORY is mandatory"
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "routeToMarket",
+					"label": "ROUTE TO MARKET",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "foodTechnologist",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "ROUTE TO MARKET",
+						"values": ["Standard", "Sourced", "Supplier Led"]
+					},
+					"editable": ["All"]
+				},
+				{
+					"id": "sustainability",
+					"label": "PLAN A ATTRIBUTE(S) / SUSTAINABILITY",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "foodTechnologist",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "SUSTAINABILITY",
+						"values": ["100% British Chicken", "Active Health / Enriched Products", "AISE Charter for Sustainable Cleaning (for homecare products only)", "Attribute Type Attribute Definition Application / Use Owner", "Balanced For You (BFY)", "BEE (Black Economic Empowerment)", "British Beef (if previously sourced from countries at risk of deforestation)"]
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "hfss",
+					"label": "HFSS (LOV REQUIRED)",
+					"type": "select",
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "HFSS",
+						"values": ["Yes", "No"]
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				}
+			]
+		},
+		{
+			"sectionName": "technicalInformation",
+			"sectionLabel": "Technical Information",
+			"sectionFields": [{
+				"id": "feasibility",
+				"label": "FEASIBILITY:OVERALL SCORE & LEVEL",
+				"type": "select",
+				"creativeGate": true,
+				"disabled": false,
+				"owner": "foodTechnologist",
+				"optionsRef": {
+					"id": "FEASIBILITY",
+					"values": ["Critical", "High", "Medium", "Low"]
+				},
+				"mandatory": true,
+				"editable": ["All", "supplier"],
+				"readable": ["supplier"]
+			},
+				{
+					"id": "bannedIngredientsForInternational",
+					"label": "BANNED INGREDIENTS FOR INTERNATIONAL",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "foodTechnologist",
+					"optionsRef": {
+						"id": "BANNED INGREDIENTS FOR INTERNATIONAL",
+						"values": ["None", "Alcohol", "BPA", "Pork Derivatives", "Poppy Seeds", "Titanium Dioxide", "Alcohol and Titanium Dioxide", "Alcohol and Pork Derivatives", "BPA and Titanium Dioxide"]
+					},
+					"mandatory": true,
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "productLife",
+					"label": "PRODUCT LIFE (Nights)",
+					"type": "input",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "foodTechnologist",
+					"mandatory": true,
+					"errorMessages": {
+						"requiredMessage": "PRODUCT LIFE (Nights)  is mandatory",
+						"patternMessage": "Enter numerical values only"
+					},
+					"format": "number",
+					"pattern": "[0-9]+",
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "legalStatus",
+					"label": "LEGAL STATUS",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "foodTechnologist",
+					"optionsRef": {
+						"id": "LEGAL STATUS",
+						"values": ["GB (Eng, Scot, Wales)", "GB, EU & NI", "GB & NI"]
+					},
+					"mandatory": true,
+					"editable": ["All"]
+
+				},
+				{
+					"id": "spsCertificationTypeRequiredForExport",
+					"label": "SPS CERTIFICATION TYPE REQUIRED FOR EXPORT",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "foodTechnologist",
+					"optionsRef": {
+						"id": "SPS CERTIFICATION TYPE REQUIRED FOR EXPORT",
+						"values": ["EHC - VET", "EHC - Non Vet", "Non SPS", "PA - BCP Check", "PHYTO", "NON FOOD"]
+					},
+					"mandatory": true,
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "multipleCountryOfOrigins",
+					"label": "MULTIPLE COUNTRY OF ORIGINS",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "foodTechnologist",
+					"optionsRef": {
+						"id": "MULTIPLE COUNTRY OF ORIGINS",
+						"values": ["Yes", "No"]
+					},
+					"mandatory": true,
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "travelTestRequired",
+					"label": "TRAVEL TEST REQUIRED",
+					"type": "select",
+					"disabled": false,
+					"owner": "foodTechnologist",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "TRAVEL TEST REQUIRED",
+						"values": ["Yes (M&S & Ocado)", "Yes (Ocado only)", "No"]
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				}
+			]
+		},
+		{
+			"sectionName": "supplierInformation",
+			"sectionLabel": "Supplier Information",
+			"sectionFields": [{
+				"id": "supplierName",
+				"label": "SUPPLIER NAME (AS DECLARED ON FIND)",
+				"type": "input",
+				"format": "text",
+				"creativeGate": true,
+				"disabled": false,
+				"owner": "productDeveloper",
+				"mandatory": true,
+				"readable": ["supplier"]
+			},
+				{
+					"id": "supplierSiteCode",
+					"label": "SUPPLIER SITE CODE",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "foodTechnologist",
+					"mandatory": true,
+					"editable": ["productDeveloper", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "newSupplier",
+					"label": "NEW SUPPLIER",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "NEW SUPPLIER",
+						"values": ["Yes", "No"]
+					},
+					"editable": ["productDeveloper"]
+
+				}
+			]
+		},
+		{
+			"sectionName": "productFileType",
+			"sectionLabel": "Product File Type",
+			"sectionFields": [{
+				"id": "productFileType",
+				"label": "FIND PRODUCT FILETYPE",
+				"type": "select",
+				"creativeGate": true,
+				"disabled": false,
+				"mandatory": true,
+				"owner": "productDeveloper",
+				"optionsRef": {
+					"id": "FIND PRODUCT FILE TYPE",
+					"values": ["Parent", "Standard", "Existing"]
+				},
+				"editable": ["All", "supplier"],
+				"readable": ["supplier"]
+			}],
+			"subSections": [{
+				"subSectionName": "childProduct",
+				"subSectionLabel": "Child Product",
+				"subSectionFields": [{
+					"id": "childProductTitle",
+					"label": "PRODUCT TITLE",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"errorMessages": {
+						"requiredMessage": "PRODUCT TITLE is mandatory",
+						"patternMessage": "Enter maximum 5 words without symbols"
+					},
+					"pattern": "^[^\\s]+([a-zA-Z0-9]*\\s*){0,5}",
+					"editable": ["productDeveloper"],
+					"readable": ["supplier"]
+				},
+					{
+						"id": "childUpc",
+						"label": "UPC",
+						"type": "input",
+						"format": "number",
+						"creativeGate": true,
+						"disabled": false,
+						"owner": "commercialPlanner",
+						"mandatory": true,
+						"errorMessages": {
+							"requiredMessage": "UPC is mandatory",
+							"patternMessage": "Enter numerical values only"
+						},
+						"pattern": "[0-9]+",
+						"editable": ["All", "supplier"],
+						"readable": ["supplier"]
+					},
+					{
+						"id": "childSupplierName",
+						"label": "SUPPLIER NAME (AS DECLARED ON FIND)",
+						"type": "input",
+						"format": "text",
+						"creativeGate": true,
+						"disabled": false,
+						"owner": "productDeveloper",
+						"mandatory": true,
+						"editable": ["productDeveloper", "supplier"],
+						"readable": ["supplier"]
+					},
+					{
+						"id": "childSupplierSiteCode",
+						"label": "SUPPLIER SITE CODE",
+						"type": "input",
+						"format": "text",
+						"creativeGate": true,
+						"disabled": false,
+						"owner": "foodTechnologist",
+						"mandatory": true,
+						"editable": ["productDeveloper", "supplier"],
+						"readable": ["supplier"]
+					},
+					{
+						"id": "childComments",
+						"label": "COMMENTS",
+						"type": "textarea",
+						"format": "text",
+						"creativeGate": false,
+						"disabled": false,
+						"owner": "productDeveloper",
+						"editable": ["All", "supplier"],
+						"readable": ["supplier"]
+					}
+				]
+			}]
+		},
+		{
+			"sectionName": "commercialSetup",
+			"sectionLabel": "Commercial Set Up",
+			"sectionFields": [{
+				"id": "modelProduct",
+				"label": "MODEL PRODUCT",
+				"type": "input",
+				"format": "text",
+				"creativeGate": true,
+				"disabled": false,
+				"owner": "buyer",
+				"errorMessages": {
+					"requiredMessage": "MODEL PRODUCT is mandatory"
+				},
+				"mandatory": true,
+				"editable": ["All"]
+
+			},
+				{
+					"id": "masterVendor",
+					"label": "MASTER VENDOR",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "buyer",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "MASTER VENDOR",
+						"values": ["Yes", "No"]
+					},
+					"editable": ["productDeveloper"]
+
+				},
+				{
+					"id": "mnsGrossPrice",
+					"label": "GROSS COST PRICE (M&S VOLUME ONLY)",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "buyer",
+					"errorMessages": {
+						"requiredMessage": "GROSS COST PRICE (M&S VOLUME ONLY) is mandatory",
+						"patternMessage": "Enter numerical value with character"
+					},
+					"pattern": "^([0-9]+.[0-9]*)",
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"],
+					"scripts": ["margin", "trayCostValue"]
+				},
+				{
+					"id": "mnsOcadoGrossPrice",
+					"label": "GROSS COST PRICE (M&S CONSIDERING OCADO VOLUMES)",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "buyer",
+					"errorMessages": {
+						"requiredMessage": "GROSS COST PRICE (M&S CONSIDERING OCADO VOLUMES) is mandatory",
+						"patternMessage": "Enter numerical value with character"
+					},
+					"pattern": "^([0-9]+.[0-9]*)",
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "ocadoExworks",
+					"label": "COST PRICE - EX WORKS(OCADO)",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "buyer",
+					"errorMessages": {
+						"requiredMessage": "OCADO EX-WORKS is mandatory",
+						"patternMessage": "Enter numerical value and characters only"
+					},
+					"pattern": "^(\\u00A3[0-9]+.[0-9]*)",
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "agreedCostPriceCurrency",
+					"label": "AGREED COST PRICE CURRENCY",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "buyer",
+					"optionsRef": {
+						"id": "AGREED COST PRICE CURRENCY",
+						"values": ["GBP", "Euro", "USD"]
+					},
+					"editable": ["All"],
+					"scripts": ["margin"]
+				},
+				{
+					"id": "upt",
+					"label": "UPT",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "buyer",
+					"errorMessages": {
+						"requiredMessage": "UPT is mandatory",
+						"patternMessage": "Enter numerical values only"
+					},
+					"mandatory": true,
+					"pattern": "[0-9]+",
+					"scripts": ["traySellingValue", "trayCostValue"],
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "sellingPrice",
+					"label": "SELLING PRICE",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "buyer",
+					"errorMessages": {
+						"requiredMessage": "SELLING PRICE is mandatory",
+						"patternMessage": "Enter numerical value with character"
+					},
+					"pattern": "^([0-9]+.[0-9]*)",
+					"scripts": ["traySellingValue", "margin", "averageWeeklySalesMandS"],
+					"editable": ["All"]
+
+				},
+				{
+					"id": "traySellingValue",
+					"label": "TRAY SELLING VALUE",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": true,
+					"mandatory": true,
+					"owner": "buyer"
+
+				},
+				{
+					"id": "trayCostValue",
+					"label": "TRAY COST VALUE",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": true,
+					"mandatory": true,
+					"owner": "buyer"
+
+				},
+				{
+					"id": "vatBuyingTaxIndicator",
+					"label": "VAT - BUYING TAX INDICATOR",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "buyer",
+					"optionsRef": {
+						"id": "UK VAT - BUYING TAX INDICATOR",
+						"values": ["As per existing", "Code 0 = 0%", "Code 1 = 20%", "Code 2 = 5%", "Code 9 = Mixed (add % in VAT comment)"]
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "vatSellingTaxIndicator",
+					"label": "VAT - SELLING TAX INDICATOR",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "buyer",
+					"optionsRef": {
+						"id": "UK VAT - SELLING TAX INDICATOR",
+						"values": ["As per existing", "Code 0 = 0%", "Code 1 = 20%", "Code 2 = 5%", "Code 9 = Mixed (add % in VAT comment)"]
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "vatTeamConfirmed",
+					"label": "VAT TEAM CONFIRMED",
+					"type": "select",
+					"creativeGate": false,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "buyer",
+					"optionsRef": {
+						"id": "VAT TEAM CONFIRMED",
+						"values": ["Yes", "No"]
+					},
+					"editable": ["All"]
+
+				},
+				{
+					"id": "vatComment",
+					"label": "VAT COMMENT",
+					"type": "input",
+					"format": "text",
+					"creativeGate": false,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "vat",
+					"errorMessages": {
+						"requiredMessage": "VAT COMMENT is mandatory"
+					},
+					"editable": ["All"]
+
+				},
+				{
+					"id": "margin",
+					"label": "MARGIN",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": true,
+					"mandatory": true,
+					"owner": "buyer"
+
+				},
+				{
+					"id": "pricePerX",
+					"label": "PRICE PER X g/kg/ml",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "buyer",
+					"optionsRef": {
+						"id": "PRICE PER UOM",
+						"values": ["per kg", "per litre", "per 10g", "per 100g", "per 10ml", "per 100ml", "per 750ml", "Single item e.g. one bread loaf"]
+					},
+					"editable": ["All"]
+
+				},
+				{
+					"id": "priceStickeredProducts",
+					"label": "PRICE STICKERED PRODUCTS",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "buyer",
+					"optionsRef": {
+						"id": "PRICE STICKERED PRODUCTS",
+						"values": ["Yes", "No"]
+					},
+					"editable": ["All"]
+
+				},
+				{
+					"id": "mpq",
+					"label": "MPQ (MINIMUM PRODUCTION QUANTITY)",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "buyer",
+					"editable": ["All"]
+
+				},
+				{
+					"id": "moq",
+					"label": "MOQ (MINIMUM ORDER QUANTITY) AMBIENT ONLY",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "buyer",
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "fixedBuy",
+					"label": "FIXED BUY",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "buyer",
+					"optionsRef": {
+						"id": "FIXED BUY",
+						"values": ["Yes – Seasonal/Event", "Yes - AYR", "Yes - Commodity", "No"]
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "fixedBuyCommitmentDeadline",
+					"label": "FIXED BUY COMMITMENT DEADLINE",
+					"type": "date",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "buyer",
+					"mandatory": true,
+					"minDate": 1,
+					"errorMessages": {
+						"requiredMessage": "FIXED BUY COMMITMENT DEADLINE is mandatory",
+						"minDateMessage": "Enter only future date"
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "maximumVolumeAvailable",
+					"label": "MAXIMUM VOLUME AVAILABLE",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "buyer",
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "promoForLaunch",
+					"label": "PROMO FOR LAUNCH",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "buyer",
+					"optionsRef": {
+						"id": "PROMO FOR LAUNCH",
+						"values": ["Yes", "No"]
+					},
+					"mandatory": true,
+					"editable": ["All"]
+
+				},
+				{
+					"id": "pricingPolicy",
+					"label": "PRICING POLICY",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "buyer",
+					"optionsRef": {
+						"id": "PRICING POLICY",
+						"values": ["Preferred price point only", "Not higher than Waitrose price", "Bigger pack better value maintained ", "Align to family group/rest of range pricing architecture"]
+					},
+					"mandatory": true,
+					"editable": ["All"]
+
+				},
+				{
+					"id": "ftoOrEbo",
+					"label": "FTO/EBO",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "buyer",
+					"optionsRef": {
+						"id": "FTO OR EBO",
+						"values": ["Yes - EBO", "Yes - FTO", "No"]
+					},
+					"editable": ["All"]
+
+				}
+			]
+		},
+		{
+			"sectionName": "ranging",
+			"sectionLabel": "Ranging",
+			"sectionFields": [{
+				"id": "productSoldIn",
+				"label": "WHERE IS THE PRODUCT TO BE SOLD?",
+				"type": "select",
+				"creativeGate": true,
+				"disabled": false,
+				"owner": "buyer",
+				"mandatory": true,
+				"optionsRef": {
+					"id": "PRODUCT SOLD IN",
+					"values": ["Online Only - Ocado", "Online & In store", "In Store only - M&S", "In Store M&S and TBC Ocado"]
+				},
+				"editable": ["All"]
+
+			},
+				{
+					"id": "proposedNoOfStores",
+					"label": "PROPOSED NUMBER OF STORES",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "buyer",
+					"errorMessages": {
+						"requiredMessage": "PROPOSED NUMBER OF STORES is mandatory",
+						"patternMessage": "Enter numerical values only"
+					},
+					"mandatory": true,
+					"pattern": "[0-9]+",
+					"editable": ["All"],
+					"scripts": ["averageWeeklySalesMandS"]
+				},
+				{
+					"id": "soldInOcado",
+					"label": "SOLD IN OCADO",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "ocado",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "SOLD IN OCADO",
+						"values": ["Yes", "No"]
+					},
+					"editable": ["All"]
+
+				},
+				{
+					"id": "productComparison",
+					"label": "PRODUCT COMPARISON",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "buyer",
+					"mandatory": true,
+					"editable": ["All"]
+
+				},
+				{
+					"id": "orderLeadtimeSupplyChain",
+					"label": "ORDER LEADTIME SUPPLY CHAIN",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "buyer",
+					"errorMessages": {
+						"requiredMessage": "ORDER LEADTIME SUPPLY CHAIN is mandatory",
+						"patternMessage": "Enter numerical values only"
+					},
+					"mandatory": true,
+					"pattern": "[0-9]+",
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "mcr",
+					"label": "MCR",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "buyer",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "MCR",
+						"values": ["Yes", "No"]
+					},
+					"editable": ["All"]
+
+				},
+				{
+					"id": "rangeActivityCode",
+					"label": "RANGE ACTIVITY CODE (RAC)",
+					"type": "input",
+					"format": "text",
+					"disabled": false,
+					"owner": "buyer",
+					"mandatory": true,
+					"editable": ["All"]
+
+				},
+				{
+					"id": "displayGroup",
+					"label": "DISPLAY GROUP",
+					"type": "select",
+					"disabled": false,
+					"owner": "buyer",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "DISPLAY GROUP",
+						"values": ["Ambient Celebration SE1B", "Biscuits BC1A", "Cards & Wrap GM1A", "Cereals & Hot Bevs GR1F", "Confectionery BC1B", "Seasonal Salad & Veg VE2X"]
+					},
+					"editable": ["All"]
+
+				}
+			]
+		},
+		{
+			"sectionName": "performanceForecast",
+			"sectionLabel": "Performance Forecast",
+			"sectionFields": [{
+				"id": "successCriteria",
+				"label": "SUCCESS CRITERIA = ROV PER STORE",
+				"type": "input",
+				"format": "number",
+				"creativeGate": true,
+				"disabled": false,
+				"owner": "buyer",
+				"errorMessages": {
+					"requiredMessage": "SUCCESS CRITERIA = ROV PER STORE is mandatory",
+					"patternMessage": "Enter numerical values only"
+				},
+				"mandatory": true,
+				"pattern": "[0-9]+",
+				"editable": ["All"],
+				"scripts": ["averageWeeklySalesMandS"]
+			},
+				{
+					"id": "averageWeeklySalesMandS",
+					"label": "AVERAGE WEEKLY SALES - M&S",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": true,
+					"mandatory": true,
+					"owner": "buyer",
+					"scripts": ["averageWeeklyVolumeMandS"]
+				},
+				{
+					"id": "averageWeeklyVolumeMandS",
+					"label": "AVERAGE WEEKLY VOLUME - M&S",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": true,
+					"mandatory": true,
+					"owner": "buyer"
+
+				},
+				{
+					"id": "averageWeeklyVolumeOcado",
+					"label": "AVERAGE WEEKLY VOLUME - OCADO",
+					"type": "input",
+					"format": "number",
+					"disabled": false,
+					"owner": "buyer",
+					"mandatory": true,
+					"errorMessages": {
+						"requiredMessage": "AVERAGE WEEKLY VOLUME - OCADO is mandatory",
+						"patternMessage": "Enter numerical values only"
+					},
+					"pattern": "[0-9]+",
+					"editable": ["All"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "seasonalSalesAndVolume",
+					"label": "SEASONAL SALES & VOLUME",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "buyer",
+					"editable": ["All"]
+
+				}
+			]
+		},
+		{
+			"sectionName": "printAndPackaging",
+			"sectionLabel": "Print &#38; Packaging",
+			"sectionFields": [{
+				"id": "printerType",
+				"label": "PRINTER TYPE",
+				"type": "select",
+				"creativeGate": true,
+				"disabled": false,
+				"owner": "productDeveloper",
+				"mandatory": true,
+				"optionsRef": {
+					"id": "PRINTER TYPE",
+					"values": ["A list", "SMP", "None"]
+				},
+				"editable": ["All", "supplier"],
+				"readable": ["supplier"]
+			},
+				{
+					"id": "printerName",
+					"label": "PRINTER NAME",
+					"type": "input",
+					"format": "text",
+					"creativeGate": false,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"errorMessages": {
+						"requiredMessage": "PRINTER NAME is mandatory"
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "smpApproved",
+					"label": "SMP APPROVED",
+					"type": "select",
+					"creativeGate": false,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "SMP APPROVED",
+						"values": ["Yes", "No"]
+					},
+					"editable": ["All"]
+
+				},
+				{
+					"id": "cutterType",
+					"label": "CUTTER TYPE",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "gsp",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "CUTTER TYPE",
+						"values": ["Approved Existing Cutter", "New Cutter", "Multiple", "None"]
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "cutterReference",
+					"label": "CUTTER REFERENCE (FOR ALL PRINTED PACKAGING COMPONENTS)",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "gsp",
+					"mandatory": true,
+					"errorMessages": {
+						"requiredMessage": "CUTTER REFERENCE is mandatory"
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "soldInFrance",
+					"label": "SOLD IN FRANCE",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "international",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "SOLD IN FRANCE",
+						"values": ["UK only", "UK only + IFG", "UK + France (2in1)", "UK + France + Bespoke", "UK + France + Oversticker", "UK + France + IFG", "France New Bespoke", "France Existing Bespoke", "International New IFG", "International Existing IFG"]
+					},
+					"editable": ["All"]
+
+				},
+				{
+					"id": "internationalComments",
+					"label": "INTERNATIONAL COMMENTS",
+					"type": "textarea",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "international",
+					"editable": ["All"]
+
+				},
+				{
+					"id": "dateCodeVisibility",
+					"label": "IS THE DATE CODE (UB/BB/BBE) VISIBLE ON THE PACK OR OUTER CARTON OR TRAY",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "foodTechnologist",
+					"optionsRef": {
+						"id": "DATE CODE VISIBILITY",
+						"values": ["Yes", "No"]
+					},
+					"mandatory": true,
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				}
+			]
+		},
+		{
+			"sectionName": "design",
+			"sectionLabel": "Design",
+			"sectionFields": [{
+				"id": "printedPackagingType",
+				"label": "PRINTED PACKAGING TYPE",
+				"type": "select",
+				"creativeGate": true,
+				"disabled": false,
+				"owner": "productDeveloper",
+				"mandatory": true,
+				"optionsRef": {
+					"id": "PRINTED PACKAGING TYPE",
+					"values": ["Multiple", "Bag", "Board", "Booklet", "Bottle", "Box", "Can", "Cap", "Card", "Wrap"]
+				},
+				"editable": ["All", "supplier"],
+				"readable": ["supplier"]
+			},
+				{
+					"id": "additionalPackagingInformation",
+					"label": "ADDITIONAL PACKAGING INFORMATION",
+					"type": "input",
+					"format": "text",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "consumerPackagingType",
+					"label": "CONSUMER PACKAGING TYPE",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "CONSUMER PACKAGING TYPE",
+						"values": ["Aerosol", "Bag", "Box", "Foil Tray", "Glass Bottle", "Loose", "VacPack"]
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "photographyRequired",
+					"label": "PHOTOGRAPHY REQUIRED",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "PHOTO REQUIRED",
+						"values": ["Yes", "No", "Existing"]
+					},
+					"editable": ["All"]
+
+				},
+				{
+					"id": "designRoute",
+					"label": "DESIGN ROUTE",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "DESIGN ROUTE",
+						"values": ["None", "Autumn", "Burns Night", "Chinese New Year", "Cook With M&S", "Core", "Valentine's Day"]
+					},
+					"editable": ["All"]
+
+				},
+				{
+					"id": "secondaryDesignRoute",
+					"label": "SECONDARY DESIGN ROUTE",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "SECONDARY DESIGN ROUTE",
+						"values": ["None", "Cook With M&S", "M&S Balanced For You", "M&S Collection", "M&S Count On Us", "M&S Taste Buds"]
+					},
+					"editable": ["All"]
+
+				},
+				{
+					"id": "fopReqLogos",
+					"label": "FOP REQ LOGOS",
+					"type": "input",
+					"format": "text",
+					"creativeGate": false,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"errorMessages": {
+						"requiredMessage": "FOP REQ LOGOS is mandatory"
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				}
+			],
+			"subSections": [{
+				"subSectionName": "packagingComponent",
+				"subSectionLabel": "Packaging Component",
+				"subSectionFields": [{
+					"id": "printerType",
+					"label": "PRINTER TYPE",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "PRINTER TYPE",
+						"values": ["A list", "SMP", "None"]
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+					{
+						"id": "printerName",
+						"label": "PRINTER NAME",
+						"type": "input",
+						"format": "text",
+						"creativeGate": false,
+						"disabled": false,
+						"owner": "productDeveloper",
+						"mandatory": true,
+						"errorMessages": {
+							"requiredMessage": "PRINTER NAME is mandatory"
+						},
+						"editable": ["All", "supplier"],
+						"readable": ["supplier"]
+					},
+					{
+						"id": "printedPackagingType",
+						"label": "PRINTED PACKAGING TYPE",
+						"type": "select",
+						"creativeGate": true,
+						"disabled": false,
+						"owner": "productDeveloper",
+						"mandatory": true,
+						"optionsRef": {
+							"id": "PRINTED PACKAGING TYPE",
+							"values": ["Multiple", "Bag", "Board", "Booklet", "Bottle", "Box", "Can", "Cap", "Card", "Wrap"]
+						},
+						"editable": ["All", "supplier"],
+						"readable": ["supplier"]
+					},
+					{
+						"id": "photographyRequired",
+						"label": "PHOTOGRAPHY REQUIRED",
+						"type": "select",
+						"creativeGate": true,
+						"disabled": false,
+						"owner": "productDeveloper",
+						"mandatory": true,
+						"optionsRef": {
+							"id": "PHOTO REQUIRED",
+							"values": ["Yes", "No", "Existing"]
+						},
+						"editable": ["All"]
+
+					},
+					{
+						"id": "designRoute",
+						"label": "DESIGN ROUTE",
+						"type": "select",
+						"creativeGate": true,
+						"disabled": false,
+						"owner": "productDeveloper",
+						"mandatory": true,
+						"optionsRef": {
+							"id": "DESIGN ROUTE",
+							"values": ["None", "Autumn", "Burns Night", "Chinese New Year", "Cook With M&S", "Core", "Valentine's Day"]
+						},
+						"editable": ["All"]
+
+					},
+					{
+						"id": "secondaryDesignRoute",
+						"label": "SECONDARY DESIGN ROUTE",
+						"type": "select",
+						"creativeGate": true,
+						"disabled": false,
+						"owner": "productDeveloper",
+						"mandatory": true,
+						"optionsRef": {
+							"id": "SECONDARY DESIGN ROUTE",
+							"values": ["None", "Cook With M&S", "M&S Balanced For You", "M&S Collection", "M&S Count On Us", "M&S Taste Buds"]
+						},
+						"editable": ["All"]
+
+					},
+					{
+						"id": "cutterType",
+						"label": "CUTTER TYPE",
+						"type": "select",
+						"creativeGate": true,
+						"disabled": false,
+						"owner": "gsp",
+						"mandatory": true,
+						"optionsRef": {
+							"id": "CUTTER TYPE",
+							"values": ["Approved Existing Cutter", "New Cutter", "Multiple", "None"]
+						},
+						"editable": ["All", "supplier"],
+						"readable": ["supplier"]
+					},
+					{
+						"id": "cutterReference",
+						"label": "CUTTER REFERENCE (FOR ALL PRINTED PACKAGING COMPONENTS)",
+						"type": "input",
+						"format": "text",
+						"creativeGate": true,
+						"disabled": false,
+						"owner": "gsp",
+						"mandatory": true,
+						"errorMessages": {
+							"requiredMessage": "CUTTER REFERENCE is mandatory"
+						},
+						"editable": ["All", "supplier"],
+						"readable": ["supplier"]
+					},
+					{
+						"id": "ftpDate",
+						"label": "FTP Date",
+						"type": "date",
+						"creativeGate": true,
+						"disabled": false,
+						"owner": "productDeveloper",
+						"mandatory": true,
+						"errorMessages": {
+							"requiredMessage": "FTP DATE is mandatory",
+							"minDateMessage": "Enter only future date"
+						},
+						"minDate": 1,
+						"editable": ["All", "supplier"],
+						"readable": ["supplier"],
+						"scripts": ["batonHandover"]
+					},
+					{
+						"id": "soldInFrance",
+						"label": "SOLD IN FRANCE",
+						"type": "select",
+						"creativeGate": true,
+						"disabled": false,
+						"owner": "international",
+						"mandatory": true,
+						"optionsRef": {
+							"id": "SOLD IN FRANCE",
+							"values": ["UK only", "UK only + IFG", "UK + France (2in1)", "UK + France + Bespoke", "UK + France + Oversticker", "UK + France + IFG", "France New Bespoke", "France Existing Bespoke", "International New IFG", "International Existing IFG"]
+						},
+						"editable": ["All"]
+
+					},
+					{
+						"id": "multipleArtworkComments",
+						"label": "MULTIPLE ARTWORK COMMENTS",
+						"type": "textarea",
+						"format": "text",
+						"disabled": false,
+						"owner": "productDeveloper",
+						"editable": ["All", "supplier"],
+						"readable": ["supplier"]
+					}
+				]
+			}]
+		},
+		{
+			"sectionName": "productDimensions",
+			"sectionLabel": "Product Dimensions",
+			"sectionFields": [{
+				"id": "finishedGoodsDimensionsHeight",
+				"label": "FINISHED GOODS DIMENSIONS HEIGHT (CM)",
+				"type": "input",
+				"format": "number",
+				"creativeGate": true,
+				"disabled": false,
+				"owner": "productDeveloper",
+				"errorMessages": {
+					"requiredMessage": "FINISHED GOODS DIMENSIONS HEIGHT(CM) is mandatory",
+					"patternMessage": "Enter numerical values only"
+				},
+				"mandatory": true,
+				"pattern": "[0-9]+",
+				"editable": ["All", "supplier"],
+				"readable": ["supplier"]
+			},
+				{
+					"id": "finishedGoodsDimensionsWidth",
+					"label": "FINISHED GOODS DIMENSIONS WIDTH (CM)",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"errorMessages": {
+						"requiredMessage": "FINISHED GOODS DIMENSIONS WIDTH(CM) is mandatory",
+						"patternMessage": "Enter numerical values only"
+					},
+					"mandatory": true,
+					"pattern": "[0-9]+",
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "finishedGoodsDimensionsDepth",
+					"label": "FINISHED GOODS DIMENSIONS DEPTH (CM)",
+					"type": "input",
+					"format": "number",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"errorMessages": {
+						"requiredMessage": "FINISHED GOODS DIMENSIONS DEPTH(CM) is mandatory",
+						"patternMessage": "Enter numerical values only"
+					},
+					"mandatory": true,
+					"pattern": "[0-9]+",
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "orientation",
+					"label": "ORIENTATION (SELECT BEST SHAPE)",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"mandatory": true,
+					"owner": "productDeveloper",
+					"optionsRef": {
+						"id": "ORIENTATION",
+						"values": ["Landscape", "Portrait", "Square", "Round"]
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "srpRequired",
+					"label": "SRP REQUIRED",
+					"type": "select",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"optionsRef": {
+						"id": "SRP REQUIRED",
+						"values": ["Yes", "No"]
+					},
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "srpDimensionsHeight",
+					"label": "SRP DIMENSIONS HEIGHT (CM)",
+					"type": "input",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"errorMessages": {
+						"requiredMessage": "SRP DIMENSIONS HEIGHT (CM)  is mandatory",
+						"patternMessage": "Enter numerical values only"
+					},
+					"format": "number",
+					"pattern": "[0-9]+",
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "srpDimensionsWidth",
+					"label": "SRP DIMENSIONS WIDTH (CM)",
+					"type": "input",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"errorMessages": {
+						"requiredMessage": "SRP DIMENSIONS WIDTH (CM)  is mandatory",
+						"patternMessage": "Enter numerical values only"
+					},
+					"format": "number",
+					"pattern": "[0-9]+",
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				},
+				{
+					"id": "srpDimensionsDepth",
+					"label": "SRP DIMENSIONS DEPTH (CM)",
+					"type": "input",
+					"creativeGate": true,
+					"disabled": false,
+					"owner": "productDeveloper",
+					"mandatory": true,
+					"errorMessages": {
+						"requiredMessage": "SRP DIMENSIONS DEPTH (CM)  is mandatory",
+						"patternMessage": "Enter numerical values only"
+					},
+					"format": "number",
+					"pattern": "[0-9]+",
+					"editable": ["All", "supplier"],
+					"readable": ["supplier"]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "templateName": {
+          "type": "string"
+        },
+        "templateId": {
+          "type": "string"
+        },
+        "products": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "productId": {
+                      "type": "string"
+                    },
+                    "productName": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "productType": {
+                      "type": "string"
+                    },
+                    "supplierName": {
+                      "type": "string"
+                    },
+                    "supplierCode": {
+                      "type": "string"
+                    },
+                    "weight": {
+                      "type": "string"
+                    },
+                    "productFileType": {
+                      "type": "string"
+                    },
+                    "percentage": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "productId",
+                    "productName",
+                    "productType",
+                    "supplierName",
+                    "weight",
+                    "productFileType",
+                    "percentage"
+                  ]
+                }
+              },
+              "required": [
+                "data"
+              ]
+            }
+          ]
+        },
+        "information": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "projectName": {
+              "type": "string"
+            },
+            "templateId": {
+              "type": "string"
+            },
+            "templateName": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "projectType": {
+              "type": "string"
+            },
+            "financialYear": {
+              "type": "string"
+            },
+            "projectCompletionDate": {
+              "type": "string"
+            },
+            "supplierName": {
+              "type": "string"
+            },
+            "launchPhase": {
+              "type": "string"
+            },
+            "comments": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "projectName",
+            "templateId",
+            "templateName",
+            "projectType",
+            "financialYear",
+            "projectCompletionDate",
+            "comments"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "templateName",
+        "templateId",
+        "information"
+      ]
+    },
+    "exception": {
+      "type": "null"
+    },
+    "status": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "data",
+    "exception",
+    "status"
+  ]
+}

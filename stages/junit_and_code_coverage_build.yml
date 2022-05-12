@@ -3,6 +3,10 @@ steps:
       displayName: 'Maven Authenticate'
       inputs:
         artifactsFeeds: 'MNS'
+    
+    - task: DownloadSecureFile@1
+      inputs:
+        secureFile: 'settings.xml'
 
     - task: Maven@3
       inputs:
@@ -17,11 +21,13 @@ steps:
         mavenOptions: '-Xmx3072m'
         mavenAuthenticateFeed: true
         effectivePomSkip: false
+        sonarQubeRunAnalysis: true
         checkStyleRunAnalysis: true
-        pmdRunAnalysis: false
+        pmdRunAnalysis: true
 
     - task: CopyFiles@2
       inputs:
+        SourceFolder: '$(Agent.BuildDirectory)/s/target/'
         Contents: '**/*.jar'
         TargetFolder: '$(build.artifactstagingdirectory)'
         OverWrite: true

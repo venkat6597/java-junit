@@ -1,0 +1,21 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "name": "Test",
+            "email": "Test@marks-and-spencer.com"
+        },
+        {
+            "id": "2",
+            "name": "Test1",
+            "email": "Test1@marks-and-spencer.com"
+        },
+        {
+            "id": "3",
+            "name": "Test2",
+            "email": "Test2@marks-and-spencer.com"
+        }
+    ],
+    "exception": null,
+    "status": true
+}

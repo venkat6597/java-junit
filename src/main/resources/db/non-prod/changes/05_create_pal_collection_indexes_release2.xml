@@ -1,0 +1,27 @@
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet id="create_pal_ttl_indexes" author="harish">
+		<ext:createIndex collectionName="PALProduct">
+			<ext:keys>
+				{ deletedDate:1 }
+			</ext:keys>
+			<ext:options>
+				{ name: "deletedDate_Idx", expireAfterSeconds: 604800, background: true }
+			</ext:options>
+		</ext:createIndex>
+		<ext:createIndex collectionName="PALProject">
+			<ext:keys>
+				{ deletedDate:1 }
+			</ext:keys>
+			<ext:options>
+				{ name: "deletedDate_Idx", expireAfterSeconds: 604800, background: true }
+			</ext:options>
+		</ext:createIndex>
+	</changeSet>
+
+</databaseChangeLog>

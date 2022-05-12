@@ -1,0 +1,630 @@
+{
+	"request": {
+		"projectId": "60ff64a1476c45bf24a684d4",
+		"userRole": "projectManager"
+	},
+	"palproject": {
+		"id": "60ff64a1476c45bf24a684d4",
+		"projectName": "2021-2022 Christmas Delicatessen",
+		"templateId": "611d11f7cde71e991b217579",
+		"templateName": "Standard",
+		"projectCompletionDate": "2021-09-29T13:24:51.608Z",
+		"financialYear": "2021/22",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				}
+			]
+		},
+		"status": "Active",
+		"projectType": "Rolling",
+		"comments": "project details"
+	},
+	"palproduct1": {
+		"id": "61357305cde71e991bd8eaab",
+		"templateId": "611d11f7cde71e991b217579",
+		"projectId": "60ff64a1476c45bf24a684d4",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				},
+				{
+					"role": "foodTechnologist",
+					"users": ["foodTechnologist@xyz.com"]
+				},
+				{
+					"role": "buyer",
+					"users": ["buyer@xyz.com"]
+				},
+				{
+					"role": "commercialPlanner",
+					"users": ["commercialPlanner@xyz.com"]
+				},
+				{
+					"role": "international",
+					"users": ["international@xyz.com"]
+				},
+				{
+					"role": "finance",
+					"users": ["finance@xyz.com"]
+				}
+			],
+			"external": [
+				{
+					"role": "supplier",
+					"users": ["supplier1@xyz.com"]
+				}
+			]
+		},
+		"datafields": [
+			{
+				"fieldId": "projectName",
+				"fieldValue": "Summer 2021"
+			},
+			{
+				"fieldId": "launchPhase",
+				"fieldValue": "P06 SEP 2020"
+			},
+			{
+				"fieldId": "inDepotDate",
+				"fieldValue": "25/09/2021"
+			},
+			{
+				"fieldId": "reasonsForChange",
+				"fieldValue": "N"
+			},
+			{
+				"fieldId": "status",
+				"fieldValue": "Inprogress"
+			},
+			{
+				"fieldId": "criticalPathRequired",
+				"fieldValue": "N/A"
+			},
+			{
+				"fieldId": "finaliseGate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "creativeGate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "batonHandover",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "designConceptHandover",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "upc",
+				"fieldValue": "12345678"
+			},
+			{
+				"fieldId": "ftpDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "conceptSubmissionDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "productTitle",
+				"fieldValue": "Sausage Roll"
+			},
+			{
+				"fieldId": "category",
+				"fieldValue": "F03C"
+			},
+			{
+				"fieldId": "tier",
+				"fieldValue": "GOOD"
+			},
+			{
+				"fieldId": "productLife",
+				"fieldValue": "8"
+			},
+			{
+				"fieldId": "supplierName",
+				"fieldValue": "Supplier 1234"
+			},
+			{
+				"fieldId": "printerType",
+				"fieldValue": "A List"
+			},
+			{
+				"fieldId": "smpApproved",
+				"fieldValue": "false"
+			},
+			{
+				"fieldId": "productFileType",
+				"fieldValue": "Parent",
+				"multifields": [
+					{
+						"multiFieldId": "1",
+						"datafields":[
+						{
+							"fieldId": "childProductTitle",
+							"fieldValue": "Child1"
+						},
+						{
+							"fieldId": "childSupplierName",
+							"fieldValue": "supplier1234"
+						},
+						{
+							"fieldId": "childSupplierSiteCode",
+							"fieldValue": "1234"
+						},
+						{
+							"fieldId": "childUpc",
+							"fieldValue": "123456"
+						},
+						{
+							"fieldId": "childComments",
+							"fieldValue": "child product1 added"
+						}
+					]},
+					{
+						"multiFieldId": "2",
+						"datafields":[
+						{
+							"fieldId": "childProductTitle",
+							"fieldValue": "Child2"
+						},
+						{
+							"fieldId": "childSupplierName",
+							"fieldValue": "supplier6789"
+						},
+						{
+							"fieldId": "childSupplierSiteCode",
+							"fieldValue": "6789"
+						},
+						{
+							"fieldId": "childUpc",
+							"fieldValue": "98765"
+						},
+						{
+							"fieldId": "childComments",
+							"fieldValue": "child product2 added"
+						}
+					]}
+				]
+			},
+			{
+				"fieldId": "mnsGrossPrice",
+				"fieldValue": "50"
+			},
+			{
+				"fieldId": "proposedNoOfStores",
+				"fieldValue": "20"
+			},
+			{
+				"fieldId": "weightOrVolume",
+				"fieldValue": "250"
+			},
+			{
+				"fieldId": "unitOfMeasure",
+				"fieldValue": "gms"
+			},
+						{
+							"fieldId": "fopReqLogos",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "finishedGoodsDimensionsHeight",
+							"fieldValue": "10"
+						},
+						{
+							"fieldId": "finishedGoodsDimensionsDepth",
+							"fieldValue": "15"
+						},
+						{
+							"fieldId": "finishedGoodsDimensionsWidth",
+							"fieldValue": "5"
+						},
+						{
+							"fieldId": "orientation",
+							"fieldValue": "Landscape"
+						},
+						{
+							"fieldId": "srpRequired",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "srpDimensionsHeight",
+							"fieldValue": "1"
+						},
+						{
+							"fieldId": "srpDimensionsDepth",
+							"fieldValue": "2"
+						},
+						{
+							"fieldId": "srpDimensionsWidth",
+							"fieldValue": "3"
+						},
+						{
+							"fieldId": "dateCodeVisibility",
+							"fieldValue": "Yes"
+						},
+			{
+				"fieldId": "printedPackagingType",
+				"fieldValue": "Multiple",
+				"multifields": [
+					{
+						"multiFieldId": "1",
+						"datafields":[
+						{
+							"fieldId": "printerType",
+							"fieldValue": "SMP"
+						},
+						{
+							"fieldId": "printerName",
+							"fieldValue": "Printer1"
+						},
+						{
+							"fieldId": "cutterType",
+							"fieldValue": "Multiple"
+						},
+						{
+							"fieldId": "printedPackagingType",
+							"fieldValue": "Bag"
+						},
+						{
+							"fieldId": "consumerPackagingType",
+							"fieldValue": "Bag"
+						},
+						{
+							"fieldId": "photographyRequired",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "designRoute",
+							"fieldValue": "Autumn"
+						},
+						{
+							"fieldId": "secondaryDesignRoute",
+							"fieldValue": "Cook With M&S"
+						}
+					]},
+					{
+						"multiFieldId": "2",
+						"datafields":[
+						{
+							"fieldId": "printerType",
+							"fieldValue": "SMP"
+						}
+					]}
+				]
+			},
+			{
+				"fieldId": "productSubTitle",
+				"fieldValue": "Sausage Roll Mini"
+			}
+		]
+	},
+	"palproduct2": {
+		"id": "6149dbf63535de17d5ad6b80",
+		"templateId": "611d11f7cde71e991b217579",
+		"projectId": "60ff64a1476c45bf24a684d4",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				},
+				{
+					"role": "foodTechnologist",
+					"users": ["foodTechnologist@xyz.com"]
+				},
+				{
+					"role": "buyer",
+					"users": ["buyer@xyz.com"]
+				},
+				{
+					"role": "commercialPlanner",
+					"users": ["commercialPlanner@xyz.com"]
+				},
+				{
+					"role": "international",
+					"users": ["international@xyz.com"]
+				},
+				{
+					"role": "finance",
+					"users": ["finance@xyz.com"]
+				}
+			],
+			"external": [
+				{
+					"role": "supplier",
+					"users": ["supplier1@xyz.com"]
+				}
+			]
+		},
+		"datafields": [
+			{
+				"fieldId": "projectName",
+				"fieldValue": "Summer 2021"
+			},
+			{
+				"fieldId": "launchPhase",
+				"fieldValue": "P10 JAN 2021"
+			},
+			{
+				"fieldId": "inDepotDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "reasonsForChange",
+				"fieldValue": "N"
+			},
+			{
+				"fieldId": "status",
+				"fieldValue": "Inprogress"
+			},
+			{
+				"fieldId": "criticalPathRequired",
+				"fieldValue": "N/A"
+			},
+			{
+				"fieldId": "finaliseGate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "creativeGate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "batonHandover",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "designConceptHandover",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "upc",
+				"fieldValue": "12345678"
+			},
+			{
+				"fieldId": "ftpDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "conceptSubmissionDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "productTitle",
+				"fieldValue": "Sausage Roll"
+			},
+			{
+				"fieldId": "category",
+				"fieldValue": "F03C"
+			},
+			{
+				"fieldId": "tier",
+				"fieldValue": "GOOD"
+			},
+			{
+				"fieldId": "productLife",
+				"fieldValue": "8"
+			},
+			{
+				"fieldId": "supplierName",
+				"fieldValue": "Supplier 1234"
+			},
+			{
+				"fieldId": "mnsGrossPrice",
+				"fieldValue": "50"
+			},
+			{
+				"fieldId": "proposedNoOfStores",
+				"fieldValue": "20"
+			},
+			{
+				"fieldId": "weightOrVolume",
+				"fieldValue": "250"
+			},
+			{
+				"fieldId": "unitOfMeasure",
+				"fieldValue": "gms"
+			},
+			{
+				"fieldId": "printerType",
+				"fieldValue": "A List"
+			},
+			{
+				"fieldId": "smpApproved",
+				"fieldValue": "false"
+			},
+			{
+				"fieldId": "printedPackagingType",
+				"fieldValue": "Multiple",
+				"multifields": [
+					{
+						"multiFieldId": "1",
+						"datafields":[
+						{
+							"fieldId": "printerType",
+							"fieldValue": "SMP"
+						},
+						{
+							"fieldId": "printerName",
+							"fieldValue": "Printer1"
+						},
+						{
+							"fieldId": "cutterType",
+							"fieldValue": "Multiple"
+						},
+						{
+							"fieldId": "printedPackagingType",
+							"fieldValue": "Bag"
+						},
+						{
+							"fieldId": "consumerPackagingType",
+							"fieldValue": "Bag"
+						},
+						{
+							"fieldId": "photographyRequired",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "designRoute",
+							"fieldValue": "Autumn"
+						},
+						{
+							"fieldId": "secondaryDesignRoute",
+							"fieldValue": "Cook With M&S"
+						}
+					]},
+					{
+						"multiFieldId": "2",
+						"datafields":[
+						{
+							"fieldId": "printerType",
+							"fieldValue": "SMP"
+						}
+					]}
+				]
+			},
+			{
+				"fieldId": "productSubTitle",
+				"fieldValue": "Sausage Roll Mini"
+			}
+		]
+	},
+	"response": {
+		"data": {
+			"id": "60ff64a1476c45bf24a684d4",
+			"templateName": "Standard",
+			"templateId": "611d11f7cde71e991b217579",
+			"progress": {
+				"totalFields": 244,
+				"completedFields": 83,
+				"roles": [
+					{
+						"role": "projectManager",
+						"status": "In Progress",
+						"totalFields": 8,
+						"completedFields": 6,
+						"percentageCompletion": 75
+					},
+					{
+						"role": "productDeveloper",
+						"status": "In Progress",
+						"totalFields": 110,
+						"completedFields": 56,
+						"percentageCompletion": 50
+					},
+					{
+						"role": "ocado",
+						"status": "Yet to Start",
+						"totalFields": 2,
+						"completedFields": 0,
+						"percentageCompletion": 0
+					},
+					{
+						"role": "foodCentralSupport",
+						"status": "Yet to Start",
+						"totalFields": 2,
+						"completedFields": 0,
+						"percentageCompletion": 0
+					},
+					{
+						"role": "gsp",
+						"status": "In Progress",
+						"totalFields": 12,
+						"completedFields": 2,
+						"percentageCompletion": 16
+					},
+					{
+						"role": "commercialPlanner",
+						"status": "Completed",
+						"totalFields": 4,
+						"completedFields": 4,
+						"percentageCompletion": 100
+					},
+					{
+						"role": "vat",
+						"status": "Yet to Start",
+						"totalFields": 2,
+						"completedFields": 0,
+						"percentageCompletion": 0
+					},
+					{
+						"role": "foodTechnologist",
+						"status": "In Progress",
+						"totalFields": 22,
+						"completedFields": 5,
+						"percentageCompletion": 22
+					},
+					{
+						"role": "international",
+						"status": "Yet to Start",
+						"totalFields": 6,
+						"completedFields": 0,
+						"percentageCompletion": 0
+					},
+					{
+						"role": "buyer",
+						"status": "In Progress",
+						"totalFields": 76,
+						"completedFields": 10,
+						"percentageCompletion": 13
+					}
+				]
+			},
+			"information": {
+				"id": "60ff64a1476c45bf24a684d4",
+				"projectName": "2021-2022 Christmas Delicatessen",
+				"templateId": "611d11f7cde71e991b217579",
+				"templateName": "Standard",
+				"status": "Active",
+				"projectType": "Rolling",
+				"financialYear": "2021/22",
+				"projectCompletionDate": "2021-09-29T13:24:51.608",
+				"comments": "project details"
+			}
+		},
+		"exception": null,
+		"status": true
+	},
+	"responseWithNoProduct": {
+		"data": {
+			"id": "60ff64a1476c45bf24a684d4",
+			"templateName": "Standard",
+			"templateId": "611d11f7cde71e991b217579",
+			"progress": null,
+			"information": {
+				"id": "60ff64a1476c45bf24a684d4",
+				"projectName": "2021-2022 Christmas Delicatessen",
+				"templateId": "611d11f7cde71e991b217579",
+				"templateName": "Standard",
+				"status": "Active",
+				"projectType": "Rolling",
+				"financialYear": "2021/22",
+				"projectCompletionDate": "2021-09-29T13:24:51.608",
+				"comments": "project details"
+			}
+		},
+		"exception": null,
+		"status": true
+	}
+}

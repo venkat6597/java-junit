@@ -1,0 +1,52 @@
+{
+    "data": {
+        "templates": [
+            {
+                "id": "1",
+                "name": "Standard"
+            }
+        ],
+        "categories": [
+            "F01C Poultry",
+            "F02F Frozen",
+            "F03C Global Meal Sol",
+            "F04C Delicatessen",
+            "F05C Cook",
+            "F06C Dairy",
+            "F07C FOTM",
+            "F08C Desserts",
+            "F09A Bakery",
+            "F10A Biscuits",
+            "F11C Fresh Counters",
+            "F12A Savoury Snacks",
+            "F13A Confectionery",
+            "F15C Vegetables",
+            "F16C Salads",
+            "F17C Fresh Counters Raw Mat",
+            "F18A Direct Hampers",
+            "F19A Groceries",
+            "F20A Wines",
+            "F21A B&S",
+            "F22A Soft Drinks",
+            "F27A In Store Bakery",
+            "F30C Juice",
+            "F33A Ambient Celebration",
+            "F35A Homecare",
+            "F38C Meat",
+            "F60C FTG Raw Material",
+            "F61C Fruit",
+            "F62C Fish",
+            "F63C Traditional Meal Sol",
+            "F64C Healthy Meal Sol",
+            "F65C Pies",
+            "F67C Prepared Vegetables",
+            "F75A Café",
+            "F76A Hospitality Raw Mat",
+            "F79A Unbaked Bakery Products",
+            "F74A Café 2",
+            "F90C HFOTM"
+        ]
+    },
+    "exception": null,
+    "status": true
+}

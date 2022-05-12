@@ -1,0 +1,337 @@
+{
+	"request": {
+		"information": {
+			"comments": "Jan Sale",
+			"financialYear": "2022/23",
+			"projectCompletionDate": "2021-12-31T12:41:17.030Z",
+			"projectName": "2022-2023 January Sale",
+			"projectType": "Rolling",
+			"status": "Post-Creative Gate",
+			"templateId": "611d11f7cde71e991b217579",
+			"templateName": "Standard"
+		},
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				}
+			]
+		},
+		"userRole": "projectManager",
+		"user": "projectManager@xyz.com"
+	},
+	"response": {
+		"data": {
+			"id": "6166d30f07e5d66b6f9f86e1",
+			"templateName": "Standard",
+			"templateId": "611d11f7cde71e991b217579",
+			"personnel": {
+				"internal": [
+					{
+						"role": "projectManager",
+						"users": ["projectManager@xyz.com"]
+					},
+					{
+						"role": "productDeveloper",
+						"users": ["productDeveloper@xyz.com"]
+					}
+				]
+			},
+			"information": {
+				"id": "6166d30f07e5d66b6f9f86e1",
+				"projectName": "2021-2022 December Sale",
+				"templateId": "611d11f7cde71e991b217579",
+				"templateName": "Standard",
+				"status": "Post-Creative Gate",
+				"projectType": "Rolling",
+				"financialYear": "2021/22",
+				"projectCompletionDate": "2021-10-12T12:41:17.03",
+				"comments": "Dec Sale"
+			}
+		},
+		"exception": null,
+		"status": true
+	},
+	"palProject": {
+		"id": "60ff64a1476c45bf24a684d4",
+		"projectName": "2021-2022 Christmas Delicatessen",
+		"templateId": "611d11f7cde71e991b217579",
+		"templateName": "Standard",
+		"projectCompletionDate": "2021-09-29T13:24:51.608Z",
+		"financialYear": "2021/22",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				}
+			]
+		},
+		"status": "Post-Creative Gate",
+		"projectType": "Rolling",
+		"comments": "project details"
+	},
+	"request2": {
+		"information": {
+			"comments": "Jan Sale",
+			"financialYear": "2022/23",
+			"projectCompletionDate": "2021-12-31T12:41:17.030Z",
+			"projectName": "2022-2023 January Sale",
+			"projectType": "Rolling",
+			"status": "Post-Creative Gate"
+		},
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				}
+			]
+		},
+		"userRole": "projectManager",
+		"user": "projectManager@xyz.com"
+	},
+	"request3": {
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				}
+			]
+		},
+		"userRole": "projectManager",
+		"user": "projectManager@xyz.com"
+	},
+	"request4": {
+		"information": {
+			"comments": "project details",
+			"financialYear": "2021/22",
+			"projectCompletionDate": "2021-09-29T13:24:51.608Z",
+			"projectName": "2021-2022 Christmas Delicatessen",
+			"projectType": "Rolling",
+			"templateId": "611d11f7cde71e991b217579",
+			"templateName": "Standard"
+		},
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				}
+			]
+		},
+		"userRole": "projectManager",
+		"user": "projectManager@xyz.com"
+	},
+	"updateRequest": {
+		"id": "6164618ea34ae47bf7072788",
+		"information": {
+			"status": "Archived"
+		},
+		"userRole": "projectManager",
+		"user": "projectManager@xyz.com"
+	},
+	"palProjectArchived": {
+		"id": "60ff64a1476c45bf24a684d4",
+		"projectName": "2021-2022 Christmas Delicatessen",
+		"templateId": "611d11f7cde71e991b217579",
+		"templateName": "Standard",
+		"projectCompletionDate": "2021-09-29T13:24:51.608Z",
+		"financialYear": "2021/22",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				}
+			]
+		},
+		"status": "Archived",
+		"projectType": "Rolling",
+		"comments": "project details"
+	},
+	"updateRequestNoAccess": {
+		"id": "6164618ea34ae47bf7072788",
+		"information": {
+			"status": "Archived"
+		},
+		"userRole": "buyer",
+		"user": "buyer@xyz.com"
+	},
+	"updateRequestNoId": {
+		
+		"information": {
+			"status": "Archived"
+		},
+		"userRole": "projectManager",
+		"user": "projectManager@xyz.com"
+	},
+	"updateRequestWithoutProjectName": {
+		"id": "6164618ea34ae47bf7072788",
+		"information": {
+			"projectName": null
+		},
+		"userRole": "projectManager",
+		"user": "projectManager@xyz.com"
+	},
+	"updateRequestWithoutStatus": {
+		"id": "6164618ea34ae47bf7072788",
+		"information": {
+			"status": null
+		},
+		"userRole": "projectManager",
+		"user": "projectManager@xyz.com"
+	},
+	"updateRequestRoleMissing": {
+		"id": "6164618ea34ae47bf7072788",
+		"information": {
+			"status": "Archived"
+		},
+		"user": "projectManager@xyz.com"
+	},
+	"updateRequestInvalidStatus": {
+		"id": "6164618ea34ae47bf7072788",
+		"information": {
+			"status": "InvalidStatus"
+		},
+		"userRole": "projectManager",
+		"user": "projectManager@xyz.com"
+	},
+	"updateRequest1": {
+		"id": "6164618ea34ae47bf7072788",
+		"information": {
+			"comments": "Jan Sale Updated",
+			"projectCompletionDate": "2021-12-30T12:41:17.030Z",
+			"projectName": "2022-2023 January New Yr Sale",
+			"templateId": "611d11f7cde71e991b217579",
+			"templateName": "Standard"
+		},
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				}
+			]
+		},
+		"userRole": "projectManager",
+		"user": "projectManager@xyz.com"
+	},
+	"addPALProjectTestWithoutProjectName": {
+		"id": "6164618ea34ae47bf7072788",
+		"information": {
+			"comments": "Jan Sale Updated",
+			"financialYear": "2023/24",
+			"projectCompletionDate": "2021-12-30T12:41:17.030Z",
+			"projectType": "Seasonal",
+			"templateId": "611d11f7cde71e991b217579",
+			"templateName": "Standard"
+		},
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				}
+			]
+		},
+		"userRole": "projectManager",
+		"user": "projectManager@xyz.com"
+	},
+	"palProjectFrmDb": {
+		"id": "6164618ea34ae47bf7072788",
+		"projectName": "2022-2023 January New Yr Sale",
+		"templateId": "611d11f7cde71e991b217579",
+		"templateName": "Standard",
+		"projectCompletionDate": "2021-12-30T12:41:17.030Z",
+		"financialYear": "2023/24",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				}
+			]
+		},
+		"status": "Post-Creative Gate",
+		"projectType": "Rolling",
+		"comments": "Jan Sale Updated"
+	},
+	"palProjectWithNoChange": {
+		"id": "6164618ea34ae47bf7072788",
+		"projectName": "2022-2023 January New Yr Sale",
+		"templateId": "611d11f7cde71e991b217580",
+		"templateName": "Standard",
+		"projectCompletionDate": "2021-12-30T12:41:17.030Z",
+		"financialYear": "2023/24",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				}
+			]
+		},
+		"status": "Post-Creative Gate",
+		"projectType": "Seasonal",
+		"comments": "Jan Sale Updated"
+	},
+	"updateResponse": {
+		"data": {
+			"id": "6166d30f07e5d66b6f9f86e1",
+			"templateId": "611d11f7cde71e991b217580",
+			"templateName": "Standard",
+			"personnel": {
+				"internal": [
+					{
+						"role": "projectManager",
+						"users": ["projectManager@xyz.com"]
+					},
+					{
+						"role": "productDeveloper",
+						"users": ["productDeveloper@xyz.com"]
+					}
+				]
+			},
+			"information": {
+				"id": "6164618ea34ae47bf7072788",
+				"projectName": "2022-2023 January New Yr Sale",
+				"templateId": "611d11f7cde71e991b217580",
+				"templateName": "Standard",
+				"projectCompletionDate": "2021-12-30T12:41:17.030Z",
+				"financialYear": "2023/24",
+				"status": "Archived",
+				"projectType": "Seasonal",
+				"comments": "Dec SaleJan Sale Updated"
+			}
+		},
+		"exception": null,
+		"status": true
+	}
+}

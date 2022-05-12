@@ -1,0 +1,319 @@
+{
+  "request" : {
+    "products": [
+      {
+        "fieldUpdates": [
+          {
+            "field": "upc",
+            "newValue": "1234",
+            "oldValue": "12345"
+          }
+        ],
+        "productId": "5678"
+      }
+    ],
+    "user": "projectManager",
+    "userRole": "projectManager"
+  },
+  "response" : {
+     "successProducts": [
+       {
+         "productId": "5678",
+         "updateStatus": "Success",
+         "productName": "product",
+         "productUrl": "https://test/home/products/new-product-development/1234/product/5678"
+       }
+     ]
+  },
+  "product1":{
+    "id" : "6238a5ca33b8296bae3a3f38",
+    "createdDate" : "2022-03-21T16:20:26.439Z",
+    "templateId" : "6230774efe9c144d69d11652",
+    "projectId" : "62388e9733b8296bae3a3f33",
+    "personnel" : {
+      "internal" : [
+        {
+          "role" : "projectManager",
+          "users" : [
+            "Harish.Karanam@marks-and-spencer.com"
+          ]
+        }
+      ]
+    },
+    "datafields" : [
+      {
+        "fieldId" : "supplierSiteCode",
+        "fieldValue" : "F01504"
+      },
+      {
+        "fieldId" : "productTitle",
+        "fieldValue" : "duplicateProduct"
+      },
+      {
+        "fieldId" : "upc",
+        "fieldValue" : "12345678"
+      },
+      {
+        "fieldId" : "upt",
+        "fieldValue" : "5"
+      },
+      {
+        "fieldId" : "status",
+        "fieldValue" : "Go"
+      }
+    ]
+  },
+  "validUpdateRequest" : {
+    "products": [
+      {
+        "fieldUpdates": [
+          {
+            "field": "upc",
+            "newValue": "5678"
+          }
+        ],
+        "productId": "6238a5ca33b8296bae3a3f38"
+      }
+    ],
+    "user": "projectManager",
+    "userRole": "projectManager"
+  },
+  "validUpdateResponse" : {
+    "successProducts": [
+      {
+        "productId": "6238a5ca33b8296bae3a3f38",
+        "updateStatus": "Success",
+        "productName": "duplicateProduct",
+        "productUrl": "https://localhost/home/products/new-product-development/62388e9733b8296bae3a3f33/product/6238a5ca33b8296bae3a3f38"
+      }
+    ]
+  },
+  "invalidProductUpdateRequest" : {
+    "products": [
+      {
+        "fieldUpdates": [
+          {
+            "field": "upc",
+            "newValue": "1234",
+            "oldValue": "12345"
+          }
+        ],
+        "productId": "62388ed933b8296bae3a3f35"
+      }
+    ],
+    "user": "projectManager",
+    "userRole": "projectManager"
+  },
+  "noChangeProductUpdateRequest" : {
+    "products": [
+      {
+        "fieldUpdates": [
+          {
+            "field": "upc",
+            "newValue": "12345678"
+          }
+        ],
+        "productId": "6238a5ca33b8296bae3a3f38"
+      }
+    ],
+    "user": "projectManager",
+    "userRole": "projectManager"
+  },
+  "multipleProductUpdateRequest" : {
+    "products": [
+      {
+        "fieldUpdates": [
+          {
+            "field": "upc",
+            "newValue": "12345678"
+          }
+        ],
+        "productId": "6238a5ca33b8296bae3a3f38"
+      },
+      {
+        "fieldUpdates": [
+          {
+            "field": "upc",
+            "newValue": "87654321"
+          }
+        ],
+        "productId": "7238a5ca33b8296bae3a3f38"
+      },
+      {
+        "fieldUpdates": [
+          {
+            "field": "upc",
+            "newValue": "87654321"
+          }
+        ],
+        "productId": "8238a5ca33b8296bae3a3f38"
+      }
+    ],
+    "user": "projectManager",
+    "userRole": "projectManager"
+  },
+  "multipleProductUpdateResponse" : {
+    "successProducts": [
+      {
+        "productId": "6238a5ca33b8296bae3a3f38",
+        "updateStatus": "Success",
+        "productName": "duplicateProduct",
+        "productUrl": "https://localhost/home/products/new-product-development/62388e9733b8296bae3a3f33/product/6238a5ca33b8296bae3a3f38"
+      },
+      {
+        "productId": "7238a5ca33b8296bae3a3f38",
+        "updateStatus": "Success",
+        "productName": "duplicateProduct",
+        "productUrl": "https://localhost/home/products/new-product-development/62388e9733b8296bae3a3f33/product/7238a5ca33b8296bae3a3f38"
+      }
+    ],
+    "failedProducts": [
+      {
+        "productId": "8238a5ca33b8296bae3a3f38",
+        "updateStatus": "Failed",
+        "productName": "duplicateProduct",
+        "productUrl": "https://localhost/home/products/new-product-development/62388e9733b8296bae3a3f33/product/8238a5ca33b8296bae3a3f38"
+      }
+    ]
+  },
+  "deleteFieldUpdateRequest" : {
+    "products": [
+      {
+        "fieldUpdates": [
+          {
+            "field": "upc",
+            "newValue": ""
+          }
+        ],
+        "productId": "6238a5ca33b8296bae3a3f38"
+      }
+    ],
+    "user": "projectManager",
+    "userRole": "projectManager"
+  },
+  "insertFieldUpdateRequest" : {
+    "products": [
+      {
+        "fieldUpdates": [
+          {
+            "field": "upt",
+            "newValue": "5"
+          }
+        ],
+        "productId": "6238a5ca33b8296bae3a3f38"
+      }
+    ],
+    "user": "projectManager",
+    "userRole": "projectManager"
+  },
+  "multipleFieldUpdateRequest" : {
+    "products": [
+      {
+        "fieldUpdates": [
+          {
+            "field": "upt",
+            "newValue": "5"
+          },
+          {
+            "field": "upc",
+            "newValue": "5678"
+          }
+        ],
+        "productId": "6238a5ca33b8296bae3a3f38"
+      }
+    ],
+    "user": "projectManager",
+    "userRole": "projectManager"
+  },
+  "autocalculateFieldUpdateRequest" : {
+    "products": [
+      {
+        "fieldUpdates": [
+          {
+            "field": "sellingPrice",
+            "newValue": "5"
+          }
+        ],
+        "productId": "6238a5ca33b8296bae3a3f38"
+      }
+    ],
+    "user": "projectManager",
+    "userRole": "projectManager"
+  },
+  "project" : {
+    "id" : "62388e9733b8296bae3a3f33",
+    "createdDate" : "2022-03-21T14:41:27.624Z",
+    "projectName" : "New Year",
+    "templateId" : "6230774efe9c144d69d11652",
+    "templateName" : "Standard",
+    "status" : "Finalise Stage",
+    "projectType" : "Standard NPD",
+    "financialYear" : "2023-2024",
+    "projectCompletionDate" : "2022-03-31T00:00:00.000Z",
+    "comments" : "",
+    "personnel" : {
+      "internal" : [
+        {
+          "role" : "projectManager",
+          "users" : [
+            "projectManager@xyz.com"
+          ]
+        }
+      ]
+    }
+  },
+  "statusUpdateNotificationRequest" : {
+    "products": [
+      {
+        "fieldUpdates": [
+          {
+            "field": "status",
+            "newValue": "Hold"
+          }
+        ],
+        "productId": "6238a5ca33b8296bae3a3f38"
+      }
+    ],
+    "user": "projectManager",
+    "userRole": "projectManager"
+  },
+  "statusUpdateNoNotificationRequest" : {
+    "products": [
+      {
+        "fieldUpdates": [
+          {
+            "field": "status",
+            "newValue": "Go"
+          }
+        ],
+        "productId": "6238a5ca33b8296bae3a3f38"
+      }
+    ],
+    "user": "projectManager",
+    "userRole": "projectManager"
+  },
+  "statusUpdateMultipleNotificationRequest" : {
+    "products": [
+      {
+        "fieldUpdates": [
+          {
+            "field": "status",
+            "newValue": "Hold"
+          }
+        ],
+        "productId": "6238a5ca33b8296bae3a3f38"
+      },
+      {
+        "fieldUpdates": [
+          {
+            "field": "status",
+            "newValue": "Hold"
+          }
+        ],
+        "productId": "7238a5ca33b8296bae3a3f38"
+      }
+    ],
+    "user": "projectManager",
+    "userRole": "projectManager"
+  }
+}

@@ -1,0 +1,1609 @@
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet id="insert_pal_fields_1"	author="harish">
+		<ext:insertMany collectionName="PALFields">
+			<ext:documents>
+				[
+				{
+				"_id" : "projectName",
+				"label" : "PROJECT NAME",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : true,
+				"owner" : "projectManager",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "PROJECT NAME is mandatory"
+				},
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "inDepotDate",
+				"label" : "IN-DEPOT DATE",
+				"type" : "date",
+				"creativeGate" : false,
+				"disabled" : false,
+				"owner" : "buyer",
+				"mandatory" : true,
+				"minDate" : 1,
+				"errorMessages" : {
+					"requiredMessage" : "IN-DEPOT DATE is mandatory",
+					"minDateMessage" : "Enter only future date"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "launchPhase",
+				"label" : "LAUNCH PHASE",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "LAUNCH PHASE"
+				},
+				"editable":["MnS"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "productGroupCode",
+				"label" : "PRODUCT GROUP CODE",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "PRODUCT GROUP CODE is mandatory"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "category",
+				"label" : "CATEGORY",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,	
+				"owner" : "buyer",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "CATEGORY"
+				},
+				"editable":["MnS"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "range",
+				"label" : "RANGE",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "projectManager",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "RANGE"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "subRange",
+				"label" : "SUB-RANGE",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "SUB-RANGE is mandatory"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "status",
+				"label" : "STATUS",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "projectManager",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "STATUS"
+				},
+				"editable":["projectManager"]
+				},
+				{
+				"_id" : "projectComments",
+				"label" : "COMMENTS",
+				"type" : "textarea",
+				"format" : "text",
+				"creativeGate" : false,
+				"disabled" : false,
+				"owner" : "projectManager"
+				},
+				{
+				"_id" : "routeToMarket",
+				"label" : "ROUTE TO MARKET",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "foodTechnologist",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "ROUTE TO MARKET"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "upc",
+				"label" : "UPC",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "commercialPlanner",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "UPC is mandatory",
+					"patternMessage" : "Enter numerical values only"
+				},
+				"pattern" : "^[0-9]+$",
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "productTitle",
+				"label" : "PRODUCT TITLE",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "PRODUCT TITLE is mandatory",
+					"patternMessage" : "Enter maximum 5 words without symbols"
+				},
+				"pattern" : "^[a-zA-Z0-9]([a-zA-Z0-9]*|\\s+[a-zA-Z0-9]*){0,4}[a-zA-Z0-9]$",
+				"editable":["productDeveloper"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "productSubTitle",
+				"label" : "PRODUCT SUBTITLE",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"errorMessages" : {
+					"requiredMessage" : "PRODUCT SUBTITLE is mandatory",
+					"patternMessage" : "Enter maximum 15 words only"
+				},
+				"mandatory" : true,
+				"pattern" : "^[a-zA-Z0-9]([a-zA-Z0-9]*|\\s+[a-zA-Z0-9]*){0,14}[a-zA-Z0-9]$",
+				"editable":["productDeveloper","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "productComments",
+				"label" : "COMMENTS",
+				"type" : "textarea",
+				"format" : "text",
+				"creativeGate" : false,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "productDeveloper",
+				"errorMessages" : {
+				"requiredMessage" : "COMMENTS is mandatory"
+				},
+				"editable":["productDeveloper","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "strategicClassification",
+				"label" : "STRATEGIC CLASSIFICATION",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+				"$ref" : "PALConfiguration",
+				"$id" : "STRATEGIC CLASSIFICATION"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "productNeedState",
+				"label" : "PRODUCT NEEDSTATE",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "PRODUCT NEEDSTATE is mandatory"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "productFileType",
+				"label" : "FIND PRODUCT FILETYPE",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "productDeveloper",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "FIND PRODUCT FILE TYPE"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "productType",
+				"label" : "PRODUCT TYPE",
+				"type" : "select",
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "PRODUCT TYPE"
+				},
+				"editable":["MnS"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "criticalPathRequired",
+				"label" : "CRITICAL PATH REQUIRED",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "projectManager",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "CRITICAL PATH REQUIRED"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "reasonsForChange",
+				"label" : "REASONS FOR CHANGE",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "REASONS FOR CHANGE"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "heroProduct",
+				"label" : "HERO PRODUCT",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "HERO PRODUCT"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "productQualityStory",
+				"label" : "PRODUCT QUALITY STORY",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "PRODUCT QUALITY STORY is mandatory"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "tier",
+				"label" : "TIER",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "TIER"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "printerType",
+				"label" : "PRINTER TYPE",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "PRINTER TYPE"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "smpApproved",
+				"label" : "SMP APPROVED",
+				"type" : "select",
+				"creativeGate" : false,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "SMP APPROVED"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "printerName",
+				"label" : "PRINTER NAME",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : false,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "PRINTER NAME is mandatory"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "printedPackagingType",
+				"label" : "PRINTED PACKAGING TYPE",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "PRINTED PACKAGING TYPE"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "additionalPackagingInformation",
+				"label" : "ADDITIONAL PACKAGING INFORMATION",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "consumerPackagingType",
+				"label" : "CONSUMER PACKAGING TYPE",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "CONSUMER PACKAGING TYPE"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "photographyRequired",
+				"label" : "PHOTOGRAPHY REQUIRED",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "PHOTO REQUIRED"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "designRoute",
+				"label" : "DESIGN ROUTE",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "DESIGN ROUTE"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "secondaryDesignRoute",
+				"label" : "SECONDARY DESIGN ROUTE",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "SECONDARY DESIGN ROUTE"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "fopReqLogos",
+				"label" : "FOP REQ LOGOS",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : false,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "FOP REQ LOGOS is mandatory"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "cutterType",
+				"label" : "CUTTER TYPE",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "gsp",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "CUTTER TYPE"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "cutterReference",
+				"label" : "CUTTER REFERENCE (FOR ALL PRINTED PACKAGING COMPONENTS)",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "gsp",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "CUTTER REFERENCE is mandatory"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "finaliseGate",
+				"label" : "FINALISE GATE",
+				"type" : "date",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"errorMessages" : {
+					"requiredMessage" : "FINALISE GATE is mandatory",
+					"minDateMessage" : "Enter only future date"
+				},
+				"mandatory" : true,
+				"minDate" : 1,
+				"editable":["MnS"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "designConceptHandover",
+				"label" : "DESIGN CONCEPT HANDOVER",
+				"type" : "date",
+				"minDate" : 1,
+				"creativeGate" : true,
+				"disabled" : true,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"errorMessages" : {
+				"requiredMessage" : "DESIGN CONCEPT HANDOVER is mandatory",
+				"minDateMessage" : "Enter only future date"
+				}
+				},
+				{
+				"_id" : "batonHandover",
+				"label" : "BATON HANDOVER",
+				"type" : "date",
+				"minDate" : 1,
+				"creativeGate" : true,
+				"disabled" : true,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"scripts":["designConceptHandover","finaliseGate"],
+				"errorMessages" : {
+				"requiredMessage" : "BATON HANDOVER is mandatory",
+				"minDateMessage" : "Enter only future date"
+				}
+				},
+				{
+				"_id" : "ftpDate",
+				"label" : "FTP Date",
+				"type" : "date",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "FTP DATE is mandatory",
+					"minDateMessage" : "Enter only future date"
+				},
+				"minDate" : 1,
+				"scripts":["batonHandover"],
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "weightOrVolume",
+				"label" : "WEIGHT/VOLUME",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"errorMessages" : {
+				"requiredMessage" : "WEIGHT/VOLUME is mandatory"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "unitOfMeasure",
+				"label" : "UNIT OF MEASURE",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "UNIT OF MEASURE"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "supplierName",
+				"label" : "SUPPLIER NAME (AS DECLARED ON FIND)",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"errorMessages" : {
+				"requiredMessage" : "SUPPLIER NAME is mandatory"
+				},
+				"editable" : ["productDeveloper","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "supplierSiteCode",
+				"label" : "SUPPLIER SITE CODE",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "foodTechnologist",
+				"mandatory" : true,
+				"errorMessages" : {
+				"requiredMessage" : "SUPPLIER SITE CODE is mandatory"
+				},
+				"editable":["productDeveloper","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "childSupplierName",
+				"label" : "SUPPLIER NAME (AS DECLARED ON FIND)",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"errorMessages" : {
+				"requiredMessage" : "SUPPLIER NAME is mandatory"
+				},
+				"editable":["productDeveloper","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "childSupplierSiteCode",
+				"label" : "SUPPLIER SITE CODE",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "foodTechnologist",
+				"mandatory" : true,
+				"errorMessages" : {
+				"requiredMessage" : "SUPPLIER SITE CODE is mandatory"
+				},
+				"editable":["productDeveloper","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "childProductTitle",
+				"label" : "PRODUCT TITLE",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"errorMessages" : {
+				"requiredMessage" : "PRODUCT TITLE is mandatory",
+				"patternMessage" : "Enter maximum 5 words without symbols"
+				},
+				"pattern" : "^[a-zA-Z0-9]([a-zA-Z0-9]*|\\s+[a-zA-Z0-9]*){0,4}[a-zA-Z0-9]$",
+				"editable":["productDeveloper"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "childUpc",
+				"label" : "UPC",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "commercialPlanner",
+				"mandatory" : true,
+				"errorMessages" : {
+				"requiredMessage" : "UPC is mandatory",
+				"patternMessage" : "Enter numerical values only"
+				},
+				"pattern" : "^[0-9]+$",
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "newSupplier",
+				"label" : "NEW SUPPLIER",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "NEW SUPPLIER"
+				},
+				"editable":["productDeveloper"]
+				},
+				{
+				"_id" : "masterVendor",
+				"label" : "MASTER VENDOR",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "MASTER VENDOR"
+				},
+				"editable":["productDeveloper"]
+				},
+				{
+				"_id" : "soldInOcado",
+				"label" : "SOLD IN OCADO",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "ocado",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "SOLD IN OCADO"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "soldInFrance",
+				"label" : "SOLD IN FRANCE",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "international",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "SOLD IN FRANCE"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "internationalComments",
+				"label" : "INTERNATIONAL COMMENTS",
+				"type" : "textarea",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "international",
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "mcr",
+				"label" : "MCR",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "MCR"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "productSoldIn",
+				"label" : "WHERE IS THE PRODUCT TO BE SOLD?",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "PRODUCT SOLD IN"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "ftoOrEbo",
+				"label" : "FTO/EBO",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "buyer",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "FTO OR EBO"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "ocadoExworks",
+				"label" : "COST PRICE - EX WORKS (OCADO)",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "buyer",
+				"errorMessages" : {
+					"requiredMessage" : "OCADO EX-WORKS is mandatory",
+					"patternMessage" : "Enter numerical value and characters only"
+				},
+				"pattern" : "^[0-9]*(\\.[0-9]+)?$",
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "mnsOcadoGrossPrice",
+				"label" : "GROSS COST PRICE (M&#38;S CONSIDERING OCADO VOLUMES)",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "buyer",
+				"errorMessages" : {
+					"requiredMessage" : "GROSS COST PRICE (M&#38;S CONSIDERING OCADO VOLUMES) is mandatory",
+					"patternMessage" : "Enter numerical value with character"
+				},
+				"pattern" : "^[0-9]*(\\.[0-9]+)?$",
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "mnsGrossPrice",
+				"label" : "GROSS COST PRICE (M&#38;S VOLUME ONLY)",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "buyer",
+				"errorMessages" : {
+					"requiredMessage" : "GROSS COST PRICE (M&#38;S VOLUME ONLY) is mandatory",
+					"patternMessage" : "Enter numerical value with character"
+				},
+				"pattern" : "^[0-9]*(\\.[0-9]+)?$",
+				"scripts" : ["margin","trayCostValue"],
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "agreedCostPriceCurrency",
+				"label" : "AGREED COST PRICE CURRENCY",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "buyer",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "AGREED COST PRICE CURRENCY"
+				},
+				"scripts" : ["margin"],
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "sellingPrice",
+				"label" : "SELLING PRICE",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "buyer",
+				"errorMessages" : {
+					"requiredMessage" : "SELLING PRICE is mandatory",
+					"patternMessage" : "Enter numerical value with character"
+				},
+				"pattern" : "^[0-9]*(\\.[0-9]+)?$",
+				"scripts" : ["traySellingValue","margin","averageWeeklySalesMandS"],
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "priceStickeredProducts",
+				"label" : "PRICE STICKERED PRODUCTS",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "buyer",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "PRICE STICKERED PRODUCTS"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "pricePerX",
+				"label" : "PRICE PER X g/kg/ml",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "buyer",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "PRICE PER UOM"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "vatBuyingTaxIndicator",
+				"label" : "VAT - BUYING TAX INDICATOR",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "buyer",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "VAT - BUYING TAX INDICATOR"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "vatSellingTaxIndicator",
+				"label" : "VAT - SELLING TAX INDICATOR",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "buyer",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "VAT - SELLING TAX INDICATOR"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "vatTeamConfirmed",
+				"label" : "VAT TEAM CONFIRMED",
+				"type" : "select",
+				"creativeGate" : false,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "buyer",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "VAT TEAM CONFIRMED"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "vatComment",
+				"label" : "VAT COMMENT",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : false,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "vat",
+				"errorMessages" : {
+					"requiredMessage" : "VAT COMMENT is mandatory"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "margin",
+				"label" : "MARGIN",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : true,
+				"mandatory" : true,
+				"owner" : "buyer"
+				},
+				{
+				"_id" : "mpq",
+				"label" : "MPQ (MINIMUM PRODUCTION QUANTITY)",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "moq",
+				"label" : "MOQ (MINIMUM ORDER QUANTITY) AMBIENT ONLY",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "fixedBuy",
+				"label" : "FIXED BUY",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "buyer",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "FIXED BUY"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "maximumVolumeAvailable",
+				"label" : "MAXIMUM VOLUME AVAILABLE",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "buyer",
+				"errorMessages" : {
+				"requiredMessage" : "MAXUMUM VOLUME AVAILABLE is mandatory"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "fixedBuyCommitmentDeadline",
+				"label" : "FIXED BUY COMMITMENT DEADLINE",
+				"type" : "date",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"minDate" : 1,
+				"errorMessages" : {
+					"requiredMessage" : "FIXED BUY COMMITMENT DEADLINE is mandatory",
+					"minDateMessage" : "Enter only future date"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "orderLeadtimeSupplyChain",
+				"label" : "ORDER LEADTIME SUPPLY CHAIN",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"errorMessages" : {
+					"requiredMessage" : "ORDER LEADTIME SUPPLY CHAIN is mandatory",
+					"patternMessage" : "Enter numerical values only"
+				},
+				"mandatory" : true,
+				"pattern" : "^[0-9]+$",
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "upt",
+				"label" : "UPT",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"errorMessages" : {
+					"requiredMessage" : "UPT is mandatory",
+					"patternMessage" : "Enter numerical values only"
+				},
+				"mandatory" : true,
+				"pattern" : "^[0-9]+$",
+				"scripts" : ["traySellingValue","trayCostValue"],
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "traySellingValue",
+				"label" : "TRAY SELLING VALUE",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : true,
+				"mandatory" : true,
+				"owner" : "buyer"
+				},
+				{
+				"_id" : "trayCostValue",
+				"label" : "TRAY COST VALUE",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : true,
+				"mandatory" : true,
+				"owner" : "buyer"
+				},
+				{
+				"_id" : "promoForLaunch",
+				"label" : "PROMO FOR LAUNCH",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "PROMO FOR LAUNCH"
+				},
+				"mandatory" : true,
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "pricingPolicy",
+				"label" : "PRICING POLICY",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "PRICING POLICY"
+				},
+				"mandatory" : true,
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "productComparison",
+				"label" : "PRODUCT COMPARISON",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"mandatory" : true,
+				"errorMessages" : {
+				"requiredMessage" : "PRODUCT COMPARISON is mandatory"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "proposedNoOfStores",
+				"label" : "PROPOSED NUMBER OF STORES",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"errorMessages" : {
+					"requiredMessage" : "PROPOSED NUMBER OF STORES is mandatory",
+					"patternMessage" : "Enter numerical values only"
+				},
+				"mandatory" : true,
+				"pattern" : "^[0-9]+$",
+				"scripts" : ["averageWeeklySalesMandS"],
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "modelProduct",
+				"label" : "MODEL PRODUCT",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"errorMessages" : {
+					"requiredMessage" : "MODEL PRODUCT is mandatory"
+				},
+				"mandatory" : true,
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "successCriteria",
+				"label" : "SUCCESS CRITERIA = ROV PER STORE",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"errorMessages" : {
+					"requiredMessage" : "SUCCESS CRITERIA = ROV PER STORE is mandatory",
+					"patternMessage" : "Enter numerical values only"
+				},
+				"mandatory" : true,
+				"pattern" : "^[0-9]+$",
+				"scripts" : ["averageWeeklySalesMandS"],
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "averageWeeklySalesMandS",
+				"label" : "AVERAGE WEEKLY SALES - M&#38;S",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : true,
+				"mandatory" : true,
+				"owner" : "buyer",
+				"scripts" : ["averageWeeklyVolumeMandS"]
+				},
+				{
+				"_id" : "averageWeeklyVolumeMandS",
+				"label" : "AVERAGE WEEKLY VOLUME - M&#38;S",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : true,
+				"mandatory" : true,
+				"owner" : "buyer"
+				},
+				{
+				"_id" : "averageWeeklyVolumeOcado",
+				"label" : "AVERAGE WEEKLY VOLUME - OCADO",
+				"type" : "input",
+				"format" : "number",
+				"disabled" : false,
+				"owner" : "buyer",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "AVERAGE WEEKLY VOLUME - OCADO is mandatory",
+					"patternMessage" : "Enter numerical values only"
+				},
+				"pattern" : "^[0-9]+$",
+				"editable":["MnS"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "seasonalSalesAndVolume",
+				"label" : "SEASONAL SALES &#38; VOLUME",
+				"type" : "input",
+				"format" : "text",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "buyer",
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "catchweightOrFixedweight",
+				"label" : "CATCH WEIGHT/ FIXED WEIGHT",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "buyer",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "CATCHWEIGHT OR FIXEDWEIGHT"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "finishedGoodsDimensionsHeight",
+				"label" : "FINISHED GOODS DIMENSIONS HEIGHT (CM)",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"errorMessages" : {
+					"requiredMessage" : "FINISHED GOODS DIMENSIONS HEIGHT(CM) is mandatory",
+					"patternMessage" : "Enter numerical values only"
+				},
+				"mandatory" : true,
+				"pattern" : "^[0-9]+$",
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "finishedGoodsDimensionsWidth",
+				"label" : "FINISHED GOODS DIMENSIONS WIDTH (CM)",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"errorMessages" : {
+					"requiredMessage" : "FINISHED GOODS DIMENSIONS WIDTH(CM) is mandatory",
+					"patternMessage" : "Enter numerical values only"
+				},
+				"mandatory" : true,
+				"pattern" : "^[0-9]+$",
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "finishedGoodsDimensionsDepth",
+				"label" : "FINISHED GOODS DIMENSIONS DEPTH (CM)",
+				"type" : "input",
+				"format" : "number",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"errorMessages" : {
+					"requiredMessage" : "FINISHED GOODS DIMENSIONS DEPTH(CM) is mandatory",
+					"patternMessage" : "Enter numerical values only"
+				},
+				"mandatory" : true,
+				"pattern" : "^[0-9]+$",
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "orientation",
+				"label" : "ORIENTATION (SELECT BEST SHAPE)",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"mandatory" : true,
+				"owner" : "productDeveloper",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "ORIENTATION"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "srpRequired",
+				"label" : "SRP REQUIRED",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "SRP REQUIRED"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "srpDimensionsHeight",
+				"label" : "SRP DIMENSIONS HEIGHT (CM)",
+				"type" : "input",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "SRP DIMENSIONS HEIGHT (CM)  is mandatory",
+					"patternMessage" : "Enter numerical values only"
+				},
+				"format" : "number",
+				"pattern" : "^[0-9]+$",
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "srpDimensionsWidth",
+				"label" : "SRP DIMENSIONS WIDTH (CM)",
+				"type" : "input",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "SRP DIMENSIONS WIDTH (CM)  is mandatory",
+					"patternMessage" : "Enter numerical values only"
+				},
+				"format" : "number",
+				"pattern" : "^[0-9]+$",
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "srpDimensionsDepth",
+				"label" : "SRP DIMENSIONS DEPTH (CM)",
+				"type" : "input",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "SRP DIMENSIONS DEPTH (CM)  is mandatory",
+					"patternMessage" : "Enter numerical values only"
+				},
+				"format" : "number",
+				"pattern" : "^[0-9]+$",
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "productLife",
+				"label" : "PRODUCT LIFE (Nights)",
+				"type" : "input",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "foodTechnologist",
+				"mandatory" : true,
+				"errorMessages" : {
+					"requiredMessage" : "PRODUCT LIFE (Nights)  is mandatory",
+					"patternMessage" : "Enter numerical values only"
+				},
+				"format" : "number",
+				"pattern" : "^[0-9]+$",
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "sustainability",
+				"label" : "PLAN A ATTRIBUTE(S) / SUSTAINABILITY",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "foodTechnologist",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "SUSTAINABILITY"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "bannedIngredientsForInternational",
+				"label" : "BANNED INGREDIENTS FOR INTERNATIONAL",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "foodTechnologist",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "BANNED INGREDIENTS FOR INTERNATIONAL"
+				},
+				"mandatory" : true,
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "spsCertificationTypeRequiredForExport",
+				"label" : "SPS CERTIFICATION TYPE REQUIRED FOR EXPORT",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "foodTechnologist",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "SPS CERTIFICATION TYPE REQUIRED FOR EXPORT"
+				},
+				"mandatory" : true,
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "legalStatus",
+				"label" : "LEGAL STATUS",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "foodTechnologist",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "LEGAL STATUS"
+				},
+				"mandatory" : true,
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "multipleCountryOfOrigins",
+				"label" : "MULTIPLE COUNTRY OF ORIGINS",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "foodTechnologist",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "MULTIPLE COUNTRY OF ORIGINS"
+				},
+				"mandatory" : true,
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "feasibility",
+				"label" : "FEASIBILITY: OVERALL SCORE &#38; LEVEL",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "foodTechnologist",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "FEASIBILITY"
+				},
+				"mandatory" : true,
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "dateCodeVisibility",
+				"label" : "IS THE DATE CODE (UB/BB/BBE) VISIBLE ON THE PACK OR OUTER CARTON OR TRAY",
+				"type" : "select",
+				"creativeGate" : true,
+				"disabled" : false,
+				"owner" : "foodTechnologist",
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "DATE CODE VISIBILITY"
+				},
+				"mandatory" : true,
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "rangeActivityCode",
+				"label" : "RANGE ACTIVITY CODE (RAC)",
+				"type" : "input",
+				"format" : "text",
+				"disabled" : false,
+				"owner" : "buyer",
+				"mandatory" : true,
+				"errorMessages" : {
+				"requiredMessage" : "RANGE ACTIVITY CODE  is mandatory"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "displayGroup",
+				"label" : "DISPLAY GROUP",
+				"type" : "select",
+				"disabled" : false,
+				"owner" : "buyer",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "DISPLAY GROUP"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "multipleArtworkComments",
+				"label" : "MULTIPLE ARTWORK COMMENTS",
+				"type" : "textarea",
+				"format" : "text",
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "childComments",
+				"label" : "COMMENTS",
+				"type" : "textarea",
+				"format" : "text",
+				"creativeGate" : false,
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "sapTitle",
+				"label" : "SAP TITLE",
+				"type" : "input",
+				"format" : "text",
+				"disabled" : false,
+				"owner" : "foodCentralSupport",
+				"mandatory" : true,
+				"errorMessages" : {
+				"requiredMessage" : "SAP TITLE  is mandatory"
+				},
+				"editable":["MnS"]
+				},
+				{
+				"_id" : "hfss",
+				"label" : "HFSS",
+				"type" : "select",
+				"disabled" : false,
+				"owner" : "productDeveloper",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "HFSS"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				},
+				{
+				"_id" : "travelTestRequired",
+				"label" : "TRAVEL TEST REQUIRED",
+				"type" : "select",
+				"disabled" : false,
+				"owner" : "foodTechnologist",
+				"mandatory" : true,
+				"optionsRef" : {
+					"$ref" : "PALConfiguration",
+					"$id" : "TRAVEL TEST REQUIRED"
+				},
+				"editable":["MnS","supplier"],
+				"readable":["supplier"]
+				}
+				]
+			</ext:documents>
+		</ext:insertMany>
+	</changeSet>
+
+</databaseChangeLog>

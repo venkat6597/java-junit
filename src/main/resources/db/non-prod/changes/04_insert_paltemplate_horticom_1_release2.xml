@@ -1,0 +1,349 @@
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet id="insert_paltemplate_horticom_1"	author="joice.joy">
+		<ext:insertOne collectionName="PALTemplate">
+			<ext:document>
+					{
+						"templateName": "HORTI.COM",
+						"sections": [
+							{
+								"sectionName": "overview",
+								"sectionLabel": "Overview",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "launchPhase"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "inDepotDate"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "status"
+									}
+								]
+							},
+							{
+								"sectionName": "criticalPath",
+								"sectionLabel": "Critical Path",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "ftpDate"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "batonHandover"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "designConceptHandover"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "finaliseGate"
+									}
+								]
+							},
+							{
+								"sectionName": "productInformation",
+								"sectionLabel": "Product Information",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "productTitle"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "upc"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "category"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "productType"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "tier"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "productComments"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "sustainability"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "confirmedProductSubcopy"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "packagingFormat"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "batchNumber"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "customerGuarantee"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "hardware"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "hardwareDimensions"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "plantDimensions"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "totalPlant"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "stemLength"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "stemCount"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "varietyElementBreakdown"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "waterlessDeliver"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "setForSundayDeliver"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "sundries"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "planting"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "brand"
+									}
+								]
+							},
+							{
+								"sectionName": "technicalInformation",
+								"sectionLabel": "Technical Information",
+								"sectionFields": [									
+									{
+										"$ref": "PALFields",
+										"$id": "productLife"
+									}
+								]
+							},
+							{
+								"sectionName": "supplierInformation",
+								"sectionLabel": "Supplier Information",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "supplierName"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "supplierSiteCode"
+									}
+								]
+							},
+							{
+								"sectionName": "productFileType",
+								"sectionLabel": "Product File Type",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "productFileType"
+									}
+								],
+								"subSections": [
+									{
+										"subSectionName": "childProduct",
+										"subSectionLabel": "Child Product",
+										"subSectionFields": [
+											{
+												"$ref": "PALFields",
+												"$id": "childProductTitle"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "childUpc"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "childSupplierName"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "childSupplierSiteCode"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "childComments"
+											}
+										]
+									}
+								]
+							},
+							{
+								"sectionName": "commercialSetup",
+								"sectionLabel": "Commercial Set Up",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "cp"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "sp"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "vat"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "agreedCostPriceCurrency"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "margin"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "promoForLaunch"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "pricingPolicy"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "modelProduct"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "seasonalBuyNo"
+									}
+								]
+							},							
+							{
+								"sectionName": "performanceForecast",
+								"sectionLabel": "Performance Forecast",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "successCriteria"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "averageWeeklySalesMandS"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "averageWeeklyVolumeMandS"
+									}
+								]
+							},
+							{
+								"sectionName": "printAndPackaging",
+								"sectionLabel": "Print &#38; Packaging",
+								"sectionFields": [
+									{
+									"$ref": "PALFields",
+									"$id": "portion"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "subBrand"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "cutterReference"
+									}									
+								]
+							},
+							{
+								"sectionName": "design",
+								"sectionLabel": "Design",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "photographyRequired"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "designRoute"
+									}
+								]
+							},
+							{
+								"sectionName": "dotCom",
+								"sectionLabel": ".COM",
+								"sectionFields": [
+									{
+									"$ref": "PALFields",
+									"$id": "removeExistingCustomerReviews"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "pimLaunchDate"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "customerDeliveryStartDate"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "customerDeliveryFinishDateCopy"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "offsaleEffectiveDate"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "firstDespatchDate"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "lastDespatchDate"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "latestDateStockShouldBeAssigned"
+									}									
+								]
+							}							
+						]
+					}
+			</ext:document>
+		</ext:insertOne>
+	</changeSet>
+</databaseChangeLog>

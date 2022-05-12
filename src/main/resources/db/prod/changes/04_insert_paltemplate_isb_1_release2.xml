@@ -1,0 +1,349 @@
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet id="insert_paltemplate_isb_1" author="joice.joy">
+		<ext:insertOne collectionName="PALTemplate">
+			<ext:document>
+					{
+						"templateName": "ISB",
+						"sections": [
+							{
+								"sectionName": "overview",
+								"sectionLabel": "Overview",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "inDepotDate"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "launchPhase"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "status"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "findSpecRequired"
+									}
+								]
+							},
+							{
+								"sectionName": "criticalPath",
+								"sectionLabel": "Critical Path",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "batonHandover"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "designConceptHandover"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "finaliseGate"
+									}
+								]
+							},
+							{
+								"sectionName": "productInformation",
+								"sectionLabel": "Product Information",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "productTitle"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "upc"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "category"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "productGroupCode"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "productType"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "tier"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "productComments"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "catchweightOrFixedweight"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "sustainability"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "shortCodeToBeAddedToCybakeSystem"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "feasibilityAttributes"
+									},
+										{
+										"$ref": "PALFields",
+										"$id": "unpackedUpc"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "backedWeight"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "unbackedWeight"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "confirmedProductSubcopy"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "packagingFormat"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "batchNumber"
+									}
+								]
+							},
+							{
+								"sectionName": "technicalInformation",
+								"sectionLabel": "Technical Information",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "productLife"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "supplyChainChilled"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "topShelfOnlyLooseProducts"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "containsAllergens"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "countryOfOrigin"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "caloriesPerItem"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "caloriesPer100g"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "portions"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "unbackedLife"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "containsTitaniumDioxide"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "containsAlcohol"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "containsPork"
+									}
+								]
+							},
+							{
+								"sectionName": "supplierInformation",
+								"sectionLabel": "Supplier Information",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "supplierName"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "supplierSiteCode"
+									}
+								]
+							},					
+							{
+								"sectionName": "productFileType",
+								"sectionLabel": "Product File Type",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "productFileType"
+									}
+								],
+								"subSections": [
+									{
+										"subSectionName": "childProduct",
+										"subSectionLabel": "Child Product",
+										"subSectionFields": [
+											{
+												"$ref": "PALFields",
+												"$id": "childProductTitle"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "childUpc"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "childSupplierName"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "childSupplierSiteCode"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "childComments"
+											}
+										]
+									}
+								]
+							},
+							{
+								"sectionName": "commercialSetup",
+								"sectionLabel": "Commercial Set Up",
+								"sectionFields": [									
+									{
+										"$ref": "PALFields",
+										"$id": "cp"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "sp"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "agreedCostPriceCurrency"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "margin"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "upt"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "traySellingValue"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "trayCostValue"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "promoForLaunch"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "pricingPolicy"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "modelProduct"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "seasonalBuyNo"
+									}
+								]
+							},
+							{
+								"sectionName": "ranging",
+								"sectionLabel": "Ranging",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "proposedNoOfStores"
+									}									
+								]
+							},
+							{
+								"sectionName": "performanceForecast",
+								"sectionLabel": "Performance Forecast",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "successCriteria"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "averageWeeklySalesMandS"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "averageWeeklyVolumeMandS"
+									}
+								]
+							},														
+							{
+								"sectionName": "printAndPackaging",
+								"sectionLabel": "Print &#38; Packaging",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "logos"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "cutterReference"
+									}									
+								]
+							},
+							{
+								"sectionName": "design",
+								"sectionLabel": "Design",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "photographyRequired"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "secondaryDesignRoute"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "fopReqLogos"
+									}
+								]
+							}
+						]
+					}
+			</ext:document>
+		</ext:insertOne>
+	</changeSet>
+</databaseChangeLog>

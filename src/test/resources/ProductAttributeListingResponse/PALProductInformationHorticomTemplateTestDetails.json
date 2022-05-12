@@ -1,0 +1,182 @@
+{
+	"request": {
+		"productId": "6256d0cb6ec4275332ead6f1",
+		"userRole": "projectManager"
+	},
+	"buyerRequest": {
+		"productId": "6256d0cb6ec4275332ead6f1",
+		"userRole": "projectManager",
+		"role": "buyer"
+	},
+	"sectionRequest": {
+		"productId": "6256d0cb6ec4275332ead6f1",
+		"userRole": "projectManager",
+		"role": "buyer",
+		"sectionName": "productInformation"
+	},
+	"palproject": {
+    "id" : "6256cb286ec4275332ead6ec",
+    "createdDate" : "2022-04-13T13:07:52.642Z",
+    "projectName" : "CHRISTMAS HAMP 2022",
+    "templateId" : "62388885fe9c144d69bab996",
+    "templateName" : "HORTI.COM",
+    "status" : "Draft",
+    "projectType" : "Rolling",
+    "financialYear" : "2018-2019",
+    "comments" : "",
+    "personnel" : {
+        "internal" : [ 
+            {
+                "role" : "projectManager",
+                "users" : [ 
+                    "Nandu.Viswanath@marks-and-spencer.com"
+                ]
+            }, 
+            {
+                "role" : "productDeveloper"
+            }, 
+            {
+                "role" : "foodTechnologist"
+            }, 
+            {
+                "role" : "buyer"
+            }
+        ]
+    }
+},
+	"palproduct": {
+    "id" : "6256d0cb6ec4275332ead6f1",
+    "createdDate" : "2022-04-13T13:31:55.951Z",
+    "templateId" : "62388885fe9c144d69bab996",
+    "projectId" : "6256cb286ec4275332ead6ec",
+    "personnel" : {
+        "internal" : [ 
+            {
+                "role" : "projectManager",
+                "users" : [ 
+                    "Nandu.Viswanath@marks-and-spencer.com"
+                ]
+            }
+        ],
+        "external" : [ 
+            {
+                "role" : "supplier"
+            }
+        ]
+    },
+    "datafields" : [ 
+        {
+            "fieldId" : "upc",
+            "fieldValue" : "2625656"
+        }, 
+        {
+            "fieldId" : "productType",
+            "fieldValue" : "Upgrade"
+        }, 
+        {
+            "fieldId" : "subRange",
+            "fieldValue" : "1_2323"
+        }, 
+        {
+            "fieldId" : "productTitle",
+            "fieldValue" : "Sweet"
+        }, 
+        {
+            "fieldId" : "status",
+            "fieldValue" : "In Progress"
+        }, 
+        {
+            "fieldId" : "ftpDate",
+            "fieldValue" : "18/08/2022"
+        }, 
+        {
+            "fieldId" : "batonHandover",
+            "fieldValue" : "22/07/2022"
+        }, 
+        {
+            "fieldId" : "designConceptHandover",
+            "fieldValue" : "06/07/2022"
+        }, 
+        {
+            "fieldId" : "finaliseGate",
+            "fieldValue" : "04/07/2022"
+        }, 
+        {
+            "fieldId" : "confirmedProductSubcopy",
+            "fieldValue" : "CONFIRMED PRODUCT SUBCOPY"
+        }, 
+        {
+            "fieldId" : "packagingFormat",
+            "fieldValue" : "PACKAGING FORMAT"
+        }, 
+        {
+            "fieldId" : "batchNumber",
+            "fieldValue" : "123456"
+        }, 
+        {
+            "fieldId" : "hardware",
+            "fieldValue" : "HARDWARE"
+        }, 
+        {
+            "fieldId" : "hardwareDimensions",
+            "fieldValue" : "HARDWARE/HAMPER DIMENSIONS"
+        }, 
+        {
+            "fieldId" : "plantDimensions",
+            "fieldValue" : "PLANT DIMESIONS"
+        }, 
+        {
+            "fieldId" : "totalPlant",
+            "fieldValue" : "TOTAL PLANT AND HARDWARE DIMENSIONS"
+        }, 
+        {
+            "fieldId" : "stemLength",
+            "fieldValue" : "STEM LENGTH"
+        }, 
+        {
+            "fieldId" : "stemCount",
+            "fieldValue" : "STEM COUNT"
+        }, 
+        {
+            "fieldId" : "varietyElementBreakdown",
+            "fieldValue" : "VARIETY ELEMENT BREAKDOWN"
+        }, 
+        {
+            "fieldId" : "waterlessDeliver",
+            "fieldValue" : "WATERLESS DELIVER Y/N"
+        }, 
+        {
+            "fieldId" : "setForSundayDeliver",
+            "fieldValue" : "SET FOR SUNDAY DELIVERY Y/N"
+        }, 
+        {
+            "fieldId" : "sundries",
+            "fieldValue" : "SUNDRIES"
+        }, 
+        {
+            "fieldId" : "planting",
+            "fieldValue" : "PLANTING (INDOOR / OUTDOOR)"
+        }, 
+        {
+            "fieldId" : "brand",
+            "fieldValue" : "BRAND"
+        }, 
+        {
+            "fieldId" : "productFileType",
+            "fieldValue" : "Standard"
+        }, 
+        {
+            "fieldId" : "portion",
+            "fieldValue" : "PORTION"
+        }, 
+        {
+            "fieldId" : "subBrand",
+            "fieldValue" : "SUB BRAND (IMAGERY USE ONLY)"
+        }, 
+        {
+            "fieldId" : "designRoute",
+            "fieldValue" : "Autumn"
+        }
+    ]
+}
+}

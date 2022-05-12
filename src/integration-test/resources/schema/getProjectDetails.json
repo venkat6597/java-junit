@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "templateName": {
+          "type": "string"
+        },
+        "templateId": {
+          "type": "string"
+        },
+        "personnel": {
+          "type": "object",
+          "properties": {
+            "internal": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "role": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "role"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "role": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "role"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "internal"
+          ]
+        },
+        "information": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "projectName": {
+              "type": "string"
+            },
+            "templateId": {
+              "type": "string"
+            },
+            "templateName": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "projectType": {
+              "type": "string"
+            },
+            "financialYear": {
+              "type": "string"
+            },
+            "projectCompletionDate": {
+              "type": "string"
+            },
+            "comments": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "projectName",
+            "templateId",
+            "templateName",
+            "status",
+            "projectType",
+            "financialYear",
+            "projectCompletionDate",
+            "comments"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "templateName",
+        "templateId",
+        "personnel",
+        "information"
+      ]
+    },
+    "exception": {
+      "type": "null"
+    },
+    "status": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "data",
+    "exception",
+    "status"
+  ]
+}

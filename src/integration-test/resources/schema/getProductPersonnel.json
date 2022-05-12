@@ -1,0 +1,3286 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "templateName": {
+          "type": "string"
+        },
+        "templateId": {
+          "type": "string"
+        },
+        "personnel": {
+          "type": "object",
+          "properties": {
+            "internal": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "role": {
+                      "type": "string"
+                    },
+                    "users": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "role",
+                    "users"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "role": {
+                      "type": "string"
+                    },
+                    "users": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "role",
+                    "users"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "role": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "role"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "role": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "role"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "internal"
+          ]
+        },
+        "header": {
+          "type": "object",
+          "properties": {
+            "productId": {
+              "type": "string"
+            },
+            "projectName": {
+              "type": "string"
+            },
+            "productName": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "productType": {
+              "type": "string"
+            },
+            "percentage": {
+              "type": "integer"
+            },
+            "subRange": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "productId",
+            "projectName",
+            "productName",
+            "status",
+            "productType",
+            "percentage",
+            "subRange"
+          ]
+        },
+        "sections": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "totalFields": {
+                  "type": "integer"
+                },
+                "completedFields": {
+                  "type": "integer"
+                },
+                "fields": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "requiredMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "requiredMessage"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "value",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "errorMessages"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "requiredMessage": {
+                              "type": "string"
+                            },
+                            "minDateMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "requiredMessage",
+                            "minDateMessage"
+                          ]
+                        },
+                        "minDate": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "errorMessages",
+                        "minDate"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "value": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "value",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "label",
+                "totalFields",
+                "completedFields",
+                "fields"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "totalFields": {
+                  "type": "integer"
+                },
+                "completedFields": {
+                  "type": "integer"
+                },
+                "fields": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "minDateMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "minDateMessage"
+                          ]
+                        },
+                        "minDate": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "errorMessages",
+                        "minDate"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "requiredMessage": {
+                              "type": "string"
+                            },
+                            "minDateMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "requiredMessage",
+                            "minDateMessage"
+                          ]
+                        },
+                        "minDate": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "errorMessages",
+                        "minDate"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "minDate": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "minDate"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "minDate": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "minDate"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "requiredMessage": {
+                              "type": "string"
+                            },
+                            "minDateMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "requiredMessage",
+                            "minDateMessage"
+                          ]
+                        },
+                        "minDate": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "errorMessages",
+                        "minDate"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "label",
+                "totalFields",
+                "completedFields",
+                "fields"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "totalFields": {
+                  "type": "integer"
+                },
+                "completedFields": {
+                  "type": "integer"
+                },
+                "fields": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "pattern": {
+                          "type": "string"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "requiredMessage": {
+                              "type": "string"
+                            },
+                            "patternMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "requiredMessage",
+                            "patternMessage"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "value",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "pattern",
+                        "errorMessages"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "pattern": {
+                          "type": "string"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "requiredMessage": {
+                              "type": "string"
+                            },
+                            "patternMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "requiredMessage",
+                            "patternMessage"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "pattern",
+                        "errorMessages"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "pattern": {
+                          "type": "string"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "requiredMessage": {
+                              "type": "string"
+                            },
+                            "patternMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "requiredMessage",
+                            "patternMessage"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "pattern",
+                        "errorMessages"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "requiredMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "requiredMessage"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "errorMessages"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "requiredMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "requiredMessage"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "value",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "errorMessages"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "value": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "value",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "requiredMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "requiredMessage"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "errorMessages"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "pattern": {
+                          "type": "string"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "patternMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "patternMessage"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "pattern",
+                        "errorMessages"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "requiredMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "requiredMessage"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "errorMessages"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "requiredMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "requiredMessage"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "errorMessages"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "label",
+                "totalFields",
+                "completedFields",
+                "fields"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "totalFields": {
+                  "type": "integer"
+                },
+                "completedFields": {
+                  "type": "integer"
+                },
+                "fields": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "label",
+                "totalFields",
+                "completedFields",
+                "fields"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "totalFields": {
+                  "type": "integer"
+                },
+                "completedFields": {
+                  "type": "integer"
+                },
+                "fields": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "subSections": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "name": {
+                                  "type": "string"
+                                },
+                                "label": {
+                                  "type": "string"
+                                },
+                                "subfields": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "label": {
+                                          "type": "string"
+                                        },
+                                        "name": {
+                                          "type": "string"
+                                        },
+                                        "type": {
+                                          "type": "string"
+                                        },
+                                        "owner": {
+                                          "type": "string"
+                                        },
+                                        "disabled": {
+                                          "type": "boolean"
+                                        },
+                                        "creativeGate": {
+                                          "type": "boolean"
+                                        },
+                                        "mandatory": {
+                                          "type": "boolean"
+                                        },
+                                        "pattern": {
+                                          "type": "string"
+                                        },
+                                        "errorMessages": {
+                                          "type": "object",
+                                          "properties": {
+                                            "requiredMessage": {
+                                              "type": "string"
+                                            },
+                                            "patternMessage": {
+                                              "type": "string"
+                                            }
+                                          },
+                                          "required": [
+                                            "requiredMessage",
+                                            "patternMessage"
+                                          ]
+                                        }
+                                      },
+                                      "required": [
+                                        "label",
+                                        "name",
+                                        "type",
+                                        "owner",
+                                        "disabled",
+                                        "creativeGate",
+                                        "mandatory",
+                                        "pattern",
+                                        "errorMessages"
+                                      ]
+                                    },
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "label": {
+                                          "type": "string"
+                                        },
+                                        "name": {
+                                          "type": "string"
+                                        },
+                                        "type": {
+                                          "type": "string"
+                                        },
+                                        "owner": {
+                                          "type": "string"
+                                        },
+                                        "disabled": {
+                                          "type": "boolean"
+                                        },
+                                        "creativeGate": {
+                                          "type": "boolean"
+                                        },
+                                        "mandatory": {
+                                          "type": "boolean"
+                                        },
+                                        "pattern": {
+                                          "type": "string"
+                                        },
+                                        "errorMessages": {
+                                          "type": "object",
+                                          "properties": {
+                                            "requiredMessage": {
+                                              "type": "string"
+                                            },
+                                            "patternMessage": {
+                                              "type": "string"
+                                            }
+                                          },
+                                          "required": [
+                                            "requiredMessage",
+                                            "patternMessage"
+                                          ]
+                                        }
+                                      },
+                                      "required": [
+                                        "label",
+                                        "name",
+                                        "type",
+                                        "owner",
+                                        "disabled",
+                                        "creativeGate",
+                                        "mandatory",
+                                        "pattern",
+                                        "errorMessages"
+                                      ]
+                                    },
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "label": {
+                                          "type": "string"
+                                        },
+                                        "name": {
+                                          "type": "string"
+                                        },
+                                        "type": {
+                                          "type": "string"
+                                        },
+                                        "owner": {
+                                          "type": "string"
+                                        },
+                                        "disabled": {
+                                          "type": "boolean"
+                                        },
+                                        "creativeGate": {
+                                          "type": "boolean"
+                                        },
+                                        "mandatory": {
+                                          "type": "boolean"
+                                        }
+                                      },
+                                      "required": [
+                                        "label",
+                                        "name",
+                                        "type",
+                                        "owner",
+                                        "disabled",
+                                        "creativeGate",
+                                        "mandatory"
+                                      ]
+                                    },
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "label": {
+                                          "type": "string"
+                                        },
+                                        "name": {
+                                          "type": "string"
+                                        },
+                                        "type": {
+                                          "type": "string"
+                                        },
+                                        "owner": {
+                                          "type": "string"
+                                        },
+                                        "disabled": {
+                                          "type": "boolean"
+                                        },
+                                        "creativeGate": {
+                                          "type": "boolean"
+                                        },
+                                        "mandatory": {
+                                          "type": "boolean"
+                                        }
+                                      },
+                                      "required": [
+                                        "label",
+                                        "name",
+                                        "type",
+                                        "owner",
+                                        "disabled",
+                                        "creativeGate",
+                                        "mandatory"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "name",
+                                "label",
+                                "subfields"
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "subSections"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "label",
+                "totalFields",
+                "completedFields",
+                "fields"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "totalFields": {
+                  "type": "integer"
+                },
+                "completedFields": {
+                  "type": "integer"
+                },
+                "fields": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "requiredMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "requiredMessage"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "errorMessages"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "requiredMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "requiredMessage"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "errorMessages"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "label",
+                "totalFields",
+                "completedFields",
+                "fields"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "totalFields": {
+                  "type": "integer"
+                },
+                "completedFields": {
+                  "type": "integer"
+                },
+                "fields": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "options": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "options",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "disabled": {
+                          "type": "boolean"
+                        },
+                        "creativeGate": {
+                          "type": "boolean"
+                        },
+                        "mandatory": {
+                          "type": "boolean"
+                        },
+                        "errorMessages": {
+                          "type": "object",
+                          "properties": {
+                            "requiredMessage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "requiredMessage"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "name",
+                        "type",
+                        "owner",
+                        "disabled",
+                        "creativeGate",
+                        "mandatory",
+                        "errorMessages"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "label",
+                "totalFields",
+                "completedFields",
+                "fields"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "templateName",
+        "templateId",
+        "personnel",
+        "header",
+        "sections"
+      ]
+    },
+    "exception": {
+      "type": "null"
+    },
+    "status": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "data",
+    "exception",
+    "status"
+  ]
+}

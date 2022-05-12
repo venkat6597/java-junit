@@ -1,0 +1,1115 @@
+{
+	"request": {
+		"projectId": "60ff64a1476c45bf24a684d4",
+		"userRole": "projectManager"
+	},
+	
+	"palproduct1": {
+		"id": "61357305cde71e991bd8eaab",
+		"templateId": "611d11f7cde71e991b217579",
+		"projectId": "60ff64a1476c45bf24a684d4",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				},
+				{
+					"role": "foodTechnologist",
+					"users": ["foodTechnologist@xyz.com"]
+				},
+				{
+					"role": "buyer",
+					"users": ["buyer@xyz.com"]
+				},
+				{
+					"role": "commercialPlanner",
+					"users": ["commercialPlanner@xyz.com"]
+				},
+				{
+					"role": "international",
+					"users": ["international@xyz.com"]
+				},
+				{
+					"role": "finance",
+					"users": ["finance@xyz.com"]
+				}
+			],
+			"external": [
+				{
+					"role": "supplier",
+					"users": ["supplier1@xyz.com"]
+				}
+			]
+		},
+		"datafields": [
+			{
+				"fieldId": "projectName",
+				"fieldValue": "Summer 2021"
+			},
+			{
+				"fieldId": "launchPhase",
+				"fieldValue": "P06 SEP 2020"
+			},
+			{
+				"fieldId": "inDepotDate",
+				"fieldValue": "25/09/2021"
+			},
+			{
+				"fieldId": "reasonsForChange",
+				"fieldValue": "N"
+			},
+			{
+				"fieldId": "status",
+				"fieldValue": "Inprogress"
+			},
+			{
+				"fieldId": "criticalPathRequired",
+				"fieldValue": "N/A"
+			},
+			{
+				"fieldId": "finaliseGate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "creativeGate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "batonHandover",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "designConceptHandover",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "upc",
+				"fieldValue": "12345678"
+			},
+			{
+				"fieldId": "ftpDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "conceptSubmissionDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "productTitle",
+				"fieldValue": "Sausage Roll"
+			},
+			{
+				"fieldId": "category",
+				"fieldValue": "F03C"
+			},
+			{
+				"fieldId": "tier",
+				"fieldValue": "GOOD"
+			},
+			{
+				"fieldId": "productLife",
+				"fieldValue": "8"
+			},
+			{
+				"fieldId": "supplierName",
+				"fieldValue": "Supplier 1234"
+			},
+			{
+				"fieldId": "printerType",
+				"fieldValue": "A List"
+			},
+			{
+				"fieldId": "smpApproved",
+				"fieldValue": "false"
+			},
+			{
+				"fieldId": "productFileType",
+				"fieldValue": "Parent",
+				"multifields": [
+					{
+						"multiFieldId": "1",
+						"datafields":[
+						{
+							"fieldId": "productTitle",
+							"fieldValue": "Child1"
+						},
+						{
+							"fieldId": "category",
+							"fieldValue": "F01C"
+						},
+						{
+							"fieldId": "supplierName",
+							"fieldValue": "supplier1234"
+						},
+						{
+							"fieldId": "supplierSiteCode",
+							"fieldValue": "1234"
+						},
+						{
+							"fieldId": "upc",
+							"fieldValue": "123456"
+						},
+						{
+							"fieldId": "childComments",
+							"fieldValue": "child product1 added"
+						}
+					]},
+					{
+						"multiFieldId": "2",
+						"datafields": [
+						{
+							"fieldId": "productTitle",
+							"fieldValue": "Child2"
+						},
+						{
+							"fieldId": "category",
+							"fieldValue": "F02F"
+						},
+						{
+							"fieldId": "supplierName",
+							"fieldValue": "supplier6789"
+						},
+						{
+							"fieldId": "supplierSiteCode",
+							"fieldValue": "6789"
+						},
+						{
+							"fieldId": "upc",
+							"fieldValue": "98765"
+						},
+						{
+							"fieldId": "childComments",
+							"fieldValue": "child product2 added"
+						}
+					]}
+				]
+			},
+			{
+				"fieldId": "mnsGrossPrice",
+				"fieldValue": "50"
+			},
+			{
+				"fieldId": "proposedNoOfStores",
+				"fieldValue": "20"
+			},
+			{
+				"fieldId": "weightOrVolume",
+				"fieldValue": "250"
+			},
+			{
+				"fieldId": "unitOfMeasure",
+				"fieldValue": "gms"
+			},
+			{
+				"fieldId": "multipleArtworks",
+				"fieldValue": "Yes",
+				"multifields": [
+					{
+						"multiFieldId": "1",
+						"datafields": [
+						{
+							"fieldId": "printerType",
+							"fieldValue": "SMP"
+						},
+						{
+							"fieldId": "printerName",
+							"fieldValue": "Printer1"
+						},
+						{
+							"fieldId": "cutterType",
+							"fieldValue": "Multiple"
+						},
+						{
+							"fieldId": "printedPackagingType",
+							"fieldValue": "Bag"
+						},
+						{
+							"fieldId": "consumerPackagingType",
+							"fieldValue": "Bag"
+						},
+						{
+							"fieldId": "photographyRequired",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "designRoute",
+							"fieldValue": "Autumn"
+						},
+						{
+							"fieldId": "secondaryDesignRoute",
+							"fieldValue": "Cook With M&S"
+						},
+						{
+							"fieldId": "fopReqLogos",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "unitOfMeasure",
+							"fieldValue": "Other"
+						},
+						{
+							"fieldId": "internationalPackagingRequirements",
+							"fieldValue": "No"
+						},
+						{
+							"fieldId": "finishedGoodsDimensionHeight",
+							"fieldValue": "10"
+						},
+						{
+							"fieldId": "finishedGoodsDimensionDepth",
+							"fieldValue": "15"
+						},
+						{
+							"fieldId": "finishedGoodsDimensionWidth",
+							"fieldValue": "5"
+						},
+						{
+							"fieldId": "orientation",
+							"fieldValue": "Landscape"
+						},
+						{
+							"fieldId": "srtRequired",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "srtDimensionHeight",
+							"fieldValue": "1"
+						},
+						{
+							"fieldId": "srtDimensionDepth",
+							"fieldValue": "2"
+						},
+						{
+							"fieldId": "srtDimensionWidth",
+							"fieldValue": "3"
+						},
+						{
+							"fieldId": "dateCodeVisibility",
+							"fieldValue": "Yes"
+						}
+					]},
+					{
+						"multiFieldId": "2",
+						"datafields":[
+						{
+							"fieldId": "printerType",
+							"fieldValue": "SMP"
+						}
+					]}
+				]
+			},
+			{
+				"fieldId": "productSubTitle",
+				"fieldValue": "Sausage Roll Mini"
+			}
+		]
+	},
+	"palproduct2": {
+		"id": "6149dbf63535de17d5ad6b80",
+		"templateId": "611d11f7cde71e991b217579",
+		"projectId": "60ff64a1476c45bf24a684d4",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["Sathishkumar.Velusamy@marks-and-spencer.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["HASEENA.KHADER@marks-and-spencer.com"]
+				},
+				{
+					"role": "foodTechnologist",
+					"users": ["foodTechnologist@xyz.com"]
+				},
+				{
+					"role": "buyer",
+					"users": ["buyer@xyz.com"]
+				},
+				{
+					"role": "commercialPlanner",
+					"users": ["commercialPlanner@xyz.com"]
+				},
+				{
+					"role": "international",
+					"users": ["international@xyz.com"]
+				},
+				{
+					"role": "finance",
+					"users": ["finance@xyz.com"]
+				}
+			],
+			"external": [
+				{
+					"role": "supplier",
+					"users": ["supplier1@xyz.com"]
+				}
+			]
+		},
+		"datafields": [
+			{
+				"fieldId": "projectName",
+				"fieldValue": "Summer 2021"
+			},
+			{
+				"fieldId": "launchPhase",
+				"fieldValue": "P10 JAN 2021"
+			},
+			{
+				"fieldId": "inDepotDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "reasonsForChange",
+				"fieldValue": "N"
+			},
+			{
+				"fieldId": "status",
+				"fieldValue": "No Go"
+			},
+			{
+				"fieldId": "criticalPathRequired",
+				"fieldValue": "N/A"
+			},
+			{
+				"fieldId": "finaliseGate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "creativeGate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "batonHandover",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "designConceptHandover",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "upc",
+				"fieldValue": "12345678"
+			},
+			{
+				"fieldId": "ftpDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "conceptSubmissionDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "productTitle",
+				"fieldValue": "Sausage Roll"
+			},
+			{
+				"fieldId": "category",
+				"fieldValue": "F03C"
+			},
+			{
+				"fieldId": "tier",
+				"fieldValue": "GOOD"
+			},
+			{
+				"fieldId": "productLife",
+				"fieldValue": "8"
+			},
+			{
+				"fieldId": "supplierName",
+				"fieldValue": "Supplier 5678"
+			},
+			{
+				"fieldId": "mnsGrossPrice",
+				"fieldValue": "50"
+			},
+			{
+				"fieldId": "proposedNoOfStores",
+				"fieldValue": "20"
+			},
+			{
+				"fieldId": "weightOrVolume",
+				"fieldValue": "250"
+			},
+			{
+				"fieldId": "unitOfMeasure",
+				"fieldValue": "gms"
+			},
+			{
+				"fieldId": "productType",
+				"fieldValue": "Existing"
+			},
+			{
+				"fieldId": "printerType",
+				"fieldValue": "A List"
+			},
+			{
+				"fieldId": "smpApproved",
+				"fieldValue": "false"
+			},
+			{
+				"fieldId": "multipleArtworks",
+				"fieldValue": "Yes",
+				"multifields": [
+					{
+						"multiFieldId": "1",
+						"datafields":[
+						{
+							"fieldId": "printerType",
+							"fieldValue": "SMP"
+						},
+						{
+							"fieldId": "printerName",
+							"fieldValue": "Printer1"
+						},
+						{
+							"fieldId": "cutterType",
+							"fieldValue": "Multiple"
+						},
+						{
+							"fieldId": "printedPackagingType",
+							"fieldValue": "Bag"
+						},
+						{
+							"fieldId": "consumerPackagingType",
+							"fieldValue": "Bag"
+						},
+						{
+							"fieldId": "photographyRequired",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "designRoute",
+							"fieldValue": "Autumn"
+						},
+						{
+							"fieldId": "secondaryDesignRoute",
+							"fieldValue": "Cook With M&S"
+						},
+						{
+							"fieldId": "fopReqLogos",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "unitOfMeasure",
+							"fieldValue": "Other"
+						},
+						{
+							"fieldId": "internationalPackagingRequirements",
+							"fieldValue": "No"
+						},
+						{
+							"fieldId": "finishedGoodsDimensionHeight",
+							"fieldValue": "10"
+						},
+						{
+							"fieldId": "finishedGoodsDimensionDepth",
+							"fieldValue": "15"
+						},
+						{
+							"fieldId": "finishedGoodsDimensionWidth",
+							"fieldValue": "5"
+						},
+						{
+							"fieldId": "orientation",
+							"fieldValue": "Landscape"
+						},
+						{
+							"fieldId": "srtRequired",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "srtDimensionHeight",
+							"fieldValue": "1"
+						},
+						{
+							"fieldId": "srtDimensionDepth",
+							"fieldValue": "2"
+						},
+						{
+							"fieldId": "srtDimensionWidth",
+							"fieldValue": "3"
+						},
+						{
+							"fieldId": "dateCodeVisibility",
+							"fieldValue": "Yes"
+						}
+					]},
+					{
+						"multiFieldId": "2",
+						"datafields":[
+						{
+							"fieldId": "printerType",
+							"fieldValue": "SMP"
+						}
+					]}
+				]
+			},
+			{
+				"fieldId": "productSubTitle",
+				"fieldValue": "Sausage Roll Mini"
+			}
+		]
+	
+},
+	
+    "response":{
+	    "id": "61357305cde71e991bd8eaab",
+		"templateId": "611d11f7cde71e991b217579",
+		"projectId": "60ff64a1476c45bf24a684d4",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				},
+				{
+					"role": "foodTechnologist",
+					"users": ["foodTechnologist@xyz.com"]
+				},
+				{
+					"role": "buyer",
+					"users": ["buyer@xyz.com"]
+				},
+				{
+					"role": "commercialPlanner",
+					"users": ["commercialPlanner@xyz.com"]
+				},
+				{
+					"role": "international",
+					"users": ["international@xyz.com"]
+				},
+				{
+					"role": "finance",
+					"users": ["finance@xyz.com"]
+				}
+			],
+			"external": [
+				{
+					"role": "supplier",
+					"users": ["supplier1@xyz.com"]
+				}
+			]
+		},
+		"datafields": [
+			{
+				"fieldId": "projectName",
+				"fieldValue": "Summer 2021"
+			},
+			{
+				"fieldId": "launchPhase",
+				"fieldValue": "P06 SEP 2020"
+			},
+			{
+				"fieldId": "inDepotDate",
+				"fieldValue": "25/09/2021"
+			},
+			{
+				"fieldId": "reasonsForChange",
+				"fieldValue": "N"
+			},
+			{
+				"fieldId": "status",
+				"fieldValue": "Inprogress"
+			},
+			{
+				"fieldId": "criticalPathRequired",
+				"fieldValue": "N/A"
+			},
+			{
+				"fieldId": "finaliseGate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "creativeGate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "batonHandover",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "designConceptHandover",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "upc",
+				"fieldValue": "12345678"
+			},
+			{
+				"fieldId": "ftpDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "conceptSubmissionDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "productTitle",
+				"fieldValue": "Sausage Roll"
+			},
+			{
+				"fieldId": "category",
+				"fieldValue": "F03C"
+			},
+			{
+				"fieldId": "tier",
+				"fieldValue": "GOOD"
+			},
+			{
+				"fieldId": "productLife",
+				"fieldValue": "8"
+			},
+			{
+				"fieldId": "supplierName",
+				"fieldValue": "Supplier 1234"
+			},
+			{
+				"fieldId": "printerType",
+				"fieldValue": "A List"
+			},
+			{
+				"fieldId": "smpApproved",
+				"fieldValue": "false"
+			},
+			{
+				"fieldId": "productFileType",
+				"fieldValue": "Parent",
+				"multifields": [
+					{
+						"multiFieldId": "1",
+						"datafields":[
+						{
+							"fieldId": "productTitle",
+							"fieldValue": "Child1"
+						},
+						{
+							"fieldId": "category",
+							"fieldValue": "F01C"
+						},
+						{
+							"fieldId": "supplierName",
+							"fieldValue": "supplier1234"
+						},
+						{
+							"fieldId": "supplierSiteCode",
+							"fieldValue": "1234"
+						},
+						{
+							"fieldId": "upc",
+							"fieldValue": "123456"
+						},
+						{
+							"fieldId": "childComments",
+							"fieldValue": "child product1 added"
+						}
+					]},
+					{
+						"multiFieldId": "2",
+						"datafields": [
+						{
+							"fieldId": "productTitle",
+							"fieldValue": "Child2"
+						},
+						{
+							"fieldId": "category",
+							"fieldValue": "F02F"
+						},
+						{
+							"fieldId": "supplierName",
+							"fieldValue": "supplier6789"
+						},
+						{
+							"fieldId": "supplierSiteCode",
+							"fieldValue": "6789"
+						},
+						{
+							"fieldId": "upc",
+							"fieldValue": "98765"
+						},
+						{
+							"fieldId": "childComments",
+							"fieldValue": "child product2 added"
+						}
+					]}
+				]
+			},
+			{
+				"fieldId": "mnsGrossPrice",
+				"fieldValue": "50"
+			},
+			{
+				"fieldId": "proposedNoOfStores",
+				"fieldValue": "20"
+			},
+			{
+				"fieldId": "weightOrVolume",
+				"fieldValue": "250"
+			},
+			{
+				"fieldId": "unitOfMeasure",
+				"fieldValue": "gms"
+			},
+			{
+				"fieldId": "multipleArtworks",
+				"fieldValue": "Yes",
+				"multifields": [
+					{
+						"multiFieldId": "1",
+						"datafields": [
+						{
+							"fieldId": "printerType",
+							"fieldValue": "SMP"
+						},
+						{
+							"fieldId": "printerName",
+							"fieldValue": "Printer1"
+						},
+						{
+							"fieldId": "cutterType",
+							"fieldValue": "Multiple"
+						},
+						{
+							"fieldId": "printedPackagingType",
+							"fieldValue": "Bag"
+						},
+						{
+							"fieldId": "consumerPackagingType",
+							"fieldValue": "Bag"
+						},
+						{
+							"fieldId": "photographyRequired",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "designRoute",
+							"fieldValue": "Autumn"
+						},
+						{
+							"fieldId": "secondaryDesignRoute",
+							"fieldValue": "Cook With M&S"
+						},
+						{
+							"fieldId": "fopReqLogos",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "unitOfMeasure",
+							"fieldValue": "Other"
+						},
+						{
+							"fieldId": "internationalPackagingRequirements",
+							"fieldValue": "No"
+						},
+						{
+							"fieldId": "finishedGoodsDimensionHeight",
+							"fieldValue": "10"
+						},
+						{
+							"fieldId": "finishedGoodsDimensionDepth",
+							"fieldValue": "15"
+						},
+						{
+							"fieldId": "finishedGoodsDimensionWidth",
+							"fieldValue": "5"
+						},
+						{
+							"fieldId": "orientation",
+							"fieldValue": "Landscape"
+						},
+						{
+							"fieldId": "srtRequired",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "srtDimensionHeight",
+							"fieldValue": "1"
+						},
+						{
+							"fieldId": "srtDimensionDepth",
+							"fieldValue": "2"
+						},
+						{
+							"fieldId": "srtDimensionWidth",
+							"fieldValue": "3"
+						},
+						{
+							"fieldId": "dateCodeVisibility",
+							"fieldValue": "Yes"
+						}
+					]},
+					{
+						"multiFieldId": "2",
+						"datafields":[
+						{
+							"fieldId": "printerType",
+							"fieldValue": "SMP"
+						}
+					]}
+				]
+			},
+			{
+				"fieldId": "productSubTitle",
+				"fieldValue": "Sausage Roll Mini"
+			}
+		]
+	},
+	"requestNull":null,
+	"response2":{
+		"id": "6149dbf63535de17d5ad6b80",
+		"templateId": "611d11f7cde71e991b217579",
+		"projectId": "60ff64a1476c45bf24a684d4",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["Sathishkumar.Velusamy@marks-and-spencer.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["HASEENA.KHADER@marks-and-spencer.com"]
+				},
+				{
+					"role": "foodTechnologist",
+					"users": ["foodTechnologist@xyz.com"]
+				},
+				{
+					"role": "buyer",
+					"users": ["buyer@xyz.com"]
+				},
+				{
+					"role": "commercialPlanner",
+					"users": ["commercialPlanner@xyz.com"]
+				},
+				{
+					"role": "international",
+					"users": ["international@xyz.com"]
+				},
+				{
+					"role": "finance",
+					"users": ["finance@xyz.com"]
+				}
+			],
+			"external": [
+				{
+					"role": "supplier",
+					"users": ["supplier1@xyz.com"]
+				}
+			]
+		},
+		"datafields": [
+			{
+				"fieldId": "projectName",
+				"fieldValue": "Summer 2021"
+			},
+			{
+				"fieldId": "launchPhase",
+				"fieldValue": "P10 JAN 2021"
+			},
+			{
+				"fieldId": "inDepotDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "reasonsForChange",
+				"fieldValue": "N"
+			},
+			{
+				"fieldId": "status",
+				"fieldValue": "No Go"
+			},
+			{
+				"fieldId": "criticalPathRequired",
+				"fieldValue": "N/A"
+			},
+			{
+				"fieldId": "finaliseGate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "creativeGate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "batonHandover",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "designConceptHandover",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "upc",
+				"fieldValue": "12345678"
+			},
+			{
+				"fieldId": "ftpDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "conceptSubmissionDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "productTitle",
+				"fieldValue": "Sausage Roll"
+			},
+			{
+				"fieldId": "category",
+				"fieldValue": "F03C"
+			},
+			{
+				"fieldId": "tier",
+				"fieldValue": "GOOD"
+			},
+			{
+				"fieldId": "productLife",
+				"fieldValue": "8"
+			},
+			{
+				"fieldId": "supplierName",
+				"fieldValue": "Supplier 5678"
+			},
+			{
+				"fieldId": "mnsGrossPrice",
+				"fieldValue": "50"
+			},
+			{
+				"fieldId": "proposedNoOfStores",
+				"fieldValue": "20"
+			},
+			{
+				"fieldId": "weightOrVolume",
+				"fieldValue": "250"
+			},
+			{
+				"fieldId": "unitOfMeasure",
+				"fieldValue": "gms"
+			},
+			{
+				"fieldId": "productType",
+				"fieldValue": "Existing"
+			},
+			{
+				"fieldId": "printerType",
+				"fieldValue": "A List"
+			},
+			{
+				"fieldId": "smpApproved",
+				"fieldValue": "false"
+			},
+			{
+				"fieldId": "multipleArtworks",
+				"fieldValue": "Yes",
+				"multifields": [
+					{
+						"multiFieldId": "1",
+						"datafields":[
+						{
+							"fieldId": "printerType",
+							"fieldValue": "SMP"
+						},
+						{
+							"fieldId": "printerName",
+							"fieldValue": "Printer1"
+						},
+						{
+							"fieldId": "cutterType",
+							"fieldValue": "Multiple"
+						},
+						{
+							"fieldId": "printedPackagingType",
+							"fieldValue": "Bag"
+						},
+						{
+							"fieldId": "consumerPackagingType",
+							"fieldValue": "Bag"
+						},
+						{
+							"fieldId": "photographyRequired",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "designRoute",
+							"fieldValue": "Autumn"
+						},
+						{
+							"fieldId": "secondaryDesignRoute",
+							"fieldValue": "Cook With M&S"
+						},
+						{
+							"fieldId": "fopReqLogos",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "unitOfMeasure",
+							"fieldValue": "Other"
+						},
+						{
+							"fieldId": "internationalPackagingRequirements",
+							"fieldValue": "No"
+						},
+						{
+							"fieldId": "finishedGoodsDimensionHeight",
+							"fieldValue": "10"
+						},
+						{
+							"fieldId": "finishedGoodsDimensionDepth",
+							"fieldValue": "15"
+						},
+						{
+							"fieldId": "finishedGoodsDimensionWidth",
+							"fieldValue": "5"
+						},
+						{
+							"fieldId": "orientation",
+							"fieldValue": "Landscape"
+						},
+						{
+							"fieldId": "srtRequired",
+							"fieldValue": "Yes"
+						},
+						{
+							"fieldId": "srtDimensionHeight",
+							"fieldValue": "1"
+						},
+						{
+							"fieldId": "srtDimensionDepth",
+							"fieldValue": "2"
+						},
+						{
+							"fieldId": "srtDimensionWidth",
+							"fieldValue": "3"
+						},
+						{
+							"fieldId": "dateCodeVisibility",
+							"fieldValue": "Yes"
+						}
+					]},
+					{
+						"multiFieldId": "2",
+						"datafields":[
+						{
+							"fieldId": "printerType",
+							"fieldValue": "SMP"
+						}
+					]}
+				]
+			},
+			{
+				"fieldId": "productSubTitle",
+				"fieldValue": "Sausage Roll Mini"
+			}
+		]
+	}
+	
+}

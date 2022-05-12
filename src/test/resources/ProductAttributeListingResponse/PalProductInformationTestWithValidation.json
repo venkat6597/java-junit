@@ -1,0 +1,215 @@
+{
+	"request": {
+		"productId": "61357305cde71e991bd8eaab",
+		"userRole": "projectManager"
+	},
+	"buyerRequest": {
+		"productId": "61357305cde71e991bd8eaab",
+		"userRole": "projectManager",
+		"role": "buyer"
+	},
+	"sectionRequest": {
+		"productId": "61357305cde71e991bd8eaab",
+		"userRole": "projectManager",
+		"role": "buyer",
+		"sectionName": "productInformation"
+	},
+	"palproject": {
+		"id": "60ff64a1476c45bf24a684d4",
+		"projectName": "2021-2022 Christmas Delicatessen",
+		"templateName": "Standard",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				}
+			]
+		},
+		"status": "Active",
+		"projectCompletionDate": "2021-09-29T13:24:51.608Z",
+		"financialYear": "2021/22",
+		"projectType": "Rolling"
+	},
+	"palproduct": {
+		"id": "61357305cde71e991bd8eaab",
+		"templateId": "611d11f7cde71e991b217579",
+		"projectId": "60ff64a1476c45bf24a684d4",
+		"personnel": {
+			"internal": [
+				{
+					"role": "projectManager",
+					"users": ["projectManager@xyz.com"]
+				},
+				{
+					"role": "productDeveloper",
+					"users": ["productDeveloper@xyz.com"]
+				},
+				{
+					"role": "foodTechnologist",
+					"users": ["foodTechnologist@xyz.com"]
+				},
+				{
+					"role": "buyer",
+					"users": ["buyer@xyz.com"]
+				},
+				{
+					"role": "commercialPlanner",
+					"users": ["commercialPlanner@xyz.com"]
+				},
+				{
+					"role": "international",
+					"users": ["international@xyz.com"]
+				},
+				{
+					"role": "finance",
+					"users": ["finance@xyz.com"]
+				}
+			],
+			"external": [
+				{
+					"role": "supplier",
+					"users": ["supplier1@xyz.com"]
+				}
+			]
+		},
+		"datafields": [
+			{
+				"fieldId": "projectName",
+				"fieldValue": "Summer 2021"
+			},
+			{
+				"fieldId": "launchPhase",
+				"fieldValue": "P10 JAN 2021"
+			},
+			{
+				"fieldId": "productGroupCode",
+				"fieldValue": "code1"
+			},
+			{
+				"fieldId": "category",
+				"fieldValue": "F01C Poultry"
+			},
+			{
+				"fieldId": "range",
+				"fieldValue": "Core"
+			},
+			{
+				"fieldId": "status",
+				"fieldValue": "GO"
+			},
+			{
+				"fieldId": "routeToMarket",
+				"fieldValue": "Standard"
+			},
+			{
+				"fieldId": "upc",
+				"fieldValue": "12345678"
+			},
+			{
+				"fieldId": "productTitle",
+				"fieldValue": "Test product title"
+			},
+			{
+				"fieldId": "productSubTitle",
+				"fieldValue": "Test product subtitle"
+			},
+			{
+				"fieldId": "productComments",
+				"fieldValue": "test comments"
+			},
+			{
+				"fieldId": "conceptSubmissionNumber",
+				"fieldValue": "10"
+			},
+			{
+				"fieldId": "changeSinceLastSubmission",
+				"fieldValue": "last submission"
+			},
+			{
+				"fieldId": "conceptSubmissionDate",
+				"fieldValue": "01/02/2022"
+			},
+			{
+				"fieldId": "strategicClassification",
+				"fieldValue": "BAU"
+			},
+			{
+				"fieldId": "productNeedState",
+				"fieldValue": "productNeedState"
+			},
+			{
+				"fieldId": "printerType",
+				"fieldValue": "A List"
+			},
+			{
+				"fieldId": "smpApproved",
+				"fieldValue": "false"
+			},
+			{
+				"fieldId": "productFileType",
+				"fieldValue": "Parent",
+				"multifields": [
+					{
+						"multiFieldId": "1",
+						"datafields": [
+							{
+								"fieldId": "productTitle",
+								"fieldValue": "child product title"
+							},
+							{
+								"fieldId": "supplierName",
+								"fieldValue": "child product supplier Name"
+							}
+						]
+					},
+					{
+						"multiFieldId": "2",
+						"datafields": [
+							{
+								"fieldId": "productTitle",
+								"fieldValue": "child product title"
+							}
+						]
+					}
+				]
+			},
+			{
+				"fieldId": "productType",
+				"fieldValue": "Upgrade"
+			},
+			{
+				"fieldId": "printAndPackaging",
+				"fieldValue": "Multiple",
+				"multifields": [
+					{
+						"multiFieldId": "1",
+						"datafields": [
+							{
+								"fieldId": "printerType",
+								"fieldValue": "SMP"
+							}
+						]
+					},
+					{
+						"multiFieldId": "2",
+						"datafields": [
+							{
+								"fieldId": "printerType",
+								"fieldValue": "None"
+							}
+						]
+					}
+				]
+			},
+			{
+				"fieldId": "fopReqLogos",
+				"fieldValue": "required"
+			}
+		]
+	}
+}

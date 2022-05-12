@@ -1,0 +1,23 @@
+<configuration>
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+
+		<!-- changed the encoder -->
+		<encoder class="com.newrelic.logging.logback.NewRelicEncoder">
+		</encoder>
+
+	</appender>
+
+	<!-- added the ASYNC appender -->
+	<appender name="ASYNC"
+		class="com.newrelic.logging.logback.NewRelicAsyncAppender">
+		<appender-ref ref="STDOUT" />
+	</appender>
+
+	<root level="${PAL-LOG-LEVEL}">
+
+		<!-- changed the root logger -->
+		<appender-ref ref="ASYNC" />
+
+	</root>
+</configuration>

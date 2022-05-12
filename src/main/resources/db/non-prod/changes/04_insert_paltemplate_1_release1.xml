@@ -1,0 +1,581 @@
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet id="insert_paltemplate_standard_1"	author="harish">
+		<ext:insertMany collectionName="PALTemplate">
+			<ext:documents>
+				[
+					{
+						"templateName": "Standard",
+						"sections": [
+							{
+								"sectionName": "overview",
+								"sectionLabel": "Overview",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "projectName"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "launchPhase"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "inDepotDate"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "status"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "criticalPathRequired"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "reasonsForChange"
+									}
+								]
+							},
+							{
+								"sectionName": "criticalPath",
+								"sectionLabel": "Critical Path",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "ftpDate"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "batonHandover"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "designConceptHandover"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "finaliseGate"
+									}
+								]
+							},
+							{
+								"sectionName": "productInformation",
+								"sectionLabel": "Product Information",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "productTitle"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "productSubTitle"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "upc"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "category"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "productGroupCode"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "range"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "subRange"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "productType"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "tier"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "productComments"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "weightOrVolume"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "unitOfMeasure"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "catchweightOrFixedweight"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "strategicClassification"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "productNeedState"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "heroProduct"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "productQualityStory"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "routeToMarket"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "sustainability"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "hfss"
+									}
+								]
+							},
+							{
+								"sectionName": "technicalInformation",
+								"sectionLabel": "Technical Information",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "feasibility"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "bannedIngredientsForInternational"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "productLife"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "legalStatus"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "spsCertificationTypeRequiredForExport"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "multipleCountryOfOrigins"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "travelTestRequired"
+									}
+								]
+							},
+							{
+								"sectionName": "supplierInformation",
+								"sectionLabel": "Supplier Information",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "supplierName"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "supplierSiteCode"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "newSupplier"
+									}
+								]
+							},
+							{
+								"sectionName": "productFileType",
+								"sectionLabel": "Product File Type",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "productFileType"
+									}
+								],
+								"subSections": [
+									{
+										"subSectionName": "childProduct",
+										"subSectionLabel": "Child Product",
+										"subSectionFields": [
+											{
+												"$ref": "PALFields",
+												"$id": "childProductTitle"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "childUpc"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "childSupplierName"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "childSupplierSiteCode"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "childComments"
+											}
+										]
+									}
+								]
+							},
+							{
+								"sectionName": "commercialSetup",
+								"sectionLabel": "Commercial Set Up",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "modelProduct"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "masterVendor"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "mnsGrossPrice"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "mnsOcadoGrossPrice"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "ocadoExworks"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "agreedCostPriceCurrency"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "upt"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "sellingPrice"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "traySellingValue"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "trayCostValue"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "vatBuyingTaxIndicator"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "vatSellingTaxIndicator"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "vatTeamConfirmed"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "vatComment"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "margin"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "pricePerX"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "priceStickeredProducts"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "moq"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "mpq"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "fixedBuy"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "fixedBuyCommitmentDeadline"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "maximumVolumeAvailable"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "promoForLaunch"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "pricingPolicy"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "ftoOrEbo"
+									}
+								]
+							},
+							{
+								"sectionName": "ranging",
+								"sectionLabel": "Ranging",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "productSoldIn"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "proposedNoOfStores"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "soldInOcado"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "productComparison"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "orderLeadtimeSupplyChain"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "mcr"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "rangeActivityCode"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "displayGroup"
+									}
+								]
+							},
+							{
+								"sectionName": "performanceForecast",
+								"sectionLabel": "Performance Forecast",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "successCriteria"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "averageWeeklySalesMandS"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "averageWeeklyVolumeMandS"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "averageWeeklyVolumeOcado"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "seasonalSalesAndVolume"
+									}
+								]
+							},
+							{
+								"sectionName": "printAndPackaging",
+								"sectionLabel": "Print &#38; Packaging",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "printerType"
+									},
+									{
+									"$ref": "PALFields",
+									"$id": "smpApproved"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "printerName"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "cutterType"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "cutterReference"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "soldInFrance"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "internationalComments"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "dateCodeVisibility"
+									}
+								]
+							},
+							{
+								"sectionName": "design",
+								"sectionLabel": "Design",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "printedPackagingType"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "additionalPackagingInformation"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "consumerPackagingType"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "photographyRequired"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "designRoute"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "secondaryDesignRoute"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "fopReqLogos"
+									}
+								],
+								"subSections": [
+									{
+										"subSectionName": "packagingComponent",
+										"subSectionLabel": "Packaging Component",
+										"subSectionFields": [
+											{
+												"$ref": "PALFields",
+												"$id": "printerType"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "printerName"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "printedPackagingType"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "photographyRequired"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "designRoute"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "secondaryDesignRoute"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "cutterType"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "cutterReference"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "ftpDate"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "soldInFrance"
+											},
+											{
+												"$ref": "PALFields",
+												"$id": "multipleArtworkComments"
+											}
+										]
+									}
+								]
+							},
+							{
+								"sectionName": "productDimensions",
+								"sectionLabel": "Product Dimensions",
+								"sectionFields": [
+									{
+										"$ref": "PALFields",
+										"$id": "finishedGoodsDimensionsHeight"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "finishedGoodsDimensionsWidth"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "finishedGoodsDimensionsDepth"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "orientation"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "srpRequired"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "srpDimensionsHeight"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "srpDimensionsWidth"
+									},
+									{
+										"$ref": "PALFields",
+										"$id": "srpDimensionsDepth"
+									}
+								]
+							}
+						]
+					}
+				]
+			</ext:documents>
+		</ext:insertMany>
+	</changeSet>
+</databaseChangeLog>

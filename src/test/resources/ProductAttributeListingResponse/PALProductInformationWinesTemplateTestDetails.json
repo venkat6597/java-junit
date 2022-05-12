@@ -1,0 +1,201 @@
+{
+	"request": {
+		"productId": "624a59aa9a0e971d988e2dd4",
+		"userRole": "projectManager"
+	},
+	"buyerRequest": {
+		"productId": "624a59aa9a0e971d988e2dd4",
+		"userRole": "projectManager",
+		"role": "buyer"
+	},
+	"sectionRequest": {
+		"productId": "624a59aa9a0e971d988e2dd4",
+		"userRole": "projectManager",
+		"role": "buyer",
+		"sectionName": "productInformation"
+	},
+	"palproject": {
+    "id" : "6246f1449a0e971d988e2dc8",
+    "createdDate" : "2022-04-01T12:34:12.068Z",
+    "projectName" : "wines",
+    "templateId" : "62388885fe9c144d69bab9ba",
+    "templateName" : "Wines",
+    "status" : "Draft",
+    "projectType" : "Rolling",
+    "financialYear" : "2021-2022",
+    "projectCompletionDate" : "2022-04-20T00:00:00.000Z",
+    "comments" : "",
+    "personnel" : {
+        "internal" : [ 
+            {
+                "role" : "projectManager",
+                "users" : [ 
+                    "Nandu.Viswanath@marks-and-spencer.com"
+                ]
+            }, 
+            {
+                "role" : "productDeveloper",
+                "users" : [ 
+                    "SkAmir.Sohel@marks-and-spencer.com"
+                ]
+            }, 
+            {
+                "role" : "foodTechnologist"
+            }, 
+            {
+                "role" : "buyer",
+                "users" : [ 
+                    null
+                ]
+            }
+        ]
+    }
+},
+	"palproduct": {
+    "id" : "624a59aa9a0e971d988e2dd4",
+    "createdDate" : "2022-04-04T02:36:26.986Z",
+    "templateId" : "62388885fe9c144d69bab9ba",
+    "projectId" : "6246f1449a0e971d988e2dc8",
+    "personnel" : {
+        "internal" : [ 
+            {
+                "role" : "buyer",
+                "users" : [ 
+                    null
+                ]
+            }, 
+            {
+                "role" : "productDeveloper",
+                "users" : [ 
+                    "SkAmir.Sohel@marks-and-spencer.com"
+                ]
+            }, 
+            {
+                "role" : "projectManager",
+                "users" : [ 
+                    "Nandu.Viswanath@marks-and-spencer.com"
+                ]
+            }
+        ],
+        "external" : [ 
+            {
+                "role" : "supplier"
+            }
+        ]
+    },
+    "datafields" : [ 
+        {
+            "fieldId" : "upc",
+            "fieldValue" : "85476155"
+        }, 
+        {
+            "fieldId" : "productType",
+            "fieldValue" : "Existing"
+        }, 
+        {
+            "fieldId" : "subRange",
+            "fieldValue" : "20"
+        }, 
+        {
+            "fieldId" : "countryOfOrigin",
+            "fieldValue" : "Sert"
+        }, 
+        {
+            "fieldId" : "productLife",
+            "fieldValue" : "222"
+        }, 
+        {
+            "fieldId" : "ftpDate",
+            "fieldValue" : "13/07/2022"
+        }, 
+        {
+            "fieldId" : "batonHandover",
+            "fieldValue" : "16/06/2022"
+        }, 
+        {
+            "fieldId" : "designConceptHandover",
+            "fieldValue" : "31/05/2022"
+        }, 
+        {
+            "fieldId" : "finaliseGate",
+            "fieldValue" : "27/05/2022"
+        }, 
+        {
+            "fieldId" : "modelProduct",
+            "fieldValue" : "as"
+        }, 
+        {
+            "fieldId" : "inDepotDate",
+            "fieldValue" : "29/04/2022"
+        }, 
+        {
+            "fieldId" : "productTitle",
+            "fieldValue" : "Test111"
+        }, 
+        {
+            "fieldId" : "supplierSiteCode",
+            "fieldValue" : "F01901"
+        }, 
+        {
+            "fieldId" : "supplierName",
+            "fieldValue" : "BAKKAVOR SALADS TILMANSTONE"
+        }, 
+        {
+            "fieldId" : "status",
+            "fieldValue" : "In Progress"
+        }, 
+        {
+            "fieldId" : "confirmedCopyForFront",
+            "fieldValue" : "Vintage country of origin"
+        }, 
+        {
+            "fieldId" : "expertlyBlended",
+            "fieldValue" : "EXPERTLY BLENDED"
+        }, 
+        {
+            "fieldId" : "launchVintage",
+            "fieldValue" : "LAUNCH VINTAGE"
+        }, 
+        {
+            "fieldId" : "packagingFormat",
+            "fieldValue" : "PACKAGING FORMAT"
+        }, 
+        {
+            "fieldId" : "weightOrVolume",
+            "fieldValue" : "15"
+        }, 
+        {
+            "fieldId" : "batchNumber",
+            "fieldValue" : "123456"
+        }, 
+        {
+            "fieldId" : "productFileType",
+            "fieldValue" : "Standard"
+        }, 
+        {
+            "fieldId" : "productDisplayMethod",
+            "fieldValue" : "PRODUCT DISPLAY METHOD"
+        }, 
+        {
+            "fieldId" : "portion",
+            "fieldValue" : "PORTION"
+        }, 
+        {
+            "fieldId" : "designRoute",
+            "fieldValue" : "Christmas Classic"
+        }, 
+        {
+            "fieldId" : "orientation",
+            "fieldValue" : "Portrait"
+        }, 
+        {
+            "fieldId" : "agent",
+            "fieldValue" : "AGENT"
+        }, 
+        {
+            "fieldId" : "unitOfMeasure",
+            "fieldValue" : "kg"
+        }
+    ]    
+}
+}

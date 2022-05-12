@@ -1,0 +1,213 @@
+{
+	"request":{
+      "financialYear":[
+         "2020-2021"
+      ],
+      "fromDate":"10/11/2020",
+      "toDate":"11/12/2021",
+      "projectType":[
+         "Seasonal"
+      ]
+   },
+	"response": {
+		"data": [
+			{
+				"id": "6194cb10b2cbd14e3d8e8e59",
+				"templateName": "Standard",
+				"templateId": "611d11f7cde71e991b217579",
+				"personnel": {
+					"internal": [
+						{
+							"role": "projectManager"
+						},
+						{
+							"role": "productDeveloper"
+						},
+						{
+							"role": "foodTechnologist"
+						},
+						{
+							"role": "buyer"
+						}
+					]
+				},
+				"information": {
+					"id": "6194cb10b2cbd14e3d8e8e59",
+					"projectName": "Christmas sale",
+					"templateId": "611d11f7cde71e991b217579",
+					"templateName": "Standard",
+					"status": "Active - Pre-Creative Seal",
+					"projectType": "Rolling",
+					"financialYear": "2019-2020",
+					"projectCompletionDate": "2021-11-15T00:00:00",
+					"comments": "test"
+				}
+			},
+			{
+				"id": "6194cb32b2cbd14e3d8e8e5a",
+				"templateName": "Standard",
+				"templateId": "611d11f7cde71e991b217579",
+				"personnel": {
+					"internal": [
+						{
+							"role": "projectManager"
+						},
+						{
+							"role": "productDeveloper"
+						},
+						{
+							"role": "foodTechnologist"
+						},
+						{
+							"role": "buyer"
+						}
+					]
+				},
+				"information": {
+					"id": "6194cb32b2cbd14e3d8e8e5a",
+					"projectName": "new pal project",
+					"templateId": "611d11f7cde71e991b217579",
+					"templateName": "Standard",
+					"status": "Active - Pre-Creative Seal",
+					"projectType": "Seasonal",
+					"financialYear": "2019-2020",
+					"projectCompletionDate": "2021-11-22T00:00:00",
+					"comments": "test"
+				}
+			}
+		],
+		"exception": null,
+		"status": true
+	},
+	"request2": {
+		"ProjectFilter": {
+			
+		},
+		"userRole": "projectManager"
+	},
+	"palproject": {
+    "id": "60ff64a1476c45bf24a684d4",
+    "projectName": "2021-2022 Christmas Delicatessen",
+    "templateId": "611d11f7cde71e991b217579",
+    "templateName": "Standard",
+    "projectCompletionDate": "2021-09-29T13:24:51.608Z",
+    "financialYear": "2020-2021",
+    "personnel": {
+      "internal": [
+        {
+          "role": "projectManager",
+          "users": ["projectManager@xyz.com"]
+        },
+        {
+          "role": "productDeveloper",
+          "users": ["productDeveloper@xyz.com"]
+        }
+      ]
+    },
+    "status": "Active",
+    "projectType": "Seasonal",
+    "comments": "project details"
+  },
+ "request4":{
+      "financialYear":[
+         "2020-2021"
+      ],
+      "fromDate":"10/11/2020",
+      "projectType":[
+         "Seasonal",
+         "projectType2"
+      ]
+   },
+	"response4": {
+		"data": [
+			{
+				"id": "6194cb10b2cbd14e3d8e8e59",
+				"templateName": "Standard",
+				"templateId": "611d11f7cde71e991b217579",
+				"personnel": {
+					"internal": [
+						{
+							"role": "projectManager"
+						},
+						{
+							"role": "productDeveloper"
+						},
+						{
+							"role": "foodTechnologist"
+						},
+						{
+							"role": "buyer"
+						}
+					]
+				},
+				"information": {
+					"id": "6194cb10b2cbd14e3d8e8e59",
+					"projectName": "Christmas sale",
+					"templateId": "611d11f7cde71e991b217579",
+					"templateName": "Standard",
+					"status": "Active - Pre-Creative Seal",
+					"projectType": "Rolling",
+					"financialYear": "2019-2020",
+					"projectCompletionDate": "11/11/2020",
+					"comments": "test"
+				}
+			}
+		],
+		"exception": null,
+		"status": true
+	},
+	"request5":{
+      "financialYear":[
+         "2020-2021"
+      ],
+      "toDate":"11/12/2021",
+      "projectType":[
+         "Seasonal",
+         "projectType2"
+      ]
+   },
+	"response5": {
+		"data": [
+			{
+				"id": "6194cb10b2cbd14e3d8e8e59",
+				"templateName": "Standard",
+				"templateId": "611d11f7cde71e991b217579",
+				"personnel": {
+					"internal": [
+						{
+							"role": "projectManager"
+						},
+						{
+							"role": "productDeveloper"
+						},
+						{
+							"role": "foodTechnologist"
+						},
+						{
+							"role": "buyer"
+						}
+					]
+				},
+				"information": {
+					"id": "6194cb10b2cbd14e3d8e8e59",
+					"projectName": "Christmas sale",
+					"templateId": "611d11f7cde71e991b217579",
+					"templateName": "Standard",
+					"status": "Active - Pre-Creative Seal",
+					"projectType": "Rolling",
+					"financialYear": "2019-2020",
+					"projectCompletionDate": "10/12/2021",
+					"comments": "test"
+				}
+			}
+		],
+		"exception": null,
+		"status": true
+	},
+"requestWithoutRole": {
+		"filter": {
+			"searchText": "project"
+		}
+	}
+
+} 

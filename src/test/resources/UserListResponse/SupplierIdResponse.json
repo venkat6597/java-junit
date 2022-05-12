@@ -1,0 +1,22 @@
+ [
+    {
+      "supplierId": "F01504",
+      "attributeId": "cb7bb77a-b25f-4d6f-8e4c-d225537f34c0",
+      "supplierName": "TANGERINE CONFECTIONERY"
+    },
+    {
+      "supplierId": "F01524",
+      "attributeId": "cb7bb77a-b25f-4d6f-8e4c-d225537f34c0",
+      "supplierName": "TANGERINE CONFECTIONERY"
+    },
+    {
+      "supplierId": "F07410",
+      "attributeId": "29a3b962-5e05-4cf7-ad9a-dea64b1a66d2",
+      "supplierName": "Ultrapharm Ltd"
+    },
+    {
+      "supplierId": "F02489",
+      "attributeId": "3ccb4746-0537-447f-b7e0-9a161fe907cc",
+      "supplierName": "It's All Good Ltd"
+    }
+  ]

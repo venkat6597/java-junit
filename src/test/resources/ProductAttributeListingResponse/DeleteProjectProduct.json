@@ -1,0 +1,92 @@
+{
+  "palProject": {
+    "id" : "626107760252be18bdfe8ff4",
+    "createdDate" : "2022-04-21T07:27:50.657Z",
+    "projectName" : "Test2",
+    "templateId" : "6230774efe9c144d69d11652",
+    "templateName" : "Standard",
+    "status" : "Deleted",
+    "projectType" : "Rolling",
+    "financialYear" : "2022-2023",
+    "comments" : "",
+    "personnel" : {
+      "internal" : [
+        {
+          "role" : "projectManager",
+          "users" : [
+            "projectManager@xyz.com"
+          ]
+        }
+      ]
+    }
+  },
+  "palProduct1" : {
+    "id" : "626107970252be18bdfe8ff5",
+    "createdDate" : "2022-04-21T07:28:23.487Z",
+    "templateId" : "6230774efe9c144d69d11652",
+    "projectId" : "626107760252be18bdfe8ff4",
+    "personnel" : {
+      "internal" : [
+        {
+          "role" : "projectManager",
+          "users" : [
+            "projectManager@xyz.com"
+          ]
+        }
+      ]
+    },
+    "datafields" : [
+      {
+        "fieldId" : "productTitle",
+        "fieldValue" : "product1"
+      },
+      {
+        "fieldId" : "status",
+        "fieldValue" : "Go"
+      }
+    ]
+  },
+  "palProduct2" : {
+    "id" : "726107970252be18bdfe8ff5",
+    "createdDate" : "2022-04-21T07:28:23.487Z",
+    "templateId" : "6230774efe9c144d69d11652",
+    "projectId" : "626107760252be18bdfe8ff4",
+    "personnel" : {
+      "internal" : [
+        {
+          "role" : "projectManager",
+          "users" : [
+            "projectManager@xyz.com"
+          ]
+        }
+      ]
+    },
+    "datafields" : [
+      {
+        "fieldId" : "productTitle",
+        "fieldValue" : "product2"
+      },
+      {
+        "fieldId" : "status",
+        "fieldValue" : "Go"
+      }
+    ]
+  },
+  "deleteProductRequest" : {
+    "productIds": ["626107970252be18bdfe8ff5"],
+    "projectId": "626107760252be18bdfe8ff4",
+    "userRole": "projectManager",
+    "user" : "projectManager"
+  },
+  "deleteProductsRequest" : {
+    "productIds": ["626107970252be18bdfe8ff5","726107970252be18bdfe8ff5"],
+    "projectId": "626107760252be18bdfe8ff4",
+    "userRole": "projectManager",
+    "user" : "projectManager"
+  },
+  "deleteProjectRequest" : {
+    "projectId": "626107760252be18bdfe8ff4",
+    "userRole": "projectManager",
+    "user" : "projectManager"
+  }
+}

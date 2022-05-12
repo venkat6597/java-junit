@@ -1,0 +1,157 @@
+{
+	"request": {
+		"productId": "625fd3556ec4275332ead70f",
+		"userRole": "projectManager"
+	},
+	"buyerRequest": {
+		"productId": "625fd3556ec4275332ead70f",
+		"userRole": "projectManager",
+		"role": "buyer"
+	},
+	"sectionRequest": {
+		"productId": "625fd3556ec4275332ead70f",
+		"userRole": "projectManager",
+		"role": "buyer",
+		"sectionName": "productInformation"
+	},
+	"palproject": {
+    "id" : "624d2cf69a0e971d988e2de0",
+    "createdDate" : "2022-04-06T06:02:30.098Z",
+    "projectName" : "test Hospitality",
+    "templateId" : "62388885fe9c144d69bab9a3",
+    "templateName" : "Hospitality",
+    "status" : "Draft",
+    "projectType" : "Rolling",
+    "financialYear" : "2019-2020",
+    "comments" : "",
+    "personnel" : {
+        "internal" : [ 
+            {
+                "role" : "projectManager",
+                "users" : [ 
+                    "Nandu.Viswanath@marks-and-spencer.com"
+                ]
+            }, 
+            {
+                "role" : "productDeveloper"
+            }, 
+            {
+                "role" : "foodTechnologist"
+            }, 
+            {
+                "role" : "buyer"
+            }
+        ]
+    }
+},
+	"palproduct": {
+    "id" : "625fd3556ec4275332ead70f",
+    "createdDate" : "2022-04-20T09:33:09.726Z",
+    "templateId" : "62388885fe9c144d69bab9a3",
+    "projectId" : "624d2cf69a0e971d988e2de0",
+    "personnel" : {
+        "internal" : [ 
+            {
+                "role" : "projectManager",
+                "users" : [ 
+                    "Nandu.Viswanath@marks-and-spencer.com"
+                ]
+            }, 
+            {
+                "role" : "productDeveloper",
+                "users" : []
+            }, 
+            {
+                "role" : "foodTechnologist",
+                "users" : []
+            }, 
+            {
+                "role" : "buyer",
+                "users" : []
+            }
+        ],
+        "external" : [ 
+            {
+                "role" : "supplier",
+                "users" : [ 
+                    "Rob.Barnes@marks-and-spencer.com"
+                ]
+            }
+        ]
+    },
+    "datafields" : [ 
+        {
+            "fieldId" : "productTitle",
+            "fieldValue" : "hospitality1"
+        }, 
+        {
+            "fieldId" : "upc",
+            "fieldValue" : "23345555"
+        }, 
+        {
+            "fieldId" : "supplierSiteCode",
+            "fieldValue" : "F01504"
+        }, 
+        {
+            "fieldId" : "supplierName",
+            "fieldValue" : "TANGERINE CONFECTIONERY"
+        }, 
+        {
+            "fieldId" : "weightOrVolume",
+            "fieldValue" : "13"
+        }, 
+        {
+            "fieldId" : "unitOfMeasure",
+            "fieldValue" : "kg"
+        }, 
+        {
+            "fieldId" : "productType",
+            "fieldValue" : "New Product"
+        }, 
+        {
+            "fieldId" : "productFileType",
+            "fieldValue" : "Standard"
+        }, 
+        {
+            "fieldId" : "subRange",
+            "fieldValue" : "12"
+        }, 
+        {
+            "fieldId" : "status",
+            "fieldValue" : "In Progress"
+        }, 
+        {
+            "fieldId" : "finaliseGate",
+            "fieldValue" : "04/07/2022"
+        }, 
+        {
+            "fieldId" : "confirmedProductSubcopy",
+            "fieldValue" : "CONFIRMED PRODUCT SUBCOPY"
+        }, 
+        {
+            "fieldId" : "packagingFormat",
+            "fieldValue" : "PACKAGING FORMAT"
+        }, 
+        {
+            "fieldId" : "batchNumber",
+            "fieldValue" : "BATCH NUMBER"
+        }, 
+        {
+            "fieldId" : "productDisplayMethod",
+            "fieldValue" : "PRODUCT DISPLAY METHOD"
+        }, 
+        {
+            "fieldId" : "ftpDate",
+            "fieldValue" : "18/08/2022"
+        }, 
+        {
+            "fieldId" : "batonHandover",
+            "fieldValue" : "22/07/2022"
+        }, 
+        {
+            "fieldId" : "designConceptHandover",
+            "fieldValue" : "06/07/2022"
+        }
+    ]
+}
+}
