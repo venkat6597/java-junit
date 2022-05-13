@@ -25,6 +25,8 @@ steps:
         checkStyleRunAnalysis: true
         pmdRunAnalysis: true
 
+    - task: WhiteSource Bolt@20
+
     - task: CopyFiles@2
       inputs:
         SourceFolder: '$(Agent.BuildDirectory)/s/target/'
