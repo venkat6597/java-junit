@@ -21,11 +21,10 @@ steps:
         mavenOptions: '-Xmx3072m'
         mavenAuthenticateFeed: true
         effectivePomSkip: false
-        sonarQubeRunAnalysis: false
+        sonarQubeRunAnalysis: true
         checkStyleRunAnalysis: true
         pmdRunAnalysis: true
 
-    - task: WhiteSource@21
 
     - task: CopyFiles@2
       inputs:
