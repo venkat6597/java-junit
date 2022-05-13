@@ -30,7 +30,7 @@ steps:
         mavenOptions: '-Xmx3072m'
         mavenAuthenticateFeed: true
         effectivePomSkip: false
-        sonarQubeRunAnalysis: false
+        sonarQubeRunAnalysis: true
         checkStyleRunAnalysis: true
         pmdRunAnalysis: true
 
@@ -46,5 +46,5 @@ steps:
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(build.artifactstagingdirectory)'
-        ArtifactName: dro
+        ArtifactName: drop
       continueOnError: false
