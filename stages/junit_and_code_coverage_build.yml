@@ -10,9 +10,9 @@ steps:
 
     - task: SonarCloudPrepare@1
       inputs:
-      SonarCloud: 'sonartest'
-      organization: 'sonartest12'
-      scannerMode: 'Other'
+       SonarCloud: 'sonartest'
+       organization: 'sonartest12'
+       scannerMode: 'Other'
 
 
    
