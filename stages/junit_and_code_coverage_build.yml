@@ -30,7 +30,7 @@ steps:
         mavenOptions: '-Xmx3072m'
         mavenAuthenticateFeed: true
         effectivePomSkip: false
-        sonarQubeRunAnalysis: true
+        sonarQubeRunAnalysis: false
         checkStyleRunAnalysis: true
         pmdRunAnalysis: true
 
