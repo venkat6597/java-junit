@@ -2,7 +2,7 @@ pipeline{
    agent any
 
    stages{
-    stage(Maven Test){
+    stage("Maven Test"){
        dir(java-junit){
          sh "mvn clean intsall"
          sh "mvn test"

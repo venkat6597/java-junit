@@ -1,0 +1,31 @@
+pipeline{
+    agent any
+    stages{
+        stage("Delete") {
+          steps{
+            deleteDir()
+           }
+        } 
+        stage("Clone Repo"){
+            steps{
+                sh "git clone https://github.com/venkat6597/java-junit.git"
+            }
+        }
+        stage("Install Maven"){
+            steps{
+                dir("java-junit") {
+                sh "ls"
+                sh "mvn clean install"
+                }
+            }
+        }  
+        stage("Test Maven"){
+            steps{
+                dir("java-junit") {
+                sh "ls"
+                sh "mvn test"
+                }
+            }
+        }
+    }
+}
