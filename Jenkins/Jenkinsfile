@@ -4,11 +4,11 @@ pipeline{
    stages{
     stage("Maven Test"){
       steps{  
-       dir(java-junit){
+       
          sh "mvn clean install"
          sh "mvn test"
 
-       }
+       
       } 
     }
      
