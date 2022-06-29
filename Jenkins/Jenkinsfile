@@ -3,11 +3,22 @@ pipeline{
 
    parameters{
      string(name: 'deploy', defaultValue: 'default', description: 'Custom Deployment Name')
-     choice(name: 'Zone', choices: ['EU-WEST-2A', 'EU-WEST-2B', 'EU-WEST-2C'], description: 'List of Zone')
+     choice(name: 'zone', choices: ['EU-WEST-2A', 'EU-WEST-2B', 'EU-WEST-2C'], description: 'List of Zone')
      booleanParam(name: 'confirm', defaultValue: false, description: 'Toggle this value to confirm deployment')
    }
    
    stages{
+     stage("Echo"){
+      steps{  
+       
+         echo "Deployment name ${params.deploy}"
+         echo "Zone name ${params.zone}"
+         echo "Confirmation ${params.confirm}"
+       
+      } 
+    }
+
+
     stage("Maven Test"){
       steps{  
        
